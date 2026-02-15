@@ -1,0 +1,5662 @@
+[
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 8,
+    "end_line": 11,
+    "chunk_id": 1,
+    "text": "Meno. Can you tell me, Socrates, whether virtue is acquired by teaching or by practice; or if neither by teaching nor practice, then whether it comes to man by nature, or in what other way?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 12,
+    "end_line": 35,
+    "chunk_id": 2,
+    "text": "Socrates. O Meno, there was a time when the Thessalians were famous among the other Hellenes only for their riches and their riding; but now, if I am not mistaken, they are equally famous for their wisdom, especially at Larisa, which is the native city of your friend Aristippus. And this is Gorgias' doing; for when he came there, the flower of the Aleuadae, among them your admirer Aristippus, and the other chiefs of the Thessalians, fell in love with his wisdom. And he has taught you the habit of answering questions in a grand and bold style, which becomes those who know, and is the style in which he himself answers all comers; and any Hellene who likes may ask him anything. How different is our lot! my dear Meno. Here at Athens there is a dearth of the commodity, and all wisdom seems to have emigrated from us to you. I am certain that if you were to ask any Athenian whether virtue was natural or acquired, he would laugh in your face, and say: \"Stranger, you have far too good an opinion of me, if you think that I can answer your question. For I literally do not know what virtue is, and much less whether it is acquired by teaching or not.\" And I myself, Meno, living as I do in this region of poverty, am as poor as the rest of the world; and I confess with shame that I know literally nothing about virtue; and when I do not know the \"quid\" of anything how can I know the \"quale\"? How, if I knew nothing at all of Meno, could I tell if he was fair, or the opposite of fair; rich and noble, or the reverse of rich and noble? Do you think that I could?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 36,
+    "end_line": 39,
+    "chunk_id": 3,
+    "text": "Meno. No, Indeed. But are you in earnest, Socrates, in saying that you do not know what virtue is? And am I to carry back this report of you to Thessaly?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 40,
+    "end_line": 42,
+    "chunk_id": 4,
+    "text": "Socrates. Not only that, my dear boy, but you may say further that I have never known of any one else who did, in my judgment."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 43,
+    "end_line": 44,
+    "chunk_id": 5,
+    "text": "Meno. Then you have never met Gorgias when he was at Athens?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 45,
+    "end_line": 46,
+    "chunk_id": 6,
+    "text": "Socrates. Yes, I have."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 47,
+    "end_line": 48,
+    "chunk_id": 7,
+    "text": "Meno. And did you not think that he knew?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 49,
+    "end_line": 54,
+    "chunk_id": 8,
+    "text": "Socrates. I have not a good memory, Meno, and therefore I cannot now tell what I thought of him at the time. And I dare say that he did know, and that you know what he said: please, therefore, to remind me of what he said; or, if you would rather, tell me your own view; for I suspect that you and he think much alike."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 55,
+    "end_line": 56,
+    "chunk_id": 9,
+    "text": "Meno. Very true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 57,
+    "end_line": 62,
+    "chunk_id": 10,
+    "text": "Socrates. Then as he is not here, never mind him, and do you tell me: By the gods, Meno, be generous, and tell me what you say that virtue is; for I shall be truly delighted to find that I have been mistaken, and that you and Gorgias do really have this knowledge; although I have been just saying that I have never found anybody who had."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 63,
+    "end_line": 74,
+    "chunk_id": 11,
+    "text": "Meno. There will be no difficulty, Socrates, in answering your question. Let us take first the virtue of a man-he should know how to administer the state, and in the administration of it to benefit his friends and harm his enemies; and he must also be careful not to suffer harm himself. A woman's virtue, if you wish to know about that, may also be easily described: her duty is to order her house, and keep what is indoors, and obey her husband. Every age, every condition of life, young or old, male or female, bond or free, has a different virtue: there are virtues numberless, and no lack of definitions of them; for virtue is relative to the actions and ages of each of us in all that we do. And the same may be said of vice, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 75,
+    "end_line": 83,
+    "chunk_id": 12,
+    "text": "Socrates. How fortunate I am, Meno! When I ask you for one virtue, you present me with a swarm of them, which are in your keeping. Suppose that I carry on the figure of the swarm, and ask of you, What is the nature of the bee? and you answer that there are many kinds of bees, and I reply: But do bees differ as bees, because there are many and different kinds of them; or are they not rather to be distinguished by some other quality, as for example beauty, size, or shape? How would you answer me?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 84,
+    "end_line": 86,
+    "chunk_id": 13,
+    "text": "Meno. I should answer that bees do not differ from one another, as bees."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 87,
+    "end_line": 90,
+    "chunk_id": 14,
+    "text": "Socrates. And if I went on to say: That is what I desire to know, Meno; tell me what is the quality in which they do not differ, but are all alike;-would you be able to answer?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 91,
+    "end_line": 92,
+    "chunk_id": 15,
+    "text": "Meno. I should."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 93,
+    "end_line": 97,
+    "chunk_id": 16,
+    "text": "Socrates. And so of the virtues, however many and different they may be, they have all a common nature which makes them virtues; and on this he who would answer the question, \"What is virtue?\" would do well to have his eye fixed: Do you understand?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 98,
+    "end_line": 100,
+    "chunk_id": 17,
+    "text": "Meno. I am beginning to understand; but I do not as yet take hold of the question as I could wish."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 101,
+    "end_line": 105,
+    "chunk_id": 18,
+    "text": "Socrates. When you say, Meno, that there is one virtue of a man, another of a woman, another of a child, and so on, does this apply only to virtue, or would you say the same of health, and size, and strength? Or is the nature of health always the same, whether in man or woman?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 106,
+    "end_line": 107,
+    "chunk_id": 19,
+    "text": "Meno. I should say that health is the same, both in man and woman."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 108,
+    "end_line": 112,
+    "chunk_id": 20,
+    "text": "Socrates. And is not this true of size and strength? If a woman is strong, she will be strong by reason of the same form and of the same strength subsisting in her which there is in the man. I mean to say that strength, as strength, whether of man or woman, is the same. Is there any difference?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 113,
+    "end_line": 114,
+    "chunk_id": 21,
+    "text": "Meno. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 115,
+    "end_line": 117,
+    "chunk_id": 22,
+    "text": "Socrates. And will not virtue, as virtue, be the same, whether in a child or in a grown-up person, in a woman or in a man?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 118,
+    "end_line": 120,
+    "chunk_id": 23,
+    "text": "Meno. I cannot help feeling, Socrates, that this case is different from the others."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 121,
+    "end_line": 123,
+    "chunk_id": 24,
+    "text": "Socrates. But why? Were you not saying that the virtue of a man was to order a state, and the virtue of a woman was to order a house?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 124,
+    "end_line": 125,
+    "chunk_id": 25,
+    "text": "Meno. I did say so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 126,
+    "end_line": 128,
+    "chunk_id": 26,
+    "text": "Socrates. And can either house or state or anything be well ordered without temperance and without justice?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 129,
+    "end_line": 130,
+    "chunk_id": 27,
+    "text": "Meno. Certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 131,
+    "end_line": 133,
+    "chunk_id": 28,
+    "text": "Socrates. Then they who order a state or a house temperately or justly order them with temperance and justice?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 134,
+    "end_line": 135,
+    "chunk_id": 29,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 136,
+    "end_line": 138,
+    "chunk_id": 30,
+    "text": "Socrates. Then both men and women, if they are to be good men and women, must have the same virtues of temperance and justice?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 139,
+    "end_line": 140,
+    "chunk_id": 31,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 141,
+    "end_line": 143,
+    "chunk_id": 32,
+    "text": "Socrates. And can either a young man or an elder one be good, if they are intemperate and unjust?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 144,
+    "end_line": 145,
+    "chunk_id": 33,
+    "text": "Meno. They cannot."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 146,
+    "end_line": 147,
+    "chunk_id": 34,
+    "text": "Socrates. They must be temperate and just?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 148,
+    "end_line": 149,
+    "chunk_id": 35,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 150,
+    "end_line": 152,
+    "chunk_id": 36,
+    "text": "Socrates. Then all men are good in the same way, and by participation in the same virtues?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 153,
+    "end_line": 154,
+    "chunk_id": 37,
+    "text": "Meno. Such is the inference."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 155,
+    "end_line": 157,
+    "chunk_id": 38,
+    "text": "Socrates. And they surely would not have been good in the same way, unless their virtue had been the same?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Meno",
+    "start_line": 158,
+    "end_line": 159,
+    "chunk_id": 39,
+    "text": "Meno. They would not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "definition_of_virtue",
+    "speaker": "Socrates",
+    "start_line": 160,
+    "end_line": 162,
+    "chunk_id": 40,
+    "text": "Socrates. Then now that the sameness of all virtue has been proven, try and remember what you and Gorgias say that virtue is."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 163,
+    "end_line": 164,
+    "chunk_id": 41,
+    "text": "Meno. Will you have one definition of them all?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 165,
+    "end_line": 166,
+    "chunk_id": 42,
+    "text": "Socrates. That is what I am seeking."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 167,
+    "end_line": 169,
+    "chunk_id": 43,
+    "text": "Meno. If you want to have one definition of them all, I know not what to say, but that virtue is the power of governing mankind."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 170,
+    "end_line": 174,
+    "chunk_id": 44,
+    "text": "Socrates. And does this definition of virtue include all virtue? Is virtue the same in a child and in a slave, Meno? Can the child govern his father, or the slave his master; and would he who governed be any longer a slave?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 175,
+    "end_line": 176,
+    "chunk_id": 45,
+    "text": "Meno. I think not, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 177,
+    "end_line": 180,
+    "chunk_id": 46,
+    "text": "Socrates. No, indeed; there would be small reason in that. Yet once more, fair friend; according to you, virtue is \"the power of governing\"; but do you not add \"justly and not unjustly\"?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 181,
+    "end_line": 182,
+    "chunk_id": 47,
+    "text": "Meno. Yes, Socrates; I agree there; for justice is virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 183,
+    "end_line": 184,
+    "chunk_id": 48,
+    "text": "Socrates. Would you say \"virtue,\" Meno, or \"a virtue\"?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 185,
+    "end_line": 186,
+    "chunk_id": 49,
+    "text": "Meno. What do you mean?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 187,
+    "end_line": 190,
+    "chunk_id": 50,
+    "text": "Socrates. I mean as I might say about anything; that a round, for example, is \"a figure\" and not simply \"figure,\" and I should adopt this mode of speaking, because there are other figures."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 191,
+    "end_line": 193,
+    "chunk_id": 51,
+    "text": "Meno. Quite right; and that is just what I am saying about virtue-that there are other virtues as well as justice."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 194,
+    "end_line": 196,
+    "chunk_id": 52,
+    "text": "Socrates. What are they? tell me the names of them, as I would tell you the names of the other figures if you asked me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 197,
+    "end_line": 199,
+    "chunk_id": 53,
+    "text": "Meno. Courage and temperance and wisdom and magnanimity are virtues; and there are many others."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 200,
+    "end_line": 204,
+    "chunk_id": 54,
+    "text": "Socrates. Yes, Meno; and again we are in the same case: in searching after one virtue we have found many, though not in the same way as before; but we have been unable to find the common virtue which runs through them all."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 205,
+    "end_line": 207,
+    "chunk_id": 55,
+    "text": "Meno. Why, Socrates, even now I am not able to follow you in the attempt to get at one common notion of virtue as of other things."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 208,
+    "end_line": 214,
+    "chunk_id": 56,
+    "text": "Socrates. No wonder; but I will try to get nearer if I can, for you know that all things have a common notion. Suppose now that some one asked you the question which I asked before: Meno, he would say, what is figure? And if you answered \"roundness,\" he would reply to you, in my way of speaking, by asking whether you would say that roundness is \"figure\" or \"a figure\"; and you would answer \"a figure.\""
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 215,
+    "end_line": 216,
+    "chunk_id": 57,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 217,
+    "end_line": 218,
+    "chunk_id": 58,
+    "text": "Socrates. And for this reason-that there are other figures?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 219,
+    "end_line": 220,
+    "chunk_id": 59,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 221,
+    "end_line": 223,
+    "chunk_id": 60,
+    "text": "Socrates. And if he proceeded to ask, What other figures are there? you would have told him."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 224,
+    "end_line": 225,
+    "chunk_id": 61,
+    "text": "Meno. I should."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 226,
+    "end_line": 230,
+    "chunk_id": 62,
+    "text": "Socrates. And if he similarly asked what colour is, and you answered whiteness, and the questioner rejoined, Would you say that whiteness is colour or a colour? you would reply, A colour, because there are other colours as well."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 231,
+    "end_line": 232,
+    "chunk_id": 63,
+    "text": "Meno. I should."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 233,
+    "end_line": 235,
+    "chunk_id": 64,
+    "text": "Socrates. And if he had said, Tell me what they are?-you would have told him of other colours which are colours just as much as whiteness."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 236,
+    "end_line": 237,
+    "chunk_id": 65,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 238,
+    "end_line": 245,
+    "chunk_id": 66,
+    "text": "Socrates. And suppose that he were to pursue the matter in my way, he would say: Ever and anon we are landed in particulars, but this is not what I want; tell me then, since you call them by a common name, and say that they are all figures, even when opposed to one another, what is that common nature which you designate as figure-which contains straight as well as round, and is no more one than the other-that would be your mode of speaking?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 246,
+    "end_line": 247,
+    "chunk_id": 67,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 248,
+    "end_line": 251,
+    "chunk_id": 68,
+    "text": "Socrates. And in speaking thus, you do not mean to say that the round is round any more than straight, or the straight any more straight than round?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 252,
+    "end_line": 253,
+    "chunk_id": 69,
+    "text": "Meno. Certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 254,
+    "end_line": 256,
+    "chunk_id": 70,
+    "text": "Socrates. You only assert that the round figure is not more a figure than the straight, or the straight than the round?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 257,
+    "end_line": 258,
+    "chunk_id": 71,
+    "text": "Meno. Very true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 259,
+    "end_line": 269,
+    "chunk_id": 72,
+    "text": "Socrates. To what then do we give the name of figure? Try and answer. Suppose that when a person asked you this question either about figure or colour, you were to reply, Man, I do not understand what you want, or know what you are saying; he would look rather astonished and say: Do you not understand that I am looking for the \"simile in multis\"? And then he might put the question in another form: Mono, he might say, what is that \"simile in multis\" which you call figure, and which includes not only round and straight figures, but all? Could you not answer that question, Meno? I wish that you would try; the attempt will be good practice with a view to the answer about virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 270,
+    "end_line": 271,
+    "chunk_id": 73,
+    "text": "Meno. I would rather that you should answer, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 272,
+    "end_line": 273,
+    "chunk_id": 74,
+    "text": "Socrates. Shall I indulge you?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 274,
+    "end_line": 275,
+    "chunk_id": 75,
+    "text": "Meno. By all means."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 276,
+    "end_line": 277,
+    "chunk_id": 76,
+    "text": "Socrates. And then you will tell me about virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 278,
+    "end_line": 279,
+    "chunk_id": 77,
+    "text": "Meno. I will."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 280,
+    "end_line": 281,
+    "chunk_id": 78,
+    "text": "Socrates. Then I must do my best, for there is a prize to be won."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 282,
+    "end_line": 283,
+    "chunk_id": 79,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 284,
+    "end_line": 288,
+    "chunk_id": 80,
+    "text": "Socrates. Well, I will try and explain to you what figure is. What do you say to this answer?-Figure is the only thing which always follows colour. Will you be satisfied with it, as I am sure that I should be, if you would let me have a similar definition of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 289,
+    "end_line": 290,
+    "chunk_id": 81,
+    "text": "Meno. But, Socrates, it is such a simple answer."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 291,
+    "end_line": 292,
+    "chunk_id": 82,
+    "text": "Socrates. Why simple?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 293,
+    "end_line": 297,
+    "chunk_id": 83,
+    "text": "Meno. Because, according to you, figure is that which always follows colour. (Soc. Granted.)"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 298,
+    "end_line": 301,
+    "chunk_id": 84,
+    "text": "Meno. But if a person were to say that he does not know what colour is, any more than what figure is-what sort of answer would you have given him?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 302,
+    "end_line": 315,
+    "chunk_id": 85,
+    "text": "Socrates. I should have told him the truth. And if he were a philosopher of the eristic and antagonistic sort, I should say to him: You have my answer, and if I am wrong, your business is to take up the argument and refute me. But if we were friends, and were talking as you and I are now, I should reply in a milder strain and more in the dialectician's vein; that is to say, I should not only speak the truth, but I should make use of premisses which the person interrogated would be willing to admit. And this is the way in which I shall endeavour to approach you. You will acknowledge, will you not, that there is such a thing as an end, or termination, or extremity?-all which words use in the same sense, although I am aware that Prodicus might draw distinctions about them: but still you, I am sure, would speak of a thing as ended or terminated-that is all which I am saying-not anything very difficult."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 316,
+    "end_line": 317,
+    "chunk_id": 86,
+    "text": "Meno. Yes, I should; and I believe that I understand your meaning."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 318,
+    "end_line": 320,
+    "chunk_id": 87,
+    "text": "Socrates. And you would speak of a surface and also of a solid, as for example in geometry."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 321,
+    "end_line": 322,
+    "chunk_id": 88,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 323,
+    "end_line": 326,
+    "chunk_id": 89,
+    "text": "Socrates. Well then, you are now in a condition to understand my definition of figure. I define figure to be that in which the solid ends; or, more concisely, the limit of solid."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 327,
+    "end_line": 328,
+    "chunk_id": 90,
+    "text": "Meno. And now, Socrates, what is colour?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 329,
+    "end_line": 332,
+    "chunk_id": 91,
+    "text": "Socrates. You are outrageous, Meno, in thus plaguing a poor old man to give you an answer, when you will not take the trouble of remembering what is Gorgias' definition of virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 333,
+    "end_line": 334,
+    "chunk_id": 92,
+    "text": "Meno. When you have told me what I ask, I will tell you, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 335,
+    "end_line": 337,
+    "chunk_id": 93,
+    "text": "Socrates. A man who was blindfolded has only to hear you talking, and he would know that you are a fair creature and have still many lovers."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 338,
+    "end_line": 339,
+    "chunk_id": 94,
+    "text": "Meno. Why do you think so?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 340,
+    "end_line": 344,
+    "chunk_id": 95,
+    "text": "Socrates. Why, because you always speak in imperatives: like all beauties when they are in their prime, you are tyrannical; and also, as I suspect, you have found out that I have weakness for the fair, and therefore to humour you I must answer."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 345,
+    "end_line": 346,
+    "chunk_id": 96,
+    "text": "Meno. Please do."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 347,
+    "end_line": 349,
+    "chunk_id": 97,
+    "text": "Socrates. Would you like me to answer you after the manner of Gorgias, which is familiar to you?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 350,
+    "end_line": 351,
+    "chunk_id": 98,
+    "text": "Meno. I should like nothing better."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 352,
+    "end_line": 354,
+    "chunk_id": 99,
+    "text": "Socrates. Do not he and you and Empedocles say that there are certain effluences of existence?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 355,
+    "end_line": 356,
+    "chunk_id": 100,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 357,
+    "end_line": 358,
+    "chunk_id": 101,
+    "text": "Socrates. And passages into which and through which the effluences pass?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 359,
+    "end_line": 360,
+    "chunk_id": 102,
+    "text": "Meno. Exactly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 361,
+    "end_line": 363,
+    "chunk_id": 103,
+    "text": "Socrates. And some of the effluences fit into the passages, and some of them are too small or too large?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 364,
+    "end_line": 365,
+    "chunk_id": 104,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 366,
+    "end_line": 367,
+    "chunk_id": 105,
+    "text": "Socrates. And there is such a thing as sight?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 368,
+    "end_line": 369,
+    "chunk_id": 106,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 370,
+    "end_line": 372,
+    "chunk_id": 107,
+    "text": "Socrates. And now, as Pindar says, \"read my meaning\" colour is an effluence of form, commensurate with sight, and palpable to sense."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 373,
+    "end_line": 374,
+    "chunk_id": 108,
+    "text": "Meno. That, Socrates, appears to me to be an admirable answer."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 375,
+    "end_line": 379,
+    "chunk_id": 109,
+    "text": "Socrates. Why, yes, because it happens to be one which you have been in the habit of hearing: and your wit will have discovered, I suspect, that you may explain in the same way the nature of sound and smell, and of many other similar phenomena."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 380,
+    "end_line": 381,
+    "chunk_id": 110,
+    "text": "Meno. Quite true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 382,
+    "end_line": 384,
+    "chunk_id": 111,
+    "text": "Socrates. The answer, Meno, was in the orthodox solemn vein, and therefore was more acceptable to you than the other answer about figure."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 385,
+    "end_line": 386,
+    "chunk_id": 112,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 387,
+    "end_line": 391,
+    "chunk_id": 113,
+    "text": "Socrates. And yet, O son of Alexidemus, I cannot help thinking that the other was the better; and I am sure that you would be of the same opinion, if you would only stay and be initiated, and were not compelled, as you said yesterday, to go away before the mysteries."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 392,
+    "end_line": 393,
+    "chunk_id": 114,
+    "text": "Meno. But I will stay, Socrates, if you will give me many such answers."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 394,
+    "end_line": 401,
+    "chunk_id": 115,
+    "text": "Socrates. Well then, for my own sake as well as for yours, I will do my very best; but I am afraid that I shall not be able to give you very many as good: and now, in your turn, you are to fulfil your promise, and tell me what virtue is in the universal; and do not make a singular into a plural, as the facetious say of those who break a thing, but deliver virtue to me whole and sound, and not broken into a number of pieces: I have given you the pattern."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 402,
+    "end_line": 408,
+    "chunk_id": 116,
+    "text": "Meno. Well then, Socrates, virtue, as I take it, is when he, who desires the honourable, is able to provide it for himself; so the poet says, and I say too- Virtue is the desire of things honourable and the power of attaining them."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 409,
+    "end_line": 410,
+    "chunk_id": 117,
+    "text": "Socrates. And does he who desires the honourable also desire the good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 411,
+    "end_line": 412,
+    "chunk_id": 118,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 413,
+    "end_line": 415,
+    "chunk_id": 119,
+    "text": "Socrates. Then are there some who desire the evil and others who desire the good? Do not all men, my dear sir, desire good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 416,
+    "end_line": 417,
+    "chunk_id": 120,
+    "text": "Meno. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 418,
+    "end_line": 419,
+    "chunk_id": 121,
+    "text": "Socrates. There are some who desire evil?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 420,
+    "end_line": 421,
+    "chunk_id": 122,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 422,
+    "end_line": 424,
+    "chunk_id": 123,
+    "text": "Socrates. Do you mean that they think the evils which they desire, to be good; or do they know that they are evil and yet desire them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 425,
+    "end_line": 426,
+    "chunk_id": 124,
+    "text": "Meno. Both, I think."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 427,
+    "end_line": 429,
+    "chunk_id": 125,
+    "text": "Socrates. And do you really imagine, Meno, that a man knows evils to be evils and desires them notwithstanding?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 430,
+    "end_line": 431,
+    "chunk_id": 126,
+    "text": "Meno. Certainly I do."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 432,
+    "end_line": 433,
+    "chunk_id": 127,
+    "text": "Socrates. And desire is of possession?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 434,
+    "end_line": 435,
+    "chunk_id": 128,
+    "text": "Meno. Yes, of possession."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 436,
+    "end_line": 438,
+    "chunk_id": 129,
+    "text": "Socrates. And does he think that the evils will do good to him who possesses them, or does he know that they will do him harm?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 439,
+    "end_line": 441,
+    "chunk_id": 130,
+    "text": "Meno. There are some who think that the evils will do them good, and others who know that they will do them harm."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 442,
+    "end_line": 444,
+    "chunk_id": 131,
+    "text": "Socrates. And, in your opinion, do those who think that they will do them good know that they are evils?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 445,
+    "end_line": 446,
+    "chunk_id": 132,
+    "text": "Meno. Certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 447,
+    "end_line": 451,
+    "chunk_id": 133,
+    "text": "Socrates. Is it not obvious that those who are ignorant of their nature do not desire them; but they desire what they suppose to be goods although they are really evils; and if they are mistaken and suppose the evils to be good they really desire goods?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 452,
+    "end_line": 453,
+    "chunk_id": 134,
+    "text": "Meno. Yes, in that case."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 454,
+    "end_line": 457,
+    "chunk_id": 135,
+    "text": "Socrates. Well, and do those who, as you say, desire evils, and think that evils are hurtful to the possessor of them, know that they will be hurt by them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 458,
+    "end_line": 459,
+    "chunk_id": 136,
+    "text": "Meno. They must know it."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 460,
+    "end_line": 462,
+    "chunk_id": 137,
+    "text": "Socrates. And must they not suppose that those who are hurt are miserable in proportion to the hurt which is inflicted upon them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 463,
+    "end_line": 464,
+    "chunk_id": 138,
+    "text": "Meno. How can it be otherwise?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 465,
+    "end_line": 466,
+    "chunk_id": 139,
+    "text": "Socrates. But are not the miserable ill-fated?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 467,
+    "end_line": 468,
+    "chunk_id": 140,
+    "text": "Meno. Yes, indeed."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 469,
+    "end_line": 470,
+    "chunk_id": 141,
+    "text": "Socrates. And does any one desire to be miserable and ill-fated?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 471,
+    "end_line": 472,
+    "chunk_id": 142,
+    "text": "Meno. I should say not, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 473,
+    "end_line": 476,
+    "chunk_id": 143,
+    "text": "Socrates. But if there is no one who desires to be miserable, there is no one, Meno, who desires evil; for what is misery but the desire and possession of evil?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 477,
+    "end_line": 479,
+    "chunk_id": 144,
+    "text": "Meno. That appears to be the truth, Socrates, and I admit that nobody desires evil."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 480,
+    "end_line": 482,
+    "chunk_id": 145,
+    "text": "Socrates. And yet, were you not saying just now that virtue is the desire and power of attaining good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 483,
+    "end_line": 484,
+    "chunk_id": 146,
+    "text": "Meno. Yes, I did say so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 485,
+    "end_line": 487,
+    "chunk_id": 147,
+    "text": "Socrates. But if this be affirmed, then the desire of good is common to all, and one man is no better than another in that respect?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 488,
+    "end_line": 489,
+    "chunk_id": 148,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 490,
+    "end_line": 492,
+    "chunk_id": 149,
+    "text": "Socrates. And if one man is not better than another in desiring good, he must be better in the power of attaining it?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 493,
+    "end_line": 494,
+    "chunk_id": 150,
+    "text": "Meno. Exactly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 495,
+    "end_line": 497,
+    "chunk_id": 151,
+    "text": "Socrates. Then, according to your definition, virtue would appear to be the power of attaining good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 498,
+    "end_line": 500,
+    "chunk_id": 152,
+    "text": "Meno. I entirely approve, Socrates, of the manner in which you now view this matter."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 501,
+    "end_line": 504,
+    "chunk_id": 153,
+    "text": "Socrates. Then let us see whether what you say is true from another point of view; for very likely you may be right:-You affirm virtue to be the power of attaining goods?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 505,
+    "end_line": 506,
+    "chunk_id": 154,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 507,
+    "end_line": 510,
+    "chunk_id": 155,
+    "text": "Socrates. And the goods which mean are such as health and wealth and the possession of gold and silver, and having office and honour in the state-those are what you would call goods?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 511,
+    "end_line": 512,
+    "chunk_id": 156,
+    "text": "Meno. Yes, I should include all those."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 513,
+    "end_line": 518,
+    "chunk_id": 157,
+    "text": "Socrates. Then, according to Meno, who is the hereditary friend of the great king, virtue is the power of getting silver and gold; and would you add that they must be gained piously, justly, or do you deem this to be of no consequence? And is any mode of acquisition, even if unjust and dishonest, equally to be deemed virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 519,
+    "end_line": 520,
+    "chunk_id": 158,
+    "text": "Meno. Not virtue, Socrates, but vice."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 521,
+    "end_line": 524,
+    "chunk_id": 159,
+    "text": "Socrates. Then justice or temperance or holiness, or some other part of virtue, as would appear, must accompany the acquisition, and without them the mere acquisition of good will not be virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 525,
+    "end_line": 526,
+    "chunk_id": 160,
+    "text": "Meno. Why, how can there be virtue without these?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 527,
+    "end_line": 530,
+    "chunk_id": 161,
+    "text": "Socrates. And the non-acquisition of gold and silver in a dishonest manner for oneself or another, or in other words the want of them, may be equally virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 531,
+    "end_line": 532,
+    "chunk_id": 162,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 533,
+    "end_line": 536,
+    "chunk_id": 163,
+    "text": "Socrates. Then the acquisition of such goods is no more virtue than the non-acquisition and want of them, but whatever is accompanied by justice or honesty is virtue, and whatever is devoid of justice is vice."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 537,
+    "end_line": 538,
+    "chunk_id": 164,
+    "text": "Meno. It cannot be otherwise, in my judgment."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 539,
+    "end_line": 541,
+    "chunk_id": 165,
+    "text": "Socrates. And were we not saying just now that justice, temperance, and the like, were each of them a part of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 542,
+    "end_line": 543,
+    "chunk_id": 166,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 544,
+    "end_line": 545,
+    "chunk_id": 167,
+    "text": "Socrates. And so, Meno, this is the way in which you mock me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 546,
+    "end_line": 547,
+    "chunk_id": 168,
+    "text": "Meno. Why do you say that, Socrates?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 548,
+    "end_line": 553,
+    "chunk_id": 169,
+    "text": "Socrates. Why, because I asked you to deliver virtue into my hands whole and unbroken, and I gave you a pattern according to which you were to frame your answer; and you have forgotten already, and tell me that virtue is the power of attaining good justly, or with justice; and justice you acknowledge to be a part of virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 554,
+    "end_line": 555,
+    "chunk_id": 170,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 556,
+    "end_line": 559,
+    "chunk_id": 171,
+    "text": "Socrates. Then it follows from your own admissions, that virtue is doing what you do with a part of virtue; for justice and the like are said by you to be parts of virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 560,
+    "end_line": 561,
+    "chunk_id": 172,
+    "text": "Meno. What of that?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 562,
+    "end_line": 573,
+    "chunk_id": 173,
+    "text": "Socrates. What of that! Why, did not I ask you to tell me the nature of virtue as a whole? And you are very far from telling me this; but declare every action to be virtue which is done with a part of virtue; as though you had told me and I must already know the whole of virtue, and this too when frittered away into little pieces. And, therefore, my dear I fear that I must begin again and repeat the same question: What is virtue? for otherwise, I can only say, that every action done with a part of virtue is virtue; what else is the meaning of saying that every action done with justice is virtue? Ought I not to ask the question over again; for can any one who does not know virtue know a part of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 574,
+    "end_line": 575,
+    "chunk_id": 174,
+    "text": "Meno. No; I do not say that he can."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 576,
+    "end_line": 578,
+    "chunk_id": 175,
+    "text": "Socrates. Do you remember how, in the example of figure, we rejected any answer given in terms which were as yet unexplained or unadmitted?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 579,
+    "end_line": 580,
+    "chunk_id": 176,
+    "text": "Meno. Yes, Socrates; and we were quite right in doing so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 581,
+    "end_line": 585,
+    "chunk_id": 177,
+    "text": "Socrates. But then, my friend, do not suppose that we can explain to any one the nature of virtue as a whole through some unexplained portion of virtue, or anything at all in that fashion; we should only have to ask over again the old question, What is virtue? Am I not right?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 586,
+    "end_line": 587,
+    "chunk_id": 178,
+    "text": "Meno. I believe that you are."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 588,
+    "end_line": 590,
+    "chunk_id": 179,
+    "text": "Socrates. Then begin again, and answer me, What, according to you and your friend Gorgias, is the definition of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 591,
+    "end_line": 605,
+    "chunk_id": 180,
+    "text": "Meno. O Socrates, I used to be told, before I knew you, that you were always doubting yourself and making others doubt; and now you are casting your spells over me, and I am simply getting bewitched and enchanted, and am at my wits' end. And if I may venture to make a jest upon you, you seem to me both in your appearance and in your power over others to be very like the flat torpedo fish, who torpifies those who come near him and touch him, as you have now torpified me, I think. For my soul and my tongue are really torpid, and I do not know how to answer you; and though I have been delivered of an infinite variety of speeches about virtue before now, and to many persons-and very good ones they were, as I thought-at this moment I cannot even say what virtue is. And I think that. you are very wise in not voyaging and going away from home, for if you did in other places as do in Athens, you would be cast into prison as a magician."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 606,
+    "end_line": 607,
+    "chunk_id": 181,
+    "text": "Socrates. You are a rogue, Meno, and had all but caught me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 608,
+    "end_line": 609,
+    "chunk_id": 182,
+    "text": "Meno. What do you mean, Socrates?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 610,
+    "end_line": 611,
+    "chunk_id": 183,
+    "text": "Socrates. I can tell why you made a simile about me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 612,
+    "end_line": 613,
+    "chunk_id": 184,
+    "text": "Meno. Why?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 614,
+    "end_line": 624,
+    "chunk_id": 185,
+    "text": "Socrates. In order that I might make another simile about you. For I know that all pretty young gentlemen like to have pretty similes made about them-as well they may-but I shall not return the compliment. As to my being a torpedo, if the torpedo is torpid as well as the cause of torpidity in others, then indeed I am a torpedo, but not otherwise; for I perplex others, not because I am clear, but because I am utterly perplexed myself. And now I know not what virtue is, and you seem to be in the same case, although you did once perhaps know before you touched me. However, I have no objection to join with you in the enquiry."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Meno",
+    "start_line": 625,
+    "end_line": 629,
+    "chunk_id": 186,
+    "text": "Meno. And how will you enquire, Socrates, into that which you do not know? What will you put forth as the subject of enquiry? And if you find what you want, how will you ever know that this is the thing which you did not know?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "paradox_recollection",
+    "speaker": "Socrates",
+    "start_line": 630,
+    "end_line": 635,
+    "chunk_id": 187,
+    "text": "Socrates. I know, Meno, what you mean; but just see what a tiresome dispute you are introducing. You argue that man cannot enquire either about that which he knows, or about that which he does not know; for if he knows, he has no need to enquire; and if not, he cannot; for he does not know the, very subject about which he is to enquire."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 636,
+    "end_line": 637,
+    "chunk_id": 188,
+    "text": "Meno. Well, Socrates, and is not the argument sound?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 638,
+    "end_line": 639,
+    "chunk_id": 189,
+    "text": "Socrates. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 640,
+    "end_line": 641,
+    "chunk_id": 190,
+    "text": "Meno. Why not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 642,
+    "end_line": 644,
+    "chunk_id": 191,
+    "text": "Socrates. I will tell you why: I have heard from certain wise men and women who spoke of things divine that-"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 645,
+    "end_line": 646,
+    "chunk_id": 192,
+    "text": "Meno. What did they say?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 647,
+    "end_line": 648,
+    "chunk_id": 193,
+    "text": "Socrates. They spoke of a glorious truth, as I conceive."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 649,
+    "end_line": 650,
+    "chunk_id": 194,
+    "text": "Meno. What was it? and who were they?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 651,
+    "end_line": 676,
+    "chunk_id": 195,
+    "text": "Socrates. Some of them were priests and priestesses, who had studied how they might be able to give a reason of their profession: there, have been poets also, who spoke of these things by inspiration, like Pindar, and many others who were inspired. And they say-mark, now, and see whether their words are true-they say that the soul of man is immortal, and at one time has an end, which is termed dying, and at another time is born again, but is never destroyed. And the moral is, that a man ought to live always in perfect holiness. \"For in the ninth year Persephone sends the souls of those from whom she has received the penalty of ancient crime back again from beneath into the light of the sun above, and these are they who become noble kings and mighty men and great in wisdom and are called saintly heroes in after ages.\" The soul, then, as being immortal, and having been born again many times, rand having seen all things that exist, whether in this world or in the world below, has knowledge of them all; and it is no wonder that she should be able to call to remembrance all that she ever knew about virtue, and about everything; for as all nature is akin, and the soul has learned all things; there is no difficulty in her eliciting or as men say learning, out of a single recollection -all the rest, if a man is strenuous and does not faint; for all enquiry and all learning is but recollection. And therefore we ought not to listen to this sophistical argument about the impossibility of enquiry: for it will make us idle; and is sweet only to the sluggard; but the other saying will make us active and inquisitive. In that confiding, I will gladly enquire with you into the nature of virtue."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 677,
+    "end_line": 680,
+    "chunk_id": 196,
+    "text": "Meno. Yes, Socrates; but what do you mean by saying that we do not learn, and that what we call learning is only a process of recollection? Can you teach me how this is?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 681,
+    "end_line": 685,
+    "chunk_id": 197,
+    "text": "Socrates. I told you, Meno, just now that you were a rogue, and now you ask whether I can teach you, when I am saying that there is no teaching, but only recollection; and thus you imagine that you will involve me in a contradiction."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 686,
+    "end_line": 689,
+    "chunk_id": 198,
+    "text": "Meno. Indeed, Socrates, I protest that I had no such intention. I only asked the question from habit; but if you can prove to me that what you say is true, I wish that you would."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 690,
+    "end_line": 693,
+    "chunk_id": 199,
+    "text": "Socrates. It will be no easy matter, but I will try to please you to the utmost of my power. Suppose that you call one of your numerous attendants, that I may demonstrate on him."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 694,
+    "end_line": 695,
+    "chunk_id": 200,
+    "text": "Meno. Certainly. Come hither, boy."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 696,
+    "end_line": 697,
+    "chunk_id": 201,
+    "text": "Socrates. He is Greek, and speaks Greek, does he not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 698,
+    "end_line": 699,
+    "chunk_id": 202,
+    "text": "Meno. Yes, indeed; he was born in the house."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 700,
+    "end_line": 702,
+    "chunk_id": 203,
+    "text": "Socrates. Attend now to the questions which I ask him, and observe whether he learns of me or only remembers."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 703,
+    "end_line": 704,
+    "chunk_id": 204,
+    "text": "Meno. I will."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 705,
+    "end_line": 706,
+    "chunk_id": 205,
+    "text": "Socrates. Tell me, boy, do you know that a figure like this is a square?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 707,
+    "end_line": 708,
+    "chunk_id": 206,
+    "text": "Slave. I do."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 709,
+    "end_line": 710,
+    "chunk_id": 207,
+    "text": "Socrates. And you know that a square figure has these four lines equal?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 711,
+    "end_line": 712,
+    "chunk_id": 208,
+    "text": "Slave. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 713,
+    "end_line": 715,
+    "chunk_id": 209,
+    "text": "Socrates. And these lines which I have drawn through the middle of the square are also equal?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 716,
+    "end_line": 717,
+    "chunk_id": 210,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 718,
+    "end_line": 719,
+    "chunk_id": 211,
+    "text": "Socrates. A square may be of any size?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 720,
+    "end_line": 721,
+    "chunk_id": 212,
+    "text": "Slave. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 722,
+    "end_line": 726,
+    "chunk_id": 213,
+    "text": "Socrates. And if one side of the figure be of two feet, and the other side be of two feet, how much will the whole be? Let me explain: if in one direction the space was of two feet, and in other direction of one foot, the whole would be of two feet taken once?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 727,
+    "end_line": 728,
+    "chunk_id": 214,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 729,
+    "end_line": 731,
+    "chunk_id": 215,
+    "text": "Socrates. But since this side is also of two feet, there are twice two feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 732,
+    "end_line": 733,
+    "chunk_id": 216,
+    "text": "Slave. There are."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 734,
+    "end_line": 735,
+    "chunk_id": 217,
+    "text": "Socrates. Then the square is of twice two feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 736,
+    "end_line": 737,
+    "chunk_id": 218,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 738,
+    "end_line": 739,
+    "chunk_id": 219,
+    "text": "Socrates. And how many are twice two feet? count and tell me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 740,
+    "end_line": 741,
+    "chunk_id": 220,
+    "text": "Slave. Four, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 742,
+    "end_line": 744,
+    "chunk_id": 221,
+    "text": "Socrates. And might there not be another square twice as large as this, and having like this the lines equal?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 745,
+    "end_line": 746,
+    "chunk_id": 222,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 747,
+    "end_line": 748,
+    "chunk_id": 223,
+    "text": "Socrates. And of how many feet will that be?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 749,
+    "end_line": 750,
+    "chunk_id": 224,
+    "text": "Slave. Of eight feet."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 751,
+    "end_line": 753,
+    "chunk_id": 225,
+    "text": "Socrates. And now try and tell me the length of the line which forms the side of that double square: this is two feet-what will that be?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 754,
+    "end_line": 755,
+    "chunk_id": 226,
+    "text": "Slave. Clearly, Socrates, it will be double."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 756,
+    "end_line": 760,
+    "chunk_id": 227,
+    "text": "Socrates. Do you observe, Meno, that I am not teaching the boy anything, but only asking him questions; and now he fancies that he knows how long a line is necessary in order to produce a figure of eight square feet; does he not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 761,
+    "end_line": 762,
+    "chunk_id": 228,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 763,
+    "end_line": 764,
+    "chunk_id": 229,
+    "text": "Socrates. And does he really know?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 765,
+    "end_line": 766,
+    "chunk_id": 230,
+    "text": "Meno. Certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 767,
+    "end_line": 769,
+    "chunk_id": 231,
+    "text": "Socrates. He only guesses that because the square is double, the line is double."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 770,
+    "end_line": 771,
+    "chunk_id": 232,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 772,
+    "end_line": 778,
+    "chunk_id": 233,
+    "text": "Socrates. Observe him while he recalls the steps in regular order. (To the Boy.) Tell me, boy, do you assert that a double space comes from a double line? Remember that I am not speaking of an oblong, but of a figure equal every way, and twice the size of this-that is to say of eight feet; and I want to know whether you still say that a double square comes from double line?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 779,
+    "end_line": 780,
+    "chunk_id": 234,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 781,
+    "end_line": 783,
+    "chunk_id": 235,
+    "text": "Socrates. But does not this line become doubled if we add another such line here?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 784,
+    "end_line": 785,
+    "chunk_id": 236,
+    "text": "Slave. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 786,
+    "end_line": 787,
+    "chunk_id": 237,
+    "text": "Socrates. And four such lines will make a space containing eight feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 788,
+    "end_line": 789,
+    "chunk_id": 238,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 790,
+    "end_line": 792,
+    "chunk_id": 239,
+    "text": "Socrates. Let us describe such a figure: Would you not say that this is the figure of eight feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 793,
+    "end_line": 794,
+    "chunk_id": 240,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 795,
+    "end_line": 797,
+    "chunk_id": 241,
+    "text": "Socrates. And are there not these four divisions in the figure, each of which is equal to the figure of four feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 798,
+    "end_line": 799,
+    "chunk_id": 242,
+    "text": "Slave. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 800,
+    "end_line": 801,
+    "chunk_id": 243,
+    "text": "Socrates. And is not that four times four?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 802,
+    "end_line": 803,
+    "chunk_id": 244,
+    "text": "Slave. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 804,
+    "end_line": 805,
+    "chunk_id": 245,
+    "text": "Socrates. And four times is not double?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 806,
+    "end_line": 807,
+    "chunk_id": 246,
+    "text": "Slave. No, indeed."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 808,
+    "end_line": 809,
+    "chunk_id": 247,
+    "text": "Socrates. But how much?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 810,
+    "end_line": 811,
+    "chunk_id": 248,
+    "text": "Slave. Four times as much."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 812,
+    "end_line": 814,
+    "chunk_id": 249,
+    "text": "Socrates. Therefore the double line, boy, has given a space, not twice, but four times as much."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 815,
+    "end_line": 816,
+    "chunk_id": 250,
+    "text": "Slave. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 817,
+    "end_line": 818,
+    "chunk_id": 251,
+    "text": "Socrates. Four times four are sixteen-are they not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 819,
+    "end_line": 820,
+    "chunk_id": 252,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 821,
+    "end_line": 823,
+    "chunk_id": 253,
+    "text": "Socrates. What line would give you a space of right feet, as this gives one of sixteen feet;-do you see?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 824,
+    "end_line": 825,
+    "chunk_id": 254,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 826,
+    "end_line": 827,
+    "chunk_id": 255,
+    "text": "Socrates. And the space of four feet is made from this half line?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 828,
+    "end_line": 829,
+    "chunk_id": 256,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 830,
+    "end_line": 832,
+    "chunk_id": 257,
+    "text": "Socrates. Good; and is not a space of eight feet twice the size of this, and half the size of the other?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 833,
+    "end_line": 834,
+    "chunk_id": 258,
+    "text": "Slave. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 835,
+    "end_line": 837,
+    "chunk_id": 259,
+    "text": "Socrates. Such a space, then, will be made out of a line greater than this one, and less than that one?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 838,
+    "end_line": 839,
+    "chunk_id": 260,
+    "text": "Slave. Yes; I think so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 840,
+    "end_line": 842,
+    "chunk_id": 261,
+    "text": "Socrates. Very good; I like to hear you say what you think. And now tell me, is not this a line of two feet and that of four?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 843,
+    "end_line": 844,
+    "chunk_id": 262,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 845,
+    "end_line": 847,
+    "chunk_id": 263,
+    "text": "Socrates. Then the line which forms the side of eight feet ought to be more than this line of two feet, and less than the other of four feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 848,
+    "end_line": 849,
+    "chunk_id": 264,
+    "text": "Slave. It ought."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 850,
+    "end_line": 851,
+    "chunk_id": 265,
+    "text": "Socrates. Try and see if you can tell me how much it will be."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 852,
+    "end_line": 853,
+    "chunk_id": 266,
+    "text": "Slave. Three feet."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 854,
+    "end_line": 858,
+    "chunk_id": 267,
+    "text": "Socrates. Then if we add a half to this line of two, that will be the line of three. Here are two and there is one; and on the other side, here are two also and there is one: and that makes the figure of which you speak?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 859,
+    "end_line": 860,
+    "chunk_id": 268,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 861,
+    "end_line": 863,
+    "chunk_id": 269,
+    "text": "Socrates. But if there are three feet this way and three feet that way, the whole space will be three times three feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 864,
+    "end_line": 865,
+    "chunk_id": 270,
+    "text": "Slave. That is evident."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 866,
+    "end_line": 867,
+    "chunk_id": 271,
+    "text": "Socrates. And how much are three times three feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 868,
+    "end_line": 869,
+    "chunk_id": 272,
+    "text": "Slave. Nine."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 870,
+    "end_line": 871,
+    "chunk_id": 273,
+    "text": "Socrates. And how much is the double of four?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 872,
+    "end_line": 873,
+    "chunk_id": 274,
+    "text": "Slave. Eight."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 874,
+    "end_line": 875,
+    "chunk_id": 275,
+    "text": "Socrates. Then the figure of eight is not made out of a of three?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 876,
+    "end_line": 877,
+    "chunk_id": 276,
+    "text": "Slave. No."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 878,
+    "end_line": 880,
+    "chunk_id": 277,
+    "text": "Socrates. But from what line?-tell me exactly; and if you would rather not reckon, try and show me the line."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 881,
+    "end_line": 882,
+    "chunk_id": 278,
+    "text": "Slave. Indeed, Socrates, I do not know."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 883,
+    "end_line": 888,
+    "chunk_id": 279,
+    "text": "Socrates. Do you see, Meno, what advances he has made in his power of recollection? He did not know at first, and he does not know now, what is the side of a figure of eight feet: but then he thought that he knew, and answered confidently as if he knew, and had no difficulty; now he has a difficulty, and neither knows nor fancies that he knows."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 889,
+    "end_line": 890,
+    "chunk_id": 280,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 891,
+    "end_line": 892,
+    "chunk_id": 281,
+    "text": "Socrates. Is he not better off in knowing his ignorance?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 893,
+    "end_line": 894,
+    "chunk_id": 282,
+    "text": "Meno. I think that he is."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 895,
+    "end_line": 897,
+    "chunk_id": 283,
+    "text": "Socrates. If we have made him doubt, and given him the \"torpedo's shock,\" have we done him any harm?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 898,
+    "end_line": 899,
+    "chunk_id": 284,
+    "text": "Meno. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 900,
+    "end_line": 904,
+    "chunk_id": 285,
+    "text": "Socrates. We have certainly, as would seem, assisted him in some degree to the discovery of the truth; and now he will wish to remedy his ignorance, but then he would have been ready to tell all the world again and again that the double space should have a double side."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 905,
+    "end_line": 906,
+    "chunk_id": 286,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 907,
+    "end_line": 911,
+    "chunk_id": 287,
+    "text": "Socrates. But do you suppose that he would ever have enquired into or learned what he fancied that he knew, though he was really ignorant of it, until he had fallen into perplexity under the idea that he did not know, and had desired to know?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 912,
+    "end_line": 913,
+    "chunk_id": 288,
+    "text": "Meno. I think not, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 914,
+    "end_line": 915,
+    "chunk_id": 289,
+    "text": "Socrates. Then he was the better for the torpedo's touch?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 916,
+    "end_line": 917,
+    "chunk_id": 290,
+    "text": "Meno. I think so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 918,
+    "end_line": 923,
+    "chunk_id": 291,
+    "text": "Socrates. Mark now the farther development. I shall only ask him, and not teach him, and he shall share the enquiry with me: and do you watch and see if you find me telling or explaining anything to him, instead of eliciting his opinion. Tell me, boy, is not this a square of four feet which I have drawn?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 924,
+    "end_line": 925,
+    "chunk_id": 292,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 926,
+    "end_line": 927,
+    "chunk_id": 293,
+    "text": "Socrates. And now I add another square equal to the former one?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 928,
+    "end_line": 929,
+    "chunk_id": 294,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 930,
+    "end_line": 931,
+    "chunk_id": 295,
+    "text": "Socrates. And a third, which is equal to either of them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 932,
+    "end_line": 933,
+    "chunk_id": 296,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 934,
+    "end_line": 935,
+    "chunk_id": 297,
+    "text": "Socrates. Suppose that we fill up the vacant corner?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 936,
+    "end_line": 937,
+    "chunk_id": 298,
+    "text": "Slave. Very good."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 938,
+    "end_line": 939,
+    "chunk_id": 299,
+    "text": "Socrates. Here, then, there are four equal spaces?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 940,
+    "end_line": 941,
+    "chunk_id": 300,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 942,
+    "end_line": 943,
+    "chunk_id": 301,
+    "text": "Socrates. And how many times larger is this space than this other?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 944,
+    "end_line": 945,
+    "chunk_id": 302,
+    "text": "Slave. Four times."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 946,
+    "end_line": 947,
+    "chunk_id": 303,
+    "text": "Socrates. But it ought to have been twice only, as you will remember."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 948,
+    "end_line": 949,
+    "chunk_id": 304,
+    "text": "Slave. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 950,
+    "end_line": 952,
+    "chunk_id": 305,
+    "text": "Socrates. And does not this line, reaching from corner to corner, bisect each of these spaces?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 953,
+    "end_line": 954,
+    "chunk_id": 306,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 955,
+    "end_line": 956,
+    "chunk_id": 307,
+    "text": "Socrates. And are there not here four equal lines which contain this space?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 957,
+    "end_line": 958,
+    "chunk_id": 308,
+    "text": "Slave. There are."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 959,
+    "end_line": 960,
+    "chunk_id": 309,
+    "text": "Socrates. Look and see how much this space is."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 961,
+    "end_line": 962,
+    "chunk_id": 310,
+    "text": "Slave. I do not understand."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 963,
+    "end_line": 964,
+    "chunk_id": 311,
+    "text": "Socrates. Has not each interior line cut off half of the four spaces?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 965,
+    "end_line": 966,
+    "chunk_id": 312,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 967,
+    "end_line": 968,
+    "chunk_id": 313,
+    "text": "Socrates. And how many spaces are there in this section?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 969,
+    "end_line": 970,
+    "chunk_id": 314,
+    "text": "Slave. Four."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 971,
+    "end_line": 972,
+    "chunk_id": 315,
+    "text": "Socrates. And how many in this?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 973,
+    "end_line": 974,
+    "chunk_id": 316,
+    "text": "Slave. Two."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 975,
+    "end_line": 976,
+    "chunk_id": 317,
+    "text": "Socrates. And four is how many times two?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 977,
+    "end_line": 978,
+    "chunk_id": 318,
+    "text": "Slave. Twice."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 979,
+    "end_line": 980,
+    "chunk_id": 319,
+    "text": "Socrates. And this space is of how many feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 981,
+    "end_line": 982,
+    "chunk_id": 320,
+    "text": "Slave. Of eight feet."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 983,
+    "end_line": 984,
+    "chunk_id": 321,
+    "text": "Socrates. And from what line do you get this figure?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 985,
+    "end_line": 986,
+    "chunk_id": 322,
+    "text": "Slave. From this."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 987,
+    "end_line": 989,
+    "chunk_id": 323,
+    "text": "Socrates. That is, from the line which extends from corner to corner of the figure of four feet?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 990,
+    "end_line": 991,
+    "chunk_id": 324,
+    "text": "Slave. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 992,
+    "end_line": 995,
+    "chunk_id": 325,
+    "text": "Socrates. And that is the line which the learned call the diagonal. And if this is the proper name, then you, Meno's slave, are prepared to affirm that the double space is the square of the diagonal?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Slave",
+    "start_line": 996,
+    "end_line": 997,
+    "chunk_id": 326,
+    "text": "Slave. Certainly, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 998,
+    "end_line": 1000,
+    "chunk_id": 327,
+    "text": "Socrates. What do you say of him, Meno? Were not all these answers given out of his own head?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1001,
+    "end_line": 1002,
+    "chunk_id": 328,
+    "text": "Meno. Yes, they were all his own."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1003,
+    "end_line": 1004,
+    "chunk_id": 329,
+    "text": "Socrates. And yet, as we were just now saying, he did not know?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1005,
+    "end_line": 1006,
+    "chunk_id": 330,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1007,
+    "end_line": 1008,
+    "chunk_id": 331,
+    "text": "Socrates. But still he had in him those notions of his-had he not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1009,
+    "end_line": 1010,
+    "chunk_id": 332,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1011,
+    "end_line": 1013,
+    "chunk_id": 333,
+    "text": "Socrates. Then he who does not know may still have true notions of that which he does not know?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1014,
+    "end_line": 1015,
+    "chunk_id": 334,
+    "text": "Meno. He has."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1016,
+    "end_line": 1019,
+    "chunk_id": 335,
+    "text": "Socrates. And at present these notions have just been stirred up in him, as in a dream; but if he were frequently asked the same questions, in different forms, he would know as well as any one at last?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1020,
+    "end_line": 1021,
+    "chunk_id": 336,
+    "text": "Meno. I dare say."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1022,
+    "end_line": 1024,
+    "chunk_id": 337,
+    "text": "Socrates. Without any one teaching him he will recover his knowledge for himself, if he is only asked questions?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1025,
+    "end_line": 1026,
+    "chunk_id": 338,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1027,
+    "end_line": 1028,
+    "chunk_id": 339,
+    "text": "Socrates. And this spontaneous recovery of knowledge in him is recollection?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1029,
+    "end_line": 1030,
+    "chunk_id": 340,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1031,
+    "end_line": 1033,
+    "chunk_id": 341,
+    "text": "Socrates. And this knowledge which he now has must he not either have acquired or always possessed?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1034,
+    "end_line": 1035,
+    "chunk_id": 342,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1036,
+    "end_line": 1042,
+    "chunk_id": 343,
+    "text": "Socrates. But if he always possessed this knowledge he would always have known; or if he has acquired the knowledge he could not have acquired it in this life, unless he has been taught geometry; for he may be made to do the same with all geometry and every other branch of knowledge. Now, has any one ever taught him all this? You must know about him, if, as you say, he was born and bred in your house."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1043,
+    "end_line": 1044,
+    "chunk_id": 344,
+    "text": "Meno. And I am certain that no one ever did teach him."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1045,
+    "end_line": 1046,
+    "chunk_id": 345,
+    "text": "Socrates. And yet he has the knowledge?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Meno",
+    "start_line": 1047,
+    "end_line": 1048,
+    "chunk_id": 346,
+    "text": "Meno. The fact, Socrates, is undeniable."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "slave_boy",
+    "speaker": "Socrates",
+    "start_line": 1049,
+    "end_line": 1051,
+    "chunk_id": 347,
+    "text": "Socrates. But if he did not acquire the knowledge in this life, then he must have had and learned it at some other time?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1052,
+    "end_line": 1053,
+    "chunk_id": 348,
+    "text": "Meno. Clearly he must."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1054,
+    "end_line": 1055,
+    "chunk_id": 349,
+    "text": "Socrates. Which must have been the time when he was not a man?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1056,
+    "end_line": 1057,
+    "chunk_id": 350,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1058,
+    "end_line": 1062,
+    "chunk_id": 351,
+    "text": "Socrates. And if there have been always true thoughts in him, both at the time when he was and was not a man, which only need to be awakened into knowledge by putting questions to him, his soul must have always possessed this knowledge, for he always either was or was not a man?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1063,
+    "end_line": 1064,
+    "chunk_id": 352,
+    "text": "Meno. Obviously."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1065,
+    "end_line": 1068,
+    "chunk_id": 353,
+    "text": "Socrates. And if the truth of all things always existed in the soul, then the soul is immortal. Wherefore be of good cheer, and try to recollect what you do not know, or rather what you do not remember."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1069,
+    "end_line": 1070,
+    "chunk_id": 354,
+    "text": "Meno. I feel, somehow, that I like what you are saying."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1071,
+    "end_line": 1078,
+    "chunk_id": 355,
+    "text": "Socrates. And I, Meno, like what I am saying. Some things I have said of which I am not altogether confident. But that we shall be better and braver and less helpless if we think that we ought to enquire, than we should have been if we indulged in the idle fancy that there was no knowing and no use in seeking to know what we do not know;-that is a theme upon which I am ready to fight, in word and deed, to the utmost of my power."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1079,
+    "end_line": 1080,
+    "chunk_id": 356,
+    "text": "Meno. There again, Socrates, your words seem to me excellent."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1081,
+    "end_line": 1084,
+    "chunk_id": 357,
+    "text": "Socrates. Then, as we are agreed that a man should enquire about that which he does not know, shall you and I make an effort to enquire together into the nature of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1085,
+    "end_line": 1089,
+    "chunk_id": 358,
+    "text": "Meno. By all means, Socrates. And yet I would much rather return to my original question, Whether in seeking to acquire virtue we should regard it as a thing to be taught, or as a gift of nature, or as coming to men in some other way?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1090,
+    "end_line": 1115,
+    "chunk_id": 359,
+    "text": "Socrates. Had I the command of you as well as of myself, Meno, I would not have enquired whether virtue is given by instruction or not, until we had first ascertained \"what it is.\" But as you think only of controlling me who am your slave, and never of controlling yourself,-such being your notion of freedom, I must yield to you, for you are irresistible. And therefore I have now to enquire into the qualities of a thing of which I do not as yet know the nature. At any rate, will you condescend a little, and allow the question \"Whether virtue is given by instruction, or in any other way,\" to be argued upon hypothesis? As the geometrician, when he is asked whether a certain triangle is capable being inscribed in a certain circle, will reply: \"I cannot tell you as yet; but I will offer a hypothesis which may assist us in forming a conclusion: If the figure be such that when you have produced a given side of it, the given area of the triangle falls short by an area corresponding to the part produced, then one consequence follows, and if this is impossible then some other; and therefore I wish to assume a hypothesis before I tell you whether this triangle is capable of being inscribed in the circle\":-that is a geometrical hypothesis. And we too, as we know not the nature and -qualities of virtue, must ask, whether virtue is or not taught, under a hypothesis: as thus, if virtue is of such a class of mental goods, will it be taught or not? Let the first hypothesis be-that virtue is or is not knowledge,-in that case will it be taught or not? or, as we were just now saying, remembered\"? For there is no use in disputing about the name. But is virtue taught or not? or rather, does not everyone see that knowledge alone is taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1116,
+    "end_line": 1117,
+    "chunk_id": 360,
+    "text": "Meno. I agree."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1118,
+    "end_line": 1119,
+    "chunk_id": 361,
+    "text": "Socrates. Then if virtue is knowledge, virtue will be taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1120,
+    "end_line": 1121,
+    "chunk_id": 362,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1122,
+    "end_line": 1124,
+    "chunk_id": 363,
+    "text": "Socrates. Then now we have made a quick end of this question: if virtue is of such a nature, it will be taught; and if not, not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1125,
+    "end_line": 1126,
+    "chunk_id": 364,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1127,
+    "end_line": 1129,
+    "chunk_id": 365,
+    "text": "Socrates. The next question is, whether virtue is knowledge or of another species?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1130,
+    "end_line": 1131,
+    "chunk_id": 366,
+    "text": "Meno. Yes, that appears to be the -question which comes next in order."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1132,
+    "end_line": 1134,
+    "chunk_id": 367,
+    "text": "Socrates. Do we not say that virtue is a good?-This is a hypothesis which is not set aside."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1135,
+    "end_line": 1136,
+    "chunk_id": 368,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1137,
+    "end_line": 1140,
+    "chunk_id": 369,
+    "text": "Socrates. Now, if there be any sort-of good which is distinct from knowledge, virtue may be that good; but if knowledge embraces all good, then we shall be right in think in that virtue is knowledge?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1141,
+    "end_line": 1142,
+    "chunk_id": 370,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1143,
+    "end_line": 1144,
+    "chunk_id": 371,
+    "text": "Socrates. And virtue makes us good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1145,
+    "end_line": 1146,
+    "chunk_id": 372,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1147,
+    "end_line": 1149,
+    "chunk_id": 373,
+    "text": "Socrates. And if we are good, then we are profitable; for all good things are profitable?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1150,
+    "end_line": 1151,
+    "chunk_id": 374,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1152,
+    "end_line": 1153,
+    "chunk_id": 375,
+    "text": "Socrates. Then virtue is profitable?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1154,
+    "end_line": 1155,
+    "chunk_id": 376,
+    "text": "Meno. That is the only inference."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1156,
+    "end_line": 1159,
+    "chunk_id": 377,
+    "text": "Socrates. Then now let us see what are the things which severally profit us. Health and strength, and beauty and wealth-these, and the like of these, we call profitable?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1160,
+    "end_line": 1161,
+    "chunk_id": 378,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1162,
+    "end_line": 1164,
+    "chunk_id": 379,
+    "text": "Socrates. And yet these things may also sometimes do us harm: would you not think so?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1165,
+    "end_line": 1166,
+    "chunk_id": 380,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1167,
+    "end_line": 1170,
+    "chunk_id": 381,
+    "text": "Socrates. And what is the guiding principle which makes them profitable or the reverse? Are they not profitable when they are rightly used, and hurtful when they are not rightly used?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1171,
+    "end_line": 1172,
+    "chunk_id": 382,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1173,
+    "end_line": 1176,
+    "chunk_id": 383,
+    "text": "Socrates. Next, let us consider the goods of the soul: they are temperance, justice, courage, quickness of apprehension, memory, magnanimity, and the like?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1177,
+    "end_line": 1178,
+    "chunk_id": 384,
+    "text": "Meno. Surely."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1179,
+    "end_line": 1183,
+    "chunk_id": 385,
+    "text": "Socrates. And such of these as are not knowledge, but of another sort, are sometimes profitable and sometimes hurtful; as, for example, courage wanting prudence, which is only a sort of confidence? When a man has no sense he is harmed by courage, but when he has sense he is profited?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1184,
+    "end_line": 1185,
+    "chunk_id": 386,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1186,
+    "end_line": 1189,
+    "chunk_id": 387,
+    "text": "Socrates. And the same may be said of temperance and quickness of apprehension; whatever things are learned or done with sense are profitable, but when done without sense they are hurtful?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1190,
+    "end_line": 1191,
+    "chunk_id": 388,
+    "text": "Meno. Very true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1192,
+    "end_line": 1195,
+    "chunk_id": 389,
+    "text": "Socrates. And in general, all that the attempts or endures, when under the guidance of wisdom, ends in happiness; but when she is under the guidance of folly, in the opposite?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1196,
+    "end_line": 1197,
+    "chunk_id": 390,
+    "text": "Meno. That appears to be true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1198,
+    "end_line": 1204,
+    "chunk_id": 391,
+    "text": "Socrates. If then virtue is a quality of the soul, and is admitted to be profitable, it must be wisdom or prudence, since none of the things of the soul are either profitable or hurtful in themselves, but they are all made profitable or hurtful by the addition of wisdom or of folly; and therefore and therefore if virtue is profitable, virtue must be a sort of wisdom or prudence?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1205,
+    "end_line": 1206,
+    "chunk_id": 392,
+    "text": "Meno. I quite agree."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1207,
+    "end_line": 1213,
+    "chunk_id": 393,
+    "text": "Socrates. And the other goods, such as wealth and the like, of which we were just now saying that they are sometimes good and sometimes evil, do not they also become profitable or hurtful, accordingly as the soul guides and uses them rightly or wrongly; just as the things of the soul herself are benefited when under the guidance of wisdom and harmed by folly?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1214,
+    "end_line": 1215,
+    "chunk_id": 394,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1216,
+    "end_line": 1217,
+    "chunk_id": 395,
+    "text": "Socrates. And the wise soul guides them rightly, and the foolish soul wrongly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1218,
+    "end_line": 1219,
+    "chunk_id": 396,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1220,
+    "end_line": 1224,
+    "chunk_id": 397,
+    "text": "Socrates. And is not this universally true of human nature? All other things hang upon the soul, and the things of the soul herself hang upon wisdom, if they are to be good; and so wisdom is inferred to be that which profits-and virtue, as we say, is profitable?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1225,
+    "end_line": 1226,
+    "chunk_id": 398,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1227,
+    "end_line": 1229,
+    "chunk_id": 399,
+    "text": "Socrates. And thus we arrive at the conclusion that virtue is either wholly or partly wisdom?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1230,
+    "end_line": 1231,
+    "chunk_id": 400,
+    "text": "Meno. I think that what you are saying, Socrates, is very true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1232,
+    "end_line": 1233,
+    "chunk_id": 401,
+    "text": "Socrates. But if this is true, then the good are not by nature good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1234,
+    "end_line": 1235,
+    "chunk_id": 402,
+    "text": "Meno. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1236,
+    "end_line": 1243,
+    "chunk_id": 403,
+    "text": "Socrates. If they had been, there would assuredly have been discerners of characters among us who would have known our future great men; and on their showing we should have adopted them, and when we had got them, we should have kept them in the citadel out of the way of harm, and set a stamp upon them far rather than upon a piece of gold, in order that no one might tamper with them; and when they grew up they would have been useful to the state?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1244,
+    "end_line": 1245,
+    "chunk_id": 404,
+    "text": "Meno. Yes, Socrates, that would have been the right way."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1246,
+    "end_line": 1248,
+    "chunk_id": 405,
+    "text": "Socrates. But if the good are not by nature good, are they made good by instruction?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1249,
+    "end_line": 1251,
+    "chunk_id": 406,
+    "text": "Meno. There appears to be no other alternative, Socrates. On the supposition that virtue is knowledge, there can be no doubt that virtue is taught."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1252,
+    "end_line": 1253,
+    "chunk_id": 407,
+    "text": "Socrates. Yes, indeed; but what if the supposition is erroneous?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1254,
+    "end_line": 1255,
+    "chunk_id": 408,
+    "text": "Meno. I certainly thought just now that we were right."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1256,
+    "end_line": 1258,
+    "chunk_id": 409,
+    "text": "Socrates. Yes, Meno; but a principle which has any soundness should stand firm not only just now, but always."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1259,
+    "end_line": 1261,
+    "chunk_id": 410,
+    "text": "Meno. Well; and why are you so slow of heart to believe that knowledge is virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1262,
+    "end_line": 1267,
+    "chunk_id": 411,
+    "text": "Socrates. I will try and tell you why, Meno. I do not retract the assertion that if virtue is knowledge it may be taught; but I fear that I have some reason in doubting whether virtue is knowledge: for consider now. and say whether virtue, and not only virtue but anything that is taught, must not have teachers and disciples?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1268,
+    "end_line": 1269,
+    "chunk_id": 412,
+    "text": "Meno. Surely."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1270,
+    "end_line": 1272,
+    "chunk_id": 413,
+    "text": "Socrates. And conversely, may not the art of which neither teachers nor disciples exist be assumed to be incapable of being taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Meno",
+    "start_line": 1273,
+    "end_line": 1274,
+    "chunk_id": 414,
+    "text": "Meno. True; but do you think that there are no teachers of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_hypothesis",
+    "speaker": "Socrates",
+    "start_line": 1275,
+    "end_line": 1293,
+    "chunk_id": 415,
+    "text": "Socrates. I have certainly often enquired whether there were any, and taken great pains to find them, and have never succeeded; and many have assisted me in the search, and they were the persons whom I thought the most likely to know. Here at the moment when he is wanted we fortunately have sitting by us Anytus, the very person of whom we should make enquiry; to him then let us repair. In the first Place, he is the son of a wealthy and wise father, Anthemion, who acquired his wealth, not by accident or gift, like Ismenias the Theban (who has recently made himself as rich as Polycrates), but by his own skill and industry, and who is a well-conditioned, modest man, not insolent, or over-bearing, or annoying; moreover, this son of his has received a good education, as the Athenian people certainly appear to think, for they choose him to fill the highest offices. And these are the sort of men from whom you are likely to learn whether there are any teachers of virtue, and who they are. Please, Anytus, to help me and your friend Meno in answering our question, Who are the teachers? Consider the matter thus: If we wanted Meno to be a good physician, to whom should we send him? Should we not send him to the physicians?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1294,
+    "end_line": 1295,
+    "chunk_id": 416,
+    "text": "Anytus. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1296,
+    "end_line": 1298,
+    "chunk_id": 417,
+    "text": "Socrates. Or if we wanted him to be a good cobbler, should we not send him to the cobblers?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1299,
+    "end_line": 1300,
+    "chunk_id": 418,
+    "text": "Anytus. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1301,
+    "end_line": 1302,
+    "chunk_id": 419,
+    "text": "Socrates. And so forth?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1303,
+    "end_line": 1304,
+    "chunk_id": 420,
+    "text": "Anytus. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1305,
+    "end_line": 1312,
+    "chunk_id": 421,
+    "text": "Socrates. Let me trouble you with one more question. When we say that we should be right in sending him to the physicians if we wanted him to be a physician, do we mean that we should be right in sending him to those who profess the art, rather than to those who do not, and to those who demand payment for teaching the art, and profess to teach it to any one who will come and learn? And if these were our reasons, should we not be right in sending him?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1313,
+    "end_line": 1314,
+    "chunk_id": 422,
+    "text": "Anytus. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1315,
+    "end_line": 1322,
+    "chunk_id": 423,
+    "text": "Socrates. And might not the same be said of flute-playing, and of the other arts? Would a man who wanted to make another a flute-player refuse to send him to those who profess to teach the art for money, and be plaguing other persons to give him instruction, who are not professed teachers and who never had a single disciple in that branch of knowledge which he wishes him to acquire-would not such conduct be the height of folly?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1323,
+    "end_line": 1324,
+    "chunk_id": 424,
+    "text": "Anytus. Yes, by Zeus, and of ignorance too."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1325,
+    "end_line": 1335,
+    "chunk_id": 425,
+    "text": "Socrates. Very good. And now you are in a position to advise with me about my friend Meno. He has been telling me, Anytus, that he desires to attain that kind of wisdom and-virtue by which men order the state or the house, and honour their parents, and know when to receive and when to send away citizens and strangers, as a good man should. Now, to whom should he go in order that he may learn this virtue? Does not the previous argument imply clearly that we should send him to those who profess and avouch that they are the common teachers of all Hellas, and are ready to impart instruction to any one who likes, at a fixed price?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1336,
+    "end_line": 1337,
+    "chunk_id": 426,
+    "text": "Anytus. Whom do you mean, Socrates?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1338,
+    "end_line": 1340,
+    "chunk_id": 427,
+    "text": "Socrates. You surely know, do you not, Anytus, that these are the people whom mankind call Sophists?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1341,
+    "end_line": 1346,
+    "chunk_id": 428,
+    "text": "Anytus. By Heracles, Socrates, forbear! I only hope that no friend or kinsman or acquaintance of mine, whether citizen or stranger, will ever be so mad as to allow himself to be corrupted by them; for they are a manifest pest and corrupting influences to those who have to do with them."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1347,
+    "end_line": 1368,
+    "chunk_id": 429,
+    "text": "Socrates. What, Anytus? Of all the people who profess that they know how to do men good, do you mean to say that these are the only ones who not only do them no good, but positively corrupt those who are entrusted to them, and in return for this disservice have the face to demand money? Indeed, I cannot believe you; for I know of a single man, Protagoras, who made more out of his craft than the illustrious Pheidias, who created such noble works, or any ten other statuaries. How could that A mender of old shoes, or patcher up of clothes, who made the shoes or clothes worse than he received them, could not have remained thirty days undetected, and would very soon have starved; whereas during more than forty years, Protagoras was corrupting all Hellas, and sending his disciples from him worse than he received them, and he was never found out. For, if I am not mistaken,-he was about seventy years old at his death, forty of which were spent in the practice of his profession; and during all that time he had a good reputation, which to this day he retains: and not only Protagoras, but many others are well spoken of; some who lived before him, and others who are still living. Now, when you say that they deceived and corrupted the youth, are they to be supposed to have corrupted them consciously or unconsciously? Can those who were deemed by many to be the wisest men of Hellas have been out of their minds?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1369,
+    "end_line": 1374,
+    "chunk_id": 430,
+    "text": "Anytus. Out of their minds! No, Socrates; the young men who gave their money to them, were out of their minds, and their relations and guardians who entrusted their youth to the care of these men were still more out of their minds, and most of all, the cities who allowed them to come in, and did not drive them out, citizen and stranger alike."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1375,
+    "end_line": 1377,
+    "chunk_id": 431,
+    "text": "Socrates. Has any of the Sophists wronged you, Anytus? What makes you so angry with them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1378,
+    "end_line": 1380,
+    "chunk_id": 432,
+    "text": "Anytus. No, indeed, neither I nor any of my belongings has ever had, nor would I suffer them to have, anything to do with them."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1381,
+    "end_line": 1382,
+    "chunk_id": 433,
+    "text": "Socrates. Then you are entirely unacquainted with them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1383,
+    "end_line": 1384,
+    "chunk_id": 434,
+    "text": "Anytus. And I have no wish to be acquainted."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1385,
+    "end_line": 1387,
+    "chunk_id": 435,
+    "text": "Socrates. Then, my dear friend, how can you know whether a thing is good or bad of which you are wholly ignorant?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1388,
+    "end_line": 1390,
+    "chunk_id": 436,
+    "text": "Anytus. Quite well; I am sure that I know what manner of men these are, whether I am acquainted with them or not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1391,
+    "end_line": 1398,
+    "chunk_id": 437,
+    "text": "Socrates. You must be a diviner, Anytus, for I really cannot make out, judging from your own words, how, if you are not acquainted with them, you know about them. But I am not enquiring of you who are the teachers who will corrupt Meno (let them be, if you please, the Sophists); I only ask you to tell him who there is in this great city who will teach him how to become eminent in the virtues which I was just, now describing. He is the friend of your family, and you will oblige him."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1399,
+    "end_line": 1400,
+    "chunk_id": 438,
+    "text": "Anytus. Why do you not tell him yourself?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1401,
+    "end_line": 1407,
+    "chunk_id": 439,
+    "text": "Socrates. I have told him whom I supposed to be the teachers of these things; but I learn from you that I am utterly at fault, and I dare say that you are right. And now I wish that you, on your part, would tell me to whom among the Athenians he should go. Whom would you name? Any. Why single out individuals? Any Athenian gentleman, taken at random, if he will mind him, will do far more, good to him than the Sophists."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1408,
+    "end_line": 1411,
+    "chunk_id": 440,
+    "text": "Socrates. And did those gentlemen grow of themselves; and without having been taught by any one, were they nevertheless able to teach others that which they had never learned themselves?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1412,
+    "end_line": 1414,
+    "chunk_id": 441,
+    "text": "Anytus. I imagine that they learned of the previous generation of gentlemen. Have there not been many good men in this city?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1415,
+    "end_line": 1426,
+    "chunk_id": 442,
+    "text": "Socrates. Yes, certainly, Anytus; and many good statesmen also there always have been and there are still, in the city of Athens. But the question is whether they were also good teachers of their own virtue;-not whether there are, or have been, good men in this part of the world, but whether virtue can be taught, is the question which we have been discussing. Now, do we mean to say that the good men our own and of other times knew how to impart to others that virtue which they had themselves; or is virtue a thing incapable of being communicated or imparted by one man to another? That is the question which I and Meno have been arguing. Look at the matter in your own way: Would you not admit that Themistocles was a good man?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1427,
+    "end_line": 1428,
+    "chunk_id": 443,
+    "text": "Anytus. Certainly; no man better."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1429,
+    "end_line": 1431,
+    "chunk_id": 444,
+    "text": "Socrates. And must not he then have been a good teacher, if any man ever was a good teacher, of his own virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1432,
+    "end_line": 1433,
+    "chunk_id": 445,
+    "text": "Anytus. Yes certainly,-if he wanted to be so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1434,
+    "end_line": 1442,
+    "chunk_id": 446,
+    "text": "Socrates. But would he not have wanted? He would, at any rate, have desired to make his own son a good man and a gentleman; he could not have been jealous of him, or have intentionally abstained from imparting to him his own virtue. Did you never hear that he made his son Cleophantus a famous horseman; and had him taught to stand upright on horseback and hurl a javelin, and to do many other marvellous things; and in anything which could be learned from a master he was well trained? Have you not heard from our elders of him?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1443,
+    "end_line": 1444,
+    "chunk_id": 447,
+    "text": "Anytus. I have."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1445,
+    "end_line": 1446,
+    "chunk_id": 448,
+    "text": "Socrates. Then no one could say that his son showed any want of capacity?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1447,
+    "end_line": 1448,
+    "chunk_id": 449,
+    "text": "Anytus. Very likely not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1449,
+    "end_line": 1452,
+    "chunk_id": 450,
+    "text": "Socrates. But did any one, old or young, ever say in your hearing that Cleophantus, son of Themistocles, was a wise or good man, as his father was?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1453,
+    "end_line": 1454,
+    "chunk_id": 451,
+    "text": "Anytus. I have certainly never heard any one say so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1455,
+    "end_line": 1459,
+    "chunk_id": 452,
+    "text": "Socrates. And if virtue could have been taught, would his father Themistocles have sought to train him in these minor accomplishments, and allowed him who, as you must remember, was his own son, to be no better than his neighbours in those qualities in which he himself excelled?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1460,
+    "end_line": 1461,
+    "chunk_id": 453,
+    "text": "Anytus. Indeed, indeed, I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1462,
+    "end_line": 1465,
+    "chunk_id": 454,
+    "text": "Socrates. Here was a teacher of virtue whom you admit to be among the best men of the past. Let us take another,-Aristides, the son of Lysimachus: would you not acknowledge that he was a good man?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1466,
+    "end_line": 1467,
+    "chunk_id": 455,
+    "text": "Anytus. To be sure I should."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1468,
+    "end_line": 1474,
+    "chunk_id": 456,
+    "text": "Socrates. And did not he train his son Lysimachus better than any other Athenian in all that could be done for him by the help of masters? But what has been the result? Is he a bit better than any other mortal? He is an acquaintance of yours, and you see what he is like. There is Pericles, again, magnificent in his wisdom; and he, as you are aware, had two sons, Paralus and Xanthippus."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1475,
+    "end_line": 1476,
+    "chunk_id": 457,
+    "text": "Anytus. I know."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1477,
+    "end_line": 1489,
+    "chunk_id": 458,
+    "text": "Socrates. And you know, also, that he taught them to be unrivalled horsemen, and had them trained in music and gymnastics and all sorts of arts-in these respects they were on a level with the best-and had he no wish to make good men of them? Nay, he must have wished it. But virtue, as I suspect, could not be taught. And that you may not suppose the incompetent teachers to be only the meaner sort of Athenians and few in number, remember again that Thucydides had two sons, Melesias and Stephanus, whom, besides giving them a good education in other things, he trained in wrestling, and they were the best wrestlers in Athens: one of them he committed to the care of Xanthias, and the other of Eudorus, who had the reputation of being the most celebrated wrestlers of that day. Do you remember them?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1490,
+    "end_line": 1491,
+    "chunk_id": 459,
+    "text": "Anytus. I have heard of them."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1492,
+    "end_line": 1503,
+    "chunk_id": 460,
+    "text": "Socrates. Now, can there be a doubt that Thucydides, whose children were taught things for which he had to spend money, would have taught them to be good men, which would have cost him nothing, if virtue could have been taught? Will you reply that he was a mean man, and had not many friends among the Athenians and allies? Nay, but he was of a great family, and a man of influence at Athens and in all Hellas, and, if virtue could have been taught, he would have found out some Athenian or foreigner who would have made good men of his sons, if he could not himself spare the time from cares of state. Once more, I suspect, friend Anytus, that virtue is not a thing which can be taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Anytus",
+    "start_line": 1504,
+    "end_line": 1509,
+    "chunk_id": 461,
+    "text": "Anytus. Socrates, I think that you are too ready to speak evil of men: and, if you will take my advice, I would recommend you to be careful. Perhaps there is no city in which it is not easier to do men harm than to do them good, and this is certainly the case at Athens, as I believe that you know."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1510,
+    "end_line": 1517,
+    "chunk_id": 462,
+    "text": "Socrates. O Meno, think that Anytus is in a rage. And he may well be in a rage, for he thinks, in the first place, that I am defaming these gentlemen; and in the second place, he is of opinion that he is one of them himself. But some day he will know what is the meaning of defamation, and if he ever does, he will forgive me. Meanwhile I will return to you, Meno; for I suppose that there are gentlemen in your region too?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1518,
+    "end_line": 1519,
+    "chunk_id": 463,
+    "text": "Meno. Certainly there are."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1520,
+    "end_line": 1522,
+    "chunk_id": 464,
+    "text": "Socrates. And are they willing to teach the young? and do they profess to be teachers? and do they agree that virtue is taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1523,
+    "end_line": 1526,
+    "chunk_id": 465,
+    "text": "Meno. No indeed, Socrates, they are anything but agreed; you may hear them saying at one time that virtue can be taught, and then again the reverse."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1527,
+    "end_line": 1529,
+    "chunk_id": 466,
+    "text": "Socrates. Can we call those teachers who do not acknowledge the possibility of their own vocation?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1530,
+    "end_line": 1531,
+    "chunk_id": 467,
+    "text": "Meno. I think not, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1532,
+    "end_line": 1534,
+    "chunk_id": 468,
+    "text": "Socrates. And what do you think of these Sophists, who are the only professors? Do they seem to you to be teachers of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1535,
+    "end_line": 1538,
+    "chunk_id": 469,
+    "text": "Meno. I often wonder, Socrates, that Gorgias is never heard promising to teach virtue: and when he hears others promising he only laughs at them; but he thinks that men should be taught to speak."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1539,
+    "end_line": 1540,
+    "chunk_id": 470,
+    "text": "Socrates. Then do you not think that the Sophists are teachers?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1541,
+    "end_line": 1544,
+    "chunk_id": 471,
+    "text": "Meno. I cannot tell you, Socrates; like the rest of the world, I am in doubt, and sometimes I think that they are teachers and sometimes not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1545,
+    "end_line": 1548,
+    "chunk_id": 472,
+    "text": "Socrates. And are you aware that not you only and other politicians have doubts whether virtue can be taught or not, but that Theognis the poet says the very same thing?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1549,
+    "end_line": 1550,
+    "chunk_id": 473,
+    "text": "Meno. Where does he say so?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1551,
+    "end_line": 1558,
+    "chunk_id": 474,
+    "text": "Socrates. In these elegiac verses: Eat and drink and sit with the mighty, and make yourself agreeable to them; for from the good you will learn what is good, but if you mix with the bad you will lose the intelligence which you already have. Do you observe that here he seems to imply that virtue can be taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1559,
+    "end_line": 1560,
+    "chunk_id": 475,
+    "text": "Meno. Clearly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1561,
+    "end_line": 1571,
+    "chunk_id": 476,
+    "text": "Socrates. But in some other verses he shifts about and says: If understanding could be created and put into a man, then they [who were able to perform this feat] would have obtained great rewards. And again:- Never would a bad son have sprung from a good sire, for he would have heard the voice of instruction; but not by teaching will you ever make a bad man into a good one. And this, as you may remark, is a contradiction of the other."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1572,
+    "end_line": 1573,
+    "chunk_id": 477,
+    "text": "Meno. Clearly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1574,
+    "end_line": 1581,
+    "chunk_id": 478,
+    "text": "Socrates. And is there anything else of which the professors are affirmed not only not to be teachers of others, but to be ignorant themselves, and bad at the knowledge of that which they are professing to teach? or is there anything about which even the acknowledged \"gentlemen\" are sometimes saying that \"this thing can be taught,\" and sometimes the opposite? Can you say that they are teachers in any true sense whose ideas are in such confusion?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1582,
+    "end_line": 1583,
+    "chunk_id": 479,
+    "text": "Meno. I should say, certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1584,
+    "end_line": 1586,
+    "chunk_id": 480,
+    "text": "Socrates. But if neither the Sophists nor the gentlemen are teachers, clearly there can be no other teachers?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1587,
+    "end_line": 1588,
+    "chunk_id": 481,
+    "text": "Meno. No."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1589,
+    "end_line": 1590,
+    "chunk_id": 482,
+    "text": "Socrates. And if there are no teachers, neither are there disciples?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1591,
+    "end_line": 1592,
+    "chunk_id": 483,
+    "text": "Meno. Agreed."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1593,
+    "end_line": 1595,
+    "chunk_id": 484,
+    "text": "Socrates. And we have admitted that a thing cannot be taught of which there are neither teachers nor disciples?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1596,
+    "end_line": 1597,
+    "chunk_id": 485,
+    "text": "Meno. We have."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Socrates",
+    "start_line": 1598,
+    "end_line": 1599,
+    "chunk_id": 486,
+    "text": "Socrates. And there are no teachers of virtue to be found anywhere?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "teachability_anytus",
+    "speaker": "Meno",
+    "start_line": 1600,
+    "end_line": 1601,
+    "chunk_id": 487,
+    "text": "Meno. There are not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1602,
+    "end_line": 1603,
+    "chunk_id": 488,
+    "text": "Socrates. And if there are no teachers, neither are there scholars?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1604,
+    "end_line": 1605,
+    "chunk_id": 489,
+    "text": "Meno. That, I think, is true."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1606,
+    "end_line": 1607,
+    "chunk_id": 490,
+    "text": "Socrates. Then virtue cannot be taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1608,
+    "end_line": 1611,
+    "chunk_id": 491,
+    "text": "Meno. Not if we are right in our view. But I cannot believe, Socrates, that there are no good men: And if there are, how did they come into existence?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1612,
+    "end_line": 1620,
+    "chunk_id": 492,
+    "text": "Socrates. I am afraid, Meno, that you and I are not good for much, and that Gorgias has been as poor an educator of you as Prodicus has been of me. Certainly we shall have to look to ourselves, and try to find some one who will help in some way or other to improve us. This I say, because I observe that in the previous discussion none of us remarked that right and good action is possible to man under other guidance than that of knowledge (episteme);-and indeed if this be denied, there is no seeing how there can be any good men at all."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1621,
+    "end_line": 1622,
+    "chunk_id": 493,
+    "text": "Meno. How do you mean, Socrates?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1623,
+    "end_line": 1625,
+    "chunk_id": 494,
+    "text": "Socrates. I mean that good men are necessarily useful or profitable. Were we not right in admitting this? It must be so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1626,
+    "end_line": 1627,
+    "chunk_id": 495,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1628,
+    "end_line": 1630,
+    "chunk_id": 496,
+    "text": "Socrates. And in supposing that they will be useful only if they are true guides to us of action-there we were also right?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1631,
+    "end_line": 1632,
+    "chunk_id": 497,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1633,
+    "end_line": 1635,
+    "chunk_id": 498,
+    "text": "Socrates. But when we said that a man cannot be a good guide unless he have knowledge (phrhonesis), this we were wrong."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1636,
+    "end_line": 1637,
+    "chunk_id": 499,
+    "text": "Meno. What do you mean by the word \"right\"?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1638,
+    "end_line": 1641,
+    "chunk_id": 500,
+    "text": "Socrates. I will explain. If a man knew the way to Larisa, or anywhere else, and went to the place and led others thither, would he not be a right and good guide?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1642,
+    "end_line": 1643,
+    "chunk_id": 501,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1644,
+    "end_line": 1646,
+    "chunk_id": 502,
+    "text": "Socrates. And a person who had a right opinion about the way, but had never been and did not know, might be a good guide also, might he not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1647,
+    "end_line": 1648,
+    "chunk_id": 503,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1649,
+    "end_line": 1652,
+    "chunk_id": 504,
+    "text": "Socrates. And while he has true opinion about that which the other knows, he will be just as good a guide if he thinks the truth, as he who knows the truth?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1653,
+    "end_line": 1654,
+    "chunk_id": 505,
+    "text": "Meno. Exactly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1655,
+    "end_line": 1659,
+    "chunk_id": 506,
+    "text": "Socrates. Then true opinion is as good a guide to correct action as knowledge; and that was the point which we omitted in our speculation about the nature of virtue, when we said that knowledge only is the guide of right action; whereas there is also right opinion."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1660,
+    "end_line": 1661,
+    "chunk_id": 507,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1662,
+    "end_line": 1663,
+    "chunk_id": 508,
+    "text": "Socrates. Then right opinion is not less useful than knowledge?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1664,
+    "end_line": 1667,
+    "chunk_id": 509,
+    "text": "Meno. The difference, Socrates, is only that he who has knowledge will always be right; but he who has right opinion will sometimes be right, and sometimes not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1668,
+    "end_line": 1670,
+    "chunk_id": 510,
+    "text": "Socrates. What do you mean? Can he be wrong who has right opinion, so long as he has right opinion?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1671,
+    "end_line": 1674,
+    "chunk_id": 511,
+    "text": "Meno. I admit the cogency of your argument, and therefore, Socrates, I wonder that knowledge should be preferred to right opinion-or why they should ever differ."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1675,
+    "end_line": 1676,
+    "chunk_id": 512,
+    "text": "Socrates. And shall I explain this wonder to you?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1677,
+    "end_line": 1678,
+    "chunk_id": 513,
+    "text": "Meno. Do tell me."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1679,
+    "end_line": 1681,
+    "chunk_id": 514,
+    "text": "Socrates. You would not wonder if you had ever observed the images of Daedalus; but perhaps you have not got them in your country?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1682,
+    "end_line": 1683,
+    "chunk_id": 515,
+    "text": "Meno. What have they to do with the question?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1684,
+    "end_line": 1686,
+    "chunk_id": 516,
+    "text": "Socrates. Because they require to be fastened in order to keep them, and if they are not fastened they will play truant and run away."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1687,
+    "end_line": 1688,
+    "chunk_id": 517,
+    "text": "Meno. Well. what of that?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1689,
+    "end_line": 1701,
+    "chunk_id": 518,
+    "text": "Socrates. I mean to say that they are not very valuable possessions if they are at liberty, for they will walk off like runaway slaves; but when fastened, they are of great value, for they are really beautiful works of art. Now this is an illustration of the nature of true opinions: while they abide with us they are beautiful and fruitful, but they run away out of the human soul, and do not remain long, and therefore they are not of much value until they are fastened by the tie of the cause; and this fastening of them, friend Meno, is recollection, as you and I have agreed to call it. But when they are bound, in the first place, they have the nature of knowledge; and, in the second place, they are abiding. And this is why knowledge is more honourable and excellent than true opinion, because fastened by a chain."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1702,
+    "end_line": 1703,
+    "chunk_id": 519,
+    "text": "Meno. What you are saying, Socrates, seems to be very like the truth."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1704,
+    "end_line": 1708,
+    "chunk_id": 520,
+    "text": "Socrates. I too speak rather in ignorance; I only conjecture. And yet that knowledge differs from true opinion is no matter of conjecture with me. There are not many things which I profess to know, but this is most certainly one of them."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1709,
+    "end_line": 1710,
+    "chunk_id": 521,
+    "text": "Meno. Yes, Socrates; and you are quite right in saying so."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1711,
+    "end_line": 1713,
+    "chunk_id": 522,
+    "text": "Socrates. And am I not also right in saying that true opinion leading the way perfects action quite as well as knowledge?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1714,
+    "end_line": 1715,
+    "chunk_id": 523,
+    "text": "Meno. There again, Socrates, I think you are right."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1716,
+    "end_line": 1719,
+    "chunk_id": 524,
+    "text": "Socrates. Then right opinion is not a whit inferior to knowledge, or less useful in action; nor is the man who has right opinion inferior to him who has knowledge?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1720,
+    "end_line": 1721,
+    "chunk_id": 525,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1722,
+    "end_line": 1723,
+    "chunk_id": 526,
+    "text": "Socrates. And surely the good man has been acknowledged by us to be useful?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1724,
+    "end_line": 1725,
+    "chunk_id": 527,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1726,
+    "end_line": 1730,
+    "chunk_id": 528,
+    "text": "Socrates. Seeing then that men become good and useful to states, not only because they have knowledge, but because they have right opinion, and that neither knowledge nor right opinion is given to man by nature or acquired by him-(do you imagine either of them to be given by nature?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1731,
+    "end_line": 1732,
+    "chunk_id": 529,
+    "text": "Meno. Not I.)"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1733,
+    "end_line": 1735,
+    "chunk_id": 530,
+    "text": "Socrates. Then if they are not given by nature, neither are the good by nature good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1736,
+    "end_line": 1737,
+    "chunk_id": 531,
+    "text": "Meno. Certainly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1738,
+    "end_line": 1740,
+    "chunk_id": 532,
+    "text": "Socrates. And nature being excluded, then came the question whether virtue is acquired by teaching?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1741,
+    "end_line": 1742,
+    "chunk_id": 533,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1743,
+    "end_line": 1745,
+    "chunk_id": 534,
+    "text": "Socrates. If virtue was wisdom [or knowledge], then, as we thought, it was taught?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1746,
+    "end_line": 1747,
+    "chunk_id": 535,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1748,
+    "end_line": 1749,
+    "chunk_id": 536,
+    "text": "Socrates. And if it was taught it was wisdom?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1750,
+    "end_line": 1751,
+    "chunk_id": 537,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1752,
+    "end_line": 1754,
+    "chunk_id": 538,
+    "text": "Socrates. And if there were teachers, it might be taught; and if there were no teachers, not?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1755,
+    "end_line": 1756,
+    "chunk_id": 539,
+    "text": "Meno. True."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1757,
+    "end_line": 1758,
+    "chunk_id": 540,
+    "text": "Socrates. But surely we acknowledged that there were no teachers of virtue?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1759,
+    "end_line": 1760,
+    "chunk_id": 541,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1761,
+    "end_line": 1762,
+    "chunk_id": 542,
+    "text": "Socrates. Then we acknowledged that it was not taught, and was not wisdom?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1763,
+    "end_line": 1764,
+    "chunk_id": 543,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1765,
+    "end_line": 1766,
+    "chunk_id": 544,
+    "text": "Socrates. And yet we admitted that it was a good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1767,
+    "end_line": 1768,
+    "chunk_id": 545,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1769,
+    "end_line": 1770,
+    "chunk_id": 546,
+    "text": "Socrates. And the right guide is useful and good?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1771,
+    "end_line": 1772,
+    "chunk_id": 547,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1773,
+    "end_line": 1776,
+    "chunk_id": 548,
+    "text": "Socrates. And the only right guides are knowledge and true opinion-these are the guides of man; for things which happen by chance are not under the guidance of man: but the guides of man are true opinion and knowledge."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1777,
+    "end_line": 1778,
+    "chunk_id": 549,
+    "text": "Meno. I think so too."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1779,
+    "end_line": 1780,
+    "chunk_id": 550,
+    "text": "Socrates. But if virtue is not taught, neither is virtue knowledge."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1781,
+    "end_line": 1782,
+    "chunk_id": 551,
+    "text": "Meno. Clearly not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1783,
+    "end_line": 1786,
+    "chunk_id": 552,
+    "text": "Socrates. Then of two good and useful things, one, which is knowledge, has been set aside, and cannot be supposed to be our guide in political life."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1787,
+    "end_line": 1788,
+    "chunk_id": 553,
+    "text": "Meno. I think not."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1789,
+    "end_line": 1793,
+    "chunk_id": 554,
+    "text": "Socrates. And therefore not by any wisdom, and not because they were wise, did Themistocles and those others of whom Anytus spoke govern states. This was the reason why they were unable to make others like themselves-because their virtue was not grounded on knowledge."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1794,
+    "end_line": 1795,
+    "chunk_id": 555,
+    "text": "Meno. That is probably true, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1796,
+    "end_line": 1800,
+    "chunk_id": 556,
+    "text": "Socrates. But if not by knowledge, the only alternative which remains is that statesmen must have guided states by right opinion, which is in politics what divination is in religion; for diviners and also prophets say many things truly, but they know not what they say."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1801,
+    "end_line": 1802,
+    "chunk_id": 557,
+    "text": "Meno. So I believe."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1803,
+    "end_line": 1805,
+    "chunk_id": 558,
+    "text": "Socrates. And may we not, Meno, truly call those men \"divine\" who, having no understanding, yet succeed in many a grand deed and word?"
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1806,
+    "end_line": 1807,
+    "chunk_id": 559,
+    "text": "Meno. Certainly."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1808,
+    "end_line": 1813,
+    "chunk_id": 560,
+    "text": "Socrates. Then we shall also be right in calling divine those whom we were just now speaking of as diviners and prophets, including the whole tribe of poets. Yes, and statesmen above all may be said to be divine and illumined, being inspired and possessed of God, in which condition they say many grand things, not knowing what they say."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1814,
+    "end_line": 1815,
+    "chunk_id": 561,
+    "text": "Meno. Yes."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1816,
+    "end_line": 1819,
+    "chunk_id": 562,
+    "text": "Socrates. And the women too, Meno, call good men divine-do they not? and the Spartans, when they praise a good man, say \"that he is a divine man.\""
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1820,
+    "end_line": 1822,
+    "chunk_id": 563,
+    "text": "Meno. And I think, Socrates, that they are right; although very likely our friend Anytus may take offence at the word."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1823,
+    "end_line": 1833,
+    "chunk_id": 564,
+    "text": "Socrates. I da not care; as for Anytus, there will be another opportunity of talking with him. To sum up our enquiry-the result seems to be, if we are at all right in our view, that virtue is neither natural nor acquired, but an instinct given by God to the virtuous. Nor is the instinct accompanied by reason, unless there may be supposed to be among statesmen some one who is capable of educating statesmen. And if there be such an one, he may be said to be among the living what Homer says that Tiresias was among the dead, \"he alone has understanding; but the rest are flitting shades\"; and he and his virtue in like manner will be a reality among shadows."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Meno",
+    "start_line": 1834,
+    "end_line": 1835,
+    "chunk_id": 565,
+    "text": "Meno. That is excellent, Socrates."
+  },
+  {
+    "book_id": "meno",
+    "volume_id": "I",
+    "thematic_division": "conclusion",
+    "speaker": "Socrates",
+    "start_line": 1836,
+    "end_line": 1842,
+    "chunk_id": 566,
+    "text": "Socrates. Then, Meno, the conclusion is that virtue comes to the virtuous by the gift of God. But we shall never know the certain truth until, before asking how virtue is given, we enquire into the actual nature of virtue. I fear that I must go away, but do you, now that you are persuaded yourself, persuade our friend Anytus. And do not let him be so exasperated; if you can conciliate him, you will have done good service to the Athenian people."
+  }
+]
