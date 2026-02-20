@@ -1,0 +1,16 @@
+{
+  "A1_citation_existence_rate": 1.0,
+  "A2_exact_quote_match_rate": 0.0,
+  "A3_fabrication_rate": 0.0,
+  "A4_hallucination_rate": 0.0,
+  "B1a_unique_retrieved_chunks": 22,
+  "B1b_unique_sections": 10,
+  "B1c_rank1_reuse_total": 3,
+  "B1c_rank1_entropy": 1.585,
+  "B1c_rank1_unique_count": 3,
+  "B2a_unique_citations": 22,
+  "B2b_citation_entropy": 3.0221,
+  "B2c_citation_reuse_rate": 1.0909,
+  "C_q_citation_similarity_mean": 0.5298,
+  "n_questions": 3
+}

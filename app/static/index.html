@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk to the People</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a0f;
+      --bg-card: #14141a;
+      --bg-input: #1a1a22;
+      --border: rgba(168, 85, 247, 0.2);
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f97316 100%);
+      --gradient-subtle: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(249, 115, 22, 0.1));
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10, 10, 15, 0.9);
+      backdrop-filter: blur(12px);
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Hero / Title */
+    .hero {
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      background: var(--gradient-subtle);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: #c084fc;
+    }
+
+    /* Chat layout */
+    .chat-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 1.5rem;
+      width: 100%;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem 0;
+      min-height: 220px;
+    }
+    #messages:empty::before {
+      content: "Ask about Apology, Republic, Meno, or Gorgias...";
+      display: block;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+    }
+
+    .msg {
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 0.95rem;
+    }
+    .msg.user {
+      background: var(--gradient-subtle);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      margin-left: 0;
+      margin-right: 2.5rem;
+    }
+    .msg.assistant {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      margin-left: 2.5rem;
+      margin-right: 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+    .msg.assistant[data-streaming="1"]::after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 1em;
+      margin-left: 2px;
+      background: #a855f7;
+      animation: blink 0.8s infinite;
+      vertical-align: -0.15em;
+    }
+    .msg-status {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    @keyframes blink {
+      50% { opacity: 0.3; }
+    }
+    .msg .cite {
+      color: #c084fc;
+      font-size: 0.85em;
+    }
+
+    /* Input area */
+    #form {
+      display: flex;
+      gap: 0.75rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+    }
+    #input {
+      flex: 1;
+      padding: 0.85rem 1.25rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+    #input:focus {
+      outline: none;
+      border-color: rgba(168, 85, 247, 0.5);
+    }
+    #input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .btn-send {
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .btn-send:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+    }
+    .btn-send:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo"><span>Talk to the People</span></a>
+  </header>
+
+  <section class="hero">
+    <h1>Plato Dialogue Chat</h1>
+    <p>Converse with grounded wisdom from Apology, Republic, Meno & Gorgias</p>
+    <span class="badge">Ask anything • Cited responses</span>
+  </section>
+
+  <div class="chat-wrapper">
+    <div id="messages"></div>
+    <form id="form">
+      <input id="input" type="text" placeholder="Ask about Plato's dialogues..." autocomplete="off">
+      <button id="send" class="btn-send" type="submit">Send →</button>
+    </form>
+  </div>
+
+  <script>
+    const messagesEl = document.getElementById('messages');
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    const sendBtn = document.getElementById('send');
+
+    let history = [];
+
+    function addMessage(role, content, isStreaming = false) {
+      const div = document.createElement('div');
+      div.className = `msg ${role}`;
+      div.textContent = content;
+      if (isStreaming) div.dataset.streaming = '1';
+      messagesEl.appendChild(div);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+      return div;
+    }
+
+    function addAssistantMessageWithStatus() {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'msg assistant';
+      wrapper.dataset.streaming = '1';
+      const statusEl = document.createElement('div');
+      statusEl.className = 'msg-status';
+      const contentEl = document.createElement('div');
+      contentEl.style.marginTop = '0.5rem';
+      contentEl.style.whiteSpace = 'pre-wrap';
+      wrapper.appendChild(statusEl);
+      wrapper.appendChild(contentEl);
+      messagesEl.appendChild(wrapper);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+      return { wrapper, statusEl, contentEl };
+    }
+
+    async function sendStreaming(userMsg) {
+      addMessage('user', userMsg);
+      history.push({ role: 'user', content: userMsg });
+      const { wrapper, statusEl, contentEl } = addAssistantMessageWithStatus();
+
+      try {
+        const res = await fetch('/chat/stream', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: userMsg, history: history.slice(-10, -1) }),
+        });
+        if (!res.ok) throw new Error(res.statusText);
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        let finalContent = '';
+
+        function processEvent(data) {
+          if (!data) return;
+          if (data.startsWith('[status] ')) {
+            statusEl.textContent = data.slice(9);
+          } else if (data.startsWith('[token] ')) {
+            contentEl.textContent += data.slice(8);
+            statusEl.textContent = '';
+          } else if (data.startsWith('[final]\n')) {
+            finalContent = data.slice(8).trim();
+          } else if (data === '[done]') {
+            contentEl.textContent = finalContent || contentEl.textContent;
+            statusEl.textContent = '';
+          }
+          messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (value) buffer += decoder.decode(value, { stream: true });
+          const events = buffer.split('\n\n');
+          buffer = done ? '' : (events.pop() || '');
+
+          for (const event of events) {
+            const lines = event.split('\n');
+            let data = '';
+            for (const line of lines) {
+              if (line.startsWith('data: ')) data += (data ? '\n' : '') + line.slice(6);
+            }
+            processEvent(data);
+          }
+          if (done) break;
+        }
+        if (buffer.trim()) {
+          const lines = buffer.split('\n');
+          let data = '';
+          for (const line of lines) {
+            if (line.startsWith('data: ')) data += (data ? '\n' : '') + line.slice(6);
+          }
+          processEvent(data);
+        }
+
+        history.push({ role: 'assistant', content: finalContent || contentEl.textContent });
+        delete wrapper.dataset.streaming;
+      } catch (err) {
+        contentEl.textContent = 'Error: ' + err.message;
+        statusEl.textContent = '';
+        history.pop();
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      sendBtn.disabled = true;
+      await sendStreaming(text);
+      sendBtn.disabled = false;
+    });
+  </script>
+</body>
+</html>
