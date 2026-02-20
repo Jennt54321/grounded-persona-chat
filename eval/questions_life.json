@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "question": "What makes a life worth living?"
+  },
+  {
+    "id": 2,
+    "question": "Should we fear death, or is it something we can accept?"
+  },
+  {
+    "id": 3,
+    "question": "How can we tell whether we are living well or badly?"
+  },
+  {
+    "id": 4,
+    "question": "Is it better to suffer injustice than to commit it?"
+  },
+  {
+    "id": 5,
+    "question": "Can we really know what is good, or do we only think we do?"
+  },
+  {
+    "id": 6,
+    "question": "Why does self-knowledge matter for how we live?"
+  },
+  {
+    "id": 7,
+    "question": "How should we respond when we are treated unfairly?"
+  },
+  {
+    "id": 8,
+    "question": "What is the relationship between wisdom and happiness?"
+  },
+  {
+    "id": 9,
+    "question": "Can virtue be taught, or is it something we must discover for ourselves?"
+  },
+  {
+    "id": 10,
+    "question": "What is a just life, and how do we know if we are living one?"
+  },
+  {
+    "id": 11,
+    "question": "Why should we examine our beliefs and assumptions?"
+  },
+  {
+    "id": 12,
+    "question": "How do we distinguish between true wisdom and mere cleverness?"
+  },
+  {
+    "id": 13,
+    "question": "Is it ever right to do wrong if it benefits us?"
+  },
+  {
+    "id": 14,
+    "question": "What role does courage play in living a good life?"
+  },
+  {
+    "id": 15,
+    "question": "How can we cultivate integrity when others pressure us to compromise?"
+  },
+  {
+    "id": 16,
+    "question": "What does it mean to care for one's soul?"
+  },
+  {
+    "id": 17,
+    "question": "Should we prioritize being admired or being good?"
+  },
+  {
+    "id": 18,
+    "question": "How do we know when we have learned something true versus memorized an opinion?"
+  },
+  {
+    "id": 19,
+    "question": "Why might an examined life be preferable to an unexamined one?"
+  },
+  {
+    "id": 20,
+    "question": "What is the difference between pleasure and the good?"
+  },
+  {
+    "id": 21,
+    "question": "How should we treat those who harm us?"
+  },
+  {
+    "id": 22,
+    "question": "Can someone who does wrong still be happy?"
+  },
+  {
+    "id": 23,
+    "question": "What does it mean to be wise about the most important things?"
+  },
+  {
+    "id": 24,
+    "question": "How do we balance speaking truth with getting along with others?"
+  },
+  {
+    "id": 25,
+    "question": "What makes a person just rather than merely law-abiding?"
+  },
+  {
+    "id": 26,
+    "question": "Why might it be worse to do injustice than to suffer it?"
+  },
+  {
+    "id": 27,
+    "question": "How can we tell if our desires are leading us astray?"
+  },
+  {
+    "id": 28,
+    "question": "What is the value of questioning authority and conventional wisdom?"
+  },
+  {
+    "id": 29,
+    "question": "How do we learn what we do not yet know?"
+  },
+  {
+    "id": 30,
+    "question": "Should we live for the approval of others or for our own conscience?"
+  },
+  {
+    "id": 31,
+    "question": "What does it mean to live in accordance with reason?"
+  },
+  {
+    "id": 32,
+    "question": "How can rhetoric and persuasion be used well or badly?"
+  },
+  {
+    "id": 33,
+    "question": "Why is it important to know the limits of our own knowledge?"
+  },
+  {
+    "id": 34,
+    "question": "What is the relationship between power and morality?"
+  },
+  {
+    "id": 35,
+    "question": "How should we respond to those who accuse us falsely?"
+  },
+  {
+    "id": 36,
+    "question": "Can we become better people, or are we fixed in our character?"
+  },
+  {
+    "id": 37,
+    "question": "What does justice require of us in our daily lives?"
+  },
+  {
+    "id": 38,
+    "question": "Why might someone choose to die rather than give up their principles?"
+  },
+  {
+    "id": 39,
+    "question": "How do we distinguish between true friends and flatterers?"
+  },
+  {
+    "id": 40,
+    "question": "What is the role of humility in wisdom?"
+  },
+  {
+    "id": 41,
+    "question": "Should we seek to change the world or to change ourselves first?"
+  },
+  {
+    "id": 42,
+    "question": "How do we find meaning when life is difficult or unjust?"
+  },
+  {
+    "id": 43,
+    "question": "What makes a life well-lived when facing adversity?"
+  },
+  {
+    "id": 44,
+    "question": "Is it better to be ignorant and content or to know and be troubled?"
+  },
+  {
+    "id": 45,
+    "question": "How should we use our gifts and talents responsibly?"
+  },
+  {
+    "id": 46,
+    "question": "What does it mean to harm another person's soul?"
+  },
+  {
+    "id": 47,
+    "question": "Why might the pursuit of wealth and status be hollow?"
+  },
+  {
+    "id": 48,
+    "question": "How do we balance self-interest with the common good?"
+  },
+  {
+    "id": 49,
+    "question": "What is the difference between opinion and knowledge?"
+  },
+  {
+    "id": 50,
+    "question": "How should we treat those who disagree with us about what matters most?"
+  },
+  {
+    "id": 51,
+    "question": "What does it mean to be free in how we live?"
+  },
+  {
+    "id": 52,
+    "question": "Why is it dangerous to think we know when we do not?"
+  },
+  {
+    "id": 53,
+    "question": "How can we live with integrity in a world full of compromise?"
+  },
+  {
+    "id": 54,
+    "question": "What is the relationship between virtue and happiness?"
+  },
+  {
+    "id": 55,
+    "question": "Should we obey laws we believe are unjust?"
+  },
+  {
+    "id": 56,
+    "question": "How do we cultivate a love of truth over a love of winning?"
+  },
+  {
+    "id": 57,
+    "question": "What does it mean to be good to others?"
+  },
+  {
+    "id": 58,
+    "question": "Why might honest inquiry be more valuable than comforting certainty?"
+  },
+  {
+    "id": 59,
+    "question": "How do we know what we ought to desire?"
+  },
+  {
+    "id": 60,
+    "question": "What is the cost of living a life of pretense?"
+  },
+  {
+    "id": 61,
+    "question": "How should we think about legacy and how we will be remembered?"
+  },
+  {
+    "id": 62,
+    "question": "What makes authority legitimate?"
+  },
+  {
+    "id": 63,
+    "question": "Why might it be foolish to avoid difficult conversations about truth?"
+  },
+  {
+    "id": 64,
+    "question": "How do we develop good judgment about right and wrong?"
+  },
+  {
+    "id": 65,
+    "question": "What does it mean to be a good citizen?"
+  },
+  {
+    "id": 66,
+    "question": "Should we prioritize the good of our soul over the good of our body?"
+  },
+  {
+    "id": 67,
+    "question": "How can we recognize and resist our own self-deception?"
+  },
+  {
+    "id": 68,
+    "question": "What is the relationship between freedom and virtue?"
+  },
+  {
+    "id": 69,
+    "question": "Why might suffering for what is right be preferable to prospering through wrong?"
+  },
+  {
+    "id": 70,
+    "question": "How do we maintain hope when the world seems unjust?"
+  },
+  {
+    "id": 71,
+    "question": "What does it mean to live authentically?"
+  },
+  {
+    "id": 72,
+    "question": "How should we respond when our beliefs are challenged?"
+  },
+  {
+    "id": 73,
+    "question": "What is the role of reflection in a meaningful life?"
+  },
+  {
+    "id": 74,
+    "question": "Can we be good without understanding why goodness matters?"
+  },
+  {
+    "id": 75,
+    "question": "How do we balance idealism with practical reality?"
+  },
+  {
+    "id": 76,
+    "question": "What makes someone worthy of respect?"
+  },
+  {
+    "id": 77,
+    "question": "Why might the unexamined life be not worth living?"
+  },
+  {
+    "id": 78,
+    "question": "How do we know when we have found genuine wisdom?"
+  },
+  {
+    "id": 79,
+    "question": "What does justice demand of us in our relationships?"
+  },
+  {
+    "id": 80,
+    "question": "Should we prefer to be wronged or to wrong another?"
+  },
+  {
+    "id": 81,
+    "question": "How can we live with uncertainty about life's biggest questions?"
+  },
+  {
+    "id": 82,
+    "question": "What is the value of admitting we do not know?"
+  },
+  {
+    "id": 83,
+    "question": "How do we discern true goodness from what merely appears good?"
+  },
+  {
+    "id": 84,
+    "question": "What does it mean to be accountable for how we live?"
+  },
+  {
+    "id": 85,
+    "question": "Why might inner peace matter more than external success?"
+  },
+  {
+    "id": 86,
+    "question": "How should we use our limited time in life?"
+  },
+  {
+    "id": 87,
+    "question": "What is the relationship between knowledge and virtue?"
+  },
+  {
+    "id": 88,
+    "question": "How do we avoid becoming corrupted by power or ambition?"
+  },
+  {
+    "id": 89,
+    "question": "What makes a person truly free?"
+  },
+  {
+    "id": 90,
+    "question": "Why might it be better to question than to blindly believe?"
+  },
+  {
+    "id": 91,
+    "question": "How do we find our calling or purpose in life?"
+  },
+  {
+    "id": 92,
+    "question": "What does it mean to harm ourselves through our choices?"
+  },
+  {
+    "id": 93,
+    "question": "How should we relate to those who have more power than us?"
+  },
+  {
+    "id": 94,
+    "question": "What is the role of moderation in living well?"
+  },
+  {
+    "id": 95,
+    "question": "Can we learn to be good, or must we be born with it?"
+  },
+  {
+    "id": 96,
+    "question": "How do we maintain our principles when everyone around us disagrees?"
+  },
+  {
+    "id": 97,
+    "question": "What does it mean to be true to oneself?"
+  },
+  {
+    "id": 98,
+    "question": "Why might the pursuit of truth be worth personal sacrifice?"
+  },
+  {
+    "id": 99,
+    "question": "How do we build a life of meaning and virtue?"
+  },
+  {
+    "id": 100,
+    "question": "What legacy should we hope to leave behind?"
+  }
+]
