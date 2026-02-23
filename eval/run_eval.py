@@ -67,7 +67,7 @@ def run_eval(
     ragas: bool = True,
     ragas_llm: str | None = None,
     from_results: Path | None = None,
-    rerank: bool = False,
+    rerank: bool = True,
 ) -> None:
     books_dir = books_dir or PROJECT_ROOT / "books"
     output_dir = Path(output_dir or PROJECT_ROOT / "eval" / "results")
@@ -155,16 +155,38 @@ def run_eval(
         retriever = Retriever(books_dir=books_dir)
         retriever._ensure_loaded()
 
+        # Stage 1: Retrieval only (bi 50 -> cross 8 when rerank, else bi top_k)
+        print("Stage 1: Retrieval...")
+        retrieval_results: list[dict] = []
         for i, q_item in enumerate(questions):
             q = q_item.get("question", q_item) if isinstance(q_item, dict) else str(q_item)
             qid = q_item.get("id", i + 1) if isinstance(q_item, dict) else i + 1
-            print(f"[{i+1}/{len(questions)}] {q[:60]}...")
-
+            print(f"  [{i+1}/{len(questions)}] {q[:60]}...")
             if rerank:
                 chunks, _ = retriever.search_with_rerank(q, bi_top_k=50, final_top_k=top_k)
             else:
                 chunks = retriever.search(q, top_k=top_k)
             all_retrieved.append(chunks)
+            retrieval_results.append({
+                "id": qid,
+                "question": q,
+                "retrieved_chunk_keys": [chunk_index.chunk_key(c) for c in chunks],
+            })
+
+        retrieval_path = output_dir / "eval_retrieval.json"
+        retrieval_path.write_text(
+            json.dumps(retrieval_results, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        print(f"Saved retrieval checkpoint: {retrieval_path}")
+
+        # Stage 2: Generation (Ollama relevance/value per citation)
+        print("Stage 2: Generation...")
+        for i, q_item in enumerate(questions):
+            q = q_item.get("question", q_item) if isinstance(q_item, dict) else str(q_item)
+            qid = q_item.get("id", i + 1) if isinstance(q_item, dict) else i + 1
+            chunks = all_retrieved[i]
+            print(f"  [{i+1}/{len(questions)}] {q[:60]}...")
 
             data, gen_errors = generate_per_citation(q, chunks)
             if auto_cite and data and chunks:
@@ -207,24 +229,47 @@ def run_eval(
                 "A3_fabrication_rate": validity["A3_fabrication_rate"],
                 "A4_hallucination_rate": halluc_rate,
             }
+            if data and data.get("quotes"):
+                result_item["quotes"] = [
+                    {
+                        "text": qt.get("text", ""),
+                        "citation": qt.get("citation", ""),
+                        "relation_to_question": qt.get("relation_to_question", ""),
+                        "value_system": qt.get("value_system", ""),
+                    }
+                    for qt in data["quotes"]
+                ]
             if gen_errors:
                 result_item["generation_errors"] = gen_errors
             per_question_results.append(result_item)
 
+    # Stage 2 checkpoint: retrieval + generation + A validity (before RAGAS)
+    pre_ragas_path = output_dir / "eval_pre_ragas.json"
+    pre_ragas_path.write_text(
+        json.dumps(per_question_results, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    print(f"Saved pre-RAGAS results (relevance/value/validity): {pre_ragas_path}")
+
+    ragas_summary: dict = {}
     # RAGAS metrics (Prometheus 2 via Ollama)
     if ragas:
-        from eval.ragas_metrics import compute_ragas_metrics
+        try:
+            from eval.ragas_metrics import compute_ragas_metrics
 
-        print("\nComputing RAGAS metrics...")
-        ragas_scores, ragas_summary = compute_ragas_metrics(
-            questions,
-            per_question_results,
-            all_retrieved,
-            llm_model=ragas_llm,
-        )
-        for i, r in enumerate(per_question_results):
-            if i < len(ragas_scores):
-                r.update(ragas_scores[i])
+            print("\nComputing RAGAS metrics...")
+            ragas_scores, ragas_summary = compute_ragas_metrics(
+                questions,
+                per_question_results,
+                all_retrieved,
+                llm_model=ragas_llm,
+            )
+            for i, r in enumerate(per_question_results):
+                if i < len(ragas_scores):
+                    r.update(ragas_scores[i])
+        except Exception as e:
+            print(f"\nRAGAS failed: {e}")
+            print("Pre-RAGAS results (relevance, value, validity) saved. Re-run with --from-results to retry RAGAS.")
 
     b1 = compute_retrieval_diversity(all_retrieved, chunk_index)
     b2 = compute_citation_diversity(all_parsed, chunk_index)
@@ -334,7 +379,11 @@ def run_eval(
     report_lines.append(f"**N questions**: {summary['n_questions']}")
     report_path.write_text("\n".join(report_lines), encoding="utf-8")
 
-    print(f"\nFull output: {full_path}")
+    retrieval_checkpoint = output_dir / "eval_retrieval.json"
+    if retrieval_checkpoint.exists():
+        print(f"Retrieval checkpoint: {retrieval_checkpoint}")
+    print(f"Pre-RAGAS checkpoint: {pre_ragas_path}")
+    print(f"Full output: {full_path}")
     print(f"Results: {results_path}")
     print(f"Summary: {summary_path}")
     print(f"Report: {report_path}")
@@ -361,7 +410,14 @@ def main():
     parser.add_argument(
         "--rerank",
         action="store_true",
-        help="Use Bi-encoder (top 50) + Cross-encoder rerank to final top_k instead of Bi-encoder only",
+        default=True,
+        help="Use Bi-encoder (top 50) + Cross-encoder rerank to final top_k (default: True)",
+    )
+    parser.add_argument(
+        "--no-rerank",
+        dest="rerank",
+        action="store_false",
+        help="Use Bi-encoder only, no Cross-encoder reranking",
     )
     args = parser.parse_args()
 
