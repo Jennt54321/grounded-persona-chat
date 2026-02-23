@@ -1,14 +1,20 @@
 """
-Conversation module: prompt + Ollama/Phi-3.5 for grounded responses.
+Conversation module: prompt + LLM for grounded responses.
+Supports Ollama (Phi-3.5) or Hugging Face (microsoft/Phi-3.5-mini-instruct).
 Model outputs plain text (Relation/Value per quote); Python assembles JSON.
 """
 
+import os
 from typing import List, Dict, Any, Iterator
 
 from src.citation_utils import make_citation_from_chunk
 
 OLLAMA_BASE_URL = "http://localhost:11434/v1"
 MODEL_ID = "phi3.5"
+HF_MODEL_ID = "microsoft/Phi-3.5-mini-instruct"
+
+# "ollama" or "huggingface"; set LLM_BACKEND=huggingface for Colab
+LLM_BACKEND = os.environ.get("LLM_BACKEND", "ollama")
 
 MAX_CHUNK_TEXT_LEN = None  # None = no truncation; set int to limit chars per chunk
 
@@ -83,6 +89,54 @@ def _is_context_length_error(exc: BaseException) -> bool:
     )
 
 
+# ----- Hugging Face backend -----
+
+_HF_PIPELINE = None
+
+
+def _load_hf_pipeline(model_id: str = HF_MODEL_ID):
+    """Lazy-load Hugging Face pipeline with 4-bit quantization for Colab T4."""
+    global _HF_PIPELINE
+    if _HF_PIPELINE is not None:
+        return _HF_PIPELINE
+    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_compute_dtype="float16",
+        bnb_4bit_use_double_quant=True,
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        quantization_config=bnb_config,
+        device_map="auto",
+        trust_remote_code=True,
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+    _HF_PIPELINE = (model, tokenizer)
+    return _HF_PIPELINE
+
+
+def _hf_chat_completion(messages: List[Dict[str, str]], model_id: str = HF_MODEL_ID) -> str:
+    """Run chat completion via Hugging Face Phi-3.5."""
+    model, tokenizer = _load_hf_pipeline(model_id)
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    inputs = tokenizer(text, return_tensors="pt").to(model.device)
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=512,
+        do_sample=True,
+        temperature=0.7,
+        pad_token_id=tokenizer.eos_token_id,
+    )
+    reply = tokenizer.decode(outputs[0][inputs["input_ids"].shape[1] :], skip_special_tokens=True)
+    return reply.strip()
+
+
 RELATION_SYSTEM_PROMPT = """You are a conversational assistant grounded ONLY in Plato's dialogues (Apology, Meno, Gorgias, Republic).
 
 Your task: Given a user question, a cited passage, and the values/beliefs the passage reflects, explain in 1-2 sentences how this passage (and its values) relates to the question.
@@ -106,14 +160,17 @@ def generate_value(
     if not formatted:
         return ""
     text, citation = formatted
-    try:
-        from openai import OpenAI
-        client = OpenAI(base_url=base_url, api_key="ollama")
-        user_content = f"""Passage [{citation}]:
+    user_content = f"""Passage [{citation}]:
 {text}
 
 What values or beliefs does this passage reflect? Reply in 1-2 sentences."""
-        messages = [{"role": "system", "content": VALUE_SYSTEM_PROMPT}, {"role": "user", "content": user_content}]
+    messages = [{"role": "system", "content": VALUE_SYSTEM_PROMPT}, {"role": "user", "content": user_content}]
+    try:
+        if LLM_BACKEND == "huggingface":
+            content = _hf_chat_completion(messages, model_id=HF_MODEL_ID)
+            return content
+        from openai import OpenAI
+        client = OpenAI(base_url=base_url, api_key="ollama")
         resp = client.chat.completions.create(model=model, messages=messages)
         content = (resp.choices[0].message.content or "").strip()
         return content
@@ -138,10 +195,7 @@ def generate_relation(
     if not formatted:
         return ""
     text, citation = formatted
-    try:
-        from openai import OpenAI
-        client = OpenAI(base_url=base_url, api_key="ollama")
-        user_content = f"""Question: {question}
+    user_content = f"""Question: {question}
 
 Passage [{citation}]:
 {text}
@@ -149,7 +203,13 @@ Passage [{citation}]:
 Values/beliefs this passage reflects: {value}
 
 How does this passage (and its values) relate to the question? Reply in 1-2 sentences."""
-        messages = [{"role": "system", "content": RELATION_SYSTEM_PROMPT}, {"role": "user", "content": user_content}]
+    messages = [{"role": "system", "content": RELATION_SYSTEM_PROMPT}, {"role": "user", "content": user_content}]
+    try:
+        if LLM_BACKEND == "huggingface":
+            content = _hf_chat_completion(messages, model_id=HF_MODEL_ID)
+            return content
+        from openai import OpenAI
+        client = OpenAI(base_url=base_url, api_key="ollama")
         resp = client.chat.completions.create(model=model, messages=messages)
         content = (resp.choices[0].message.content or "").strip()
         return content
@@ -199,9 +259,11 @@ def generate(
     model: str = MODEL_ID,
 ) -> str:
     """Generate a single response (non-streaming)."""
+    messages = build_messages(user_message, chunks, history)
+    if LLM_BACKEND == "huggingface":
+        return _hf_chat_completion(messages, model_id=HF_MODEL_ID)
     from openai import OpenAI
     client = OpenAI(base_url=base_url, api_key="ollama")
-    messages = build_messages(user_message, chunks, history)
     resp = client.chat.completions.create(model=model, messages=messages)
     content = resp.choices[0].message.content or ""
     return content
@@ -214,10 +276,14 @@ def generate_stream(
     base_url: str = OLLAMA_BASE_URL,
     model: str = MODEL_ID,
 ) -> Iterator[str]:
-    """Generate response token by token (streaming)."""
+    """Generate response token by token (streaming). HF backend yields full response at once."""
+    messages = build_messages(user_message, chunks, history)
+    if LLM_BACKEND == "huggingface":
+        content = _hf_chat_completion(messages, model_id=HF_MODEL_ID)
+        yield content
+        return
     from openai import OpenAI
     client = OpenAI(base_url=base_url, api_key="ollama")
-    messages = build_messages(user_message, chunks, history)
     stream = client.chat.completions.create(
         model=model,
         messages=messages,
