@@ -3,3 +3,5 @@ torch>=1.11.0
 openai>=1.0.0
 fastapi>=0.100.0
 uvicorn[standard]>=0.22.0
+ragas>=0.2.0
+datasets>=2.14.0
