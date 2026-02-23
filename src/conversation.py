@@ -132,6 +132,7 @@ def _hf_chat_completion(messages: List[Dict[str, str]], model_id: str = HF_MODEL
         do_sample=True,
         temperature=0.7,
         pad_token_id=tokenizer.eos_token_id,
+        use_cache=False,  # Avoid DynamicCache.from_legacy_cache compatibility issues with transformers 4.48+
     )
     reply = tokenizer.decode(outputs[0][inputs["input_ids"].shape[1] :], skip_special_tokens=True)
     return reply.strip()
