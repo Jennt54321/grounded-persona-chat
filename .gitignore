@@ -1,0 +1,11 @@
+# Eval results
+eval/results/
+eval/results@2026_2_21/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Retrieval logs
+retrieval_logs/
