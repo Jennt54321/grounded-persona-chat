@@ -67,6 +67,7 @@ def run_eval(
     ragas: bool = True,
     ragas_llm: str | None = None,
     from_results: Path | None = None,
+    from_retrieval: Path | None = None,
     rerank: bool = True,
 ) -> None:
     books_dir = books_dir or PROJECT_ROOT / "books"
@@ -143,6 +144,90 @@ def run_eval(
 
         retriever = Retriever(books_dir=books_dir)
         retriever._ensure_loaded()
+    elif from_retrieval is not None:
+        # Load retrieval checkpoint; skip Stage 1, run Stage 2 (generation) and beyond
+        retrieval_list = json.loads(Path(from_retrieval).read_text(encoding="utf-8"))
+        if not isinstance(retrieval_list, list):
+            raise ValueError("from_retrieval must be eval_retrieval.json (list of {id, question, retrieved_chunk_keys})")
+        if limit is not None:
+            retrieval_list = retrieval_list[:limit]
+
+        print(f"Loading retrieval from {from_retrieval} ({len(retrieval_list)} questions)...")
+        for r in retrieval_list:
+            keys = r.get("retrieved_chunk_keys", [])
+            chunks = _chunks_from_keys(chunk_index, keys)
+            all_retrieved.append(chunks)
+            questions.append({
+                "id": r.get("id"),
+                "question": r.get("question", ""),
+                "book_hint": r.get("book_hint"),
+            })
+
+        retriever = Retriever(books_dir=books_dir)
+        retriever._ensure_loaded()
+
+        # Stage 2: Generation (skip Stage 1)
+        print("Stage 2: Generation (using loaded retrieval)...")
+        for i, q_item in enumerate(questions):
+            q = q_item.get("question", q_item) if isinstance(q_item, dict) else str(q_item)
+            qid = q_item.get("id", i + 1) if isinstance(q_item, dict) else i + 1
+            chunks = all_retrieved[i]
+            print(f"  [{i+1}/{len(questions)}] {q[:60]}...")
+
+            data, gen_errors = generate_per_citation(q, chunks)
+            if auto_cite and data and chunks:
+                data = apply_auto_cite_to_data(data, chunks)
+            response = render_quotes_to_bullets(data) if data else ""
+
+            strict_parsed = (
+                strict_citations_from_data(data) if data else parse_citations_strict(response)
+            )
+            parsed = [strict_to_parsed(sc) for sc in strict_parsed]
+            all_parsed.append(parsed)
+            all_strict_parsed.append(strict_parsed)
+            all_questions.append(q)
+
+            cited_texts: list[str] = []
+            for sc in strict_parsed:
+                chunk = chunk_index.get(sc.file, sc.start_line, sc.end_line)
+                if chunk:
+                    t = (chunk.get("text") or "").strip()
+                    if t:
+                        cited_texts.append(t)
+            all_cited_texts.append(cited_texts)
+
+            validity = compute_citation_validity(parsed, chunk_index)
+            _, _, halluc_rate = verify_citations_against_retrieved(strict_parsed, chunks)
+            all_hallucination_rates.append(halluc_rate)
+
+            result_item = {
+                "id": qid,
+                "question": q,
+                "book_hint": q_item.get("book_hint") if isinstance(q_item, dict) else None,
+                "response": response,
+                "parsed_citations": [
+                    {"file": sc.file, "start_line": sc.start_line, "end_line": sc.end_line}
+                    for sc in strict_parsed
+                ],
+                "retrieved_chunk_keys": [chunk_index.chunk_key(c) for c in chunks],
+                "A1_existence_rate": validity["A1_existence_rate"],
+                "A2_quote_match_rate": validity["A2_quote_match_rate"],
+                "A3_fabrication_rate": validity["A3_fabrication_rate"],
+                "A4_hallucination_rate": halluc_rate,
+            }
+            if data and data.get("quotes"):
+                result_item["quotes"] = [
+                    {
+                        "text": qt.get("text", ""),
+                        "citation": qt.get("citation", ""),
+                        "relation_to_question": qt.get("relation_to_question", ""),
+                        "value_system": qt.get("value_system", ""),
+                    }
+                    for qt in data["quotes"]
+                ]
+            if gen_errors:
+                result_item["generation_errors"] = gen_errors
+            per_question_results.append(result_item)
     else:
         # Full pipeline: retrieve + generate
         questions_path = questions_path or PROJECT_ROOT / "eval" / "questions.json"
@@ -408,6 +493,12 @@ def main():
         help="Skip retrieval+generation; load existing eval_results.json or eval_full.json and run metrics only",
     )
     parser.add_argument(
+        "--from-retrieval",
+        type=Path,
+        default=None,
+        help="Skip Stage 1; load eval_retrieval.json and continue with generation + metrics",
+    )
+    parser.add_argument(
         "--rerank",
         action="store_true",
         default=True,
@@ -431,6 +522,7 @@ def main():
         ragas=args.ragas,
         ragas_llm=args.ragas_llm,
         from_results=args.from_results,
+        from_retrieval=args.from_retrieval,
         rerank=args.rerank,
     )
 
