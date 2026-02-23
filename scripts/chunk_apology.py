@@ -2,7 +2,13 @@
 """
 Hybrid chunking approach for RAG implementation.
 Chunks the Apology.text file by paragraphs with overlap between chunks.
+- Each paragraph = chunk_id. If paragraph > MAX_CHUNK_WORDS, split by sentences;
+  sub_chunk_id = 1, 2, 3, ...
+- Schema: book_id, volume_id, thematic_division, speaker, start_line, end_line,
+  chunk_id, sub_chunk_id, text.
 """
+
+MAX_CHUNK_WORDS = 250
 
 import json
 import re
@@ -125,6 +131,37 @@ def get_overlap_text(paragraphs: List[Tuple[int, int, str]],
     return prev_overlap, next_overlap
 
 
+def _split_text_by_max_words(text: str, max_words: int) -> List[str]:
+    """Split text into sub-parts of at most max_words each, breaking on sentence boundaries."""
+    sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', text) if s.strip()]
+    if not sentences:
+        return [text] if text.strip() else []
+    parts = []
+    buf = []
+    buf_words = 0
+    for sent in sentences:
+        sent_words = len(sent.split())
+        if sent_words > max_words:
+            # Single sentence too long: split by word count
+            if buf:
+                parts.append(" ".join(buf))
+                buf = []
+                buf_words = 0
+            words = sent.split()
+            for i in range(0, len(words), max_words):
+                parts.append(" ".join(words[i : i + max_words]))
+        elif buf_words + sent_words > max_words and buf:
+            parts.append(" ".join(buf))
+            buf = [sent]
+            buf_words = sent_words
+        else:
+            buf.append(sent)
+            buf_words += sent_words
+    if buf:
+        parts.append(" ".join(buf))
+    return parts
+
+
 def create_chunks_with_overlap(
     paragraphs: List[Tuple[int, int, str]],
     sections: Dict[int, str],
@@ -133,38 +170,51 @@ def create_chunks_with_overlap(
     speaker: str = "Socrates",
     overlap_sentences: int = 2,
 ) -> List[Dict]:
-    """Create chunks with overlap. Schema: book_id, volume_id, thematic_division, speaker, start_line, end_line, chunk_id, text."""
+    """Create chunks with overlap. If para > MAX_CHUNK_WORDS, split into sub_chunk_id 1, 2, 3..."""
     chunks = []
     
     for idx, (start_line, end_line, para_text) in enumerate(paragraphs):
-        # Get overlap text
-        prev_overlap, next_overlap = get_overlap_text(paragraphs, idx, overlap_sentences)
-        
-        # Build chunk text with overlaps
-        chunk_text_parts = []
-        if prev_overlap:
-            chunk_text_parts.append(prev_overlap)
-        chunk_text_parts.append(para_text)
-        if next_overlap:
-            chunk_text_parts.append(next_overlap)
-        
-        chunk_text = " ".join(chunk_text_parts)
-        
-        # Thematic division from section at start of this paragraph
+        chunk_id = idx + 1
         section_name = sections.get(start_line, "Main Defense")
         thematic_division = section_to_thematic_division(section_name)
         
-        chunk = {
-            "book_id": book_id,
-            "volume_id": volume_id,
-            "thematic_division": thematic_division,
-            "speaker": speaker,
-            "start_line": start_line,
-            "end_line": end_line,
-            "chunk_id": idx + 1,
-            "text": chunk_text,
-        }
-        chunks.append(chunk)
+        para_words = len(para_text.split())
+        if para_words <= MAX_CHUNK_WORDS:
+            # Single chunk
+            prev_overlap, next_overlap = get_overlap_text(paragraphs, idx, overlap_sentences)
+            chunk_text_parts = []
+            if prev_overlap:
+                chunk_text_parts.append(prev_overlap)
+            chunk_text_parts.append(para_text)
+            if next_overlap:
+                chunk_text_parts.append(next_overlap)
+            chunk_text = " ".join(chunk_text_parts)
+            chunks.append({
+                "book_id": book_id,
+                "volume_id": volume_id,
+                "thematic_division": thematic_division,
+                "speaker": speaker,
+                "start_line": start_line,
+                "end_line": end_line,
+                "chunk_id": chunk_id,
+                "sub_chunk_id": 1,
+                "text": chunk_text,
+            })
+        else:
+            # Split paragraph into sub-chunks
+            sub_texts = _split_text_by_max_words(para_text, MAX_CHUNK_WORDS)
+            for sub_idx, sub_text in enumerate(sub_texts, 1):
+                chunks.append({
+                    "book_id": book_id,
+                    "volume_id": volume_id,
+                    "thematic_division": thematic_division,
+                    "speaker": speaker,
+                    "start_line": start_line,
+                    "end_line": end_line,
+                    "chunk_id": chunk_id,
+                    "sub_chunk_id": sub_idx,
+                    "text": sub_text,
+                })
     
     return chunks
 
@@ -222,6 +272,8 @@ def main():
     print("\n=== Chunking Summary ===")
     print(f"Total chunks: {len(chunks)}")
     if chunks:
+        split_count = sum(1 for c in chunks if c.get("sub_chunk_id", 1) > 1)
+        print(f"Chunks with sub_chunk_id > 1: {split_count}")
         print(f"Average chunk size: {sum(len(c['text'].split()) for c in chunks) / len(chunks):.1f} words")
         print(f"Min chunk size: {min(len(c['text'].split()) for c in chunks)} words")
         print(f"Max chunk size: {max(len(c['text'].split()) for c in chunks)} words")

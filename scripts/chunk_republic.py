@@ -2,7 +2,10 @@
 """
 Chunk the Republic.text file for RAG implementation.
 Skips the introduction (lines 1-572), chunks by Book and speaker blocks.
-Schema: book_id, volume_id, thematic_division, speakers, start_line, end_line, chunk_id, text
+- Each chunk_id = one speaker block. If block exceeds MAX_CHUNK_WORDS, split by
+  paragraph; chunk_id stays same, sub_chunk_id = 1, 2, 3, ...
+- Schema: book_id, volume_id, thematic_division, speakers, start_line, end_line,
+  chunk_id, sub_chunk_id, text
 """
 
 import json
@@ -33,7 +36,7 @@ BOOK_TO_DIVISION = {
 }
 
 # Max words per chunk before splitting by paragraph
-MAX_CHUNK_WORDS = 450
+MAX_CHUNK_WORDS = 350
 
 
 def is_speaker_line(line: str) -> bool:
@@ -73,13 +76,25 @@ BOOK_MARKER = "\x00BOOK\x00"
 SPEAKER_LINE_MARKER = "\x00SPEAKER\x00"
 
 
+def _split_text_by_max_words(text: str, max_words: int, start_ln: int, end_ln: int) -> List[Tuple[int, int, str]]:
+    """Split text into sub-parts of at most max_words each; return (start_ln, end_ln, sub_text) tuples."""
+    words_list = text.split()
+    if len(words_list) <= max_words:
+        return [(start_ln, end_ln, text)]
+    parts = []
+    for i in range(0, len(words_list), max_words):
+        sub_text = " ".join(words_list[i : i + max_words])
+        parts.append((start_ln, end_ln, sub_text))  # same line range for citation
+    return parts
+
+
 def chunk_republic(text_lines: List[str]) -> List[Dict]:
     """
     Chunk the Republic text (lines after introduction) by Book and speaker blocks.
     Returns list of chunk dicts with the specified schema.
     """
     chunks = []
-    chunk_id = 0
+    block_chunk_id = 0
 
     # Use only content after introduction
     content_start = min(INTRODUCTION_END_LINE, len(text_lines))
@@ -102,8 +117,9 @@ def chunk_republic(text_lines: List[str]) -> List[Dict]:
         book_num = is_book_header(stripped)
         if book_num:
             if current_block_lines:
-                chunk_id = _flush_block(
-                    chunks, chunk_id, current_book, current_speakers,
+                block_chunk_id += 1
+                _flush_block(
+                    chunks, block_chunk_id, current_book, current_speakers,
                     current_block_lines, current_block_start,
                     end_line_include_until=source_line - 1,
                 )
@@ -119,8 +135,9 @@ def chunk_republic(text_lines: List[str]) -> List[Dict]:
         # Check for speaker line: put speaker line in next chunk's range
         if is_speaker_line(stripped):
             if current_block_lines:
-                chunk_id = _flush_block(
-                    chunks, chunk_id, current_book, current_speakers,
+                block_chunk_id += 1
+                _flush_block(
+                    chunks, block_chunk_id, current_book, current_speakers,
                     current_block_lines, current_block_start,
                 )
                 current_block_lines = []
@@ -155,8 +172,9 @@ def chunk_republic(text_lines: List[str]) -> List[Dict]:
         i += 1
 
     if current_block_lines:
+        block_chunk_id += 1
         _flush_block(
-            chunks, chunk_id, current_book, current_speakers,
+            chunks, block_chunk_id, current_book, current_speakers,
             current_block_lines, current_block_start,
         )
 
@@ -171,10 +189,10 @@ def _flush_block(
     block_lines: List[Tuple[int, str]],
     block_start: int,
     end_line_include_until: Optional[int] = None,
-) -> int:
+) -> None:
     """
-    Flush a speaker block to one or more chunks.
-    Splits by paragraph if block exceeds MAX_CHUNK_WORDS.
+    Flush a speaker block to one or more chunks. chunk_id stays same;
+    sub_chunk_id = 1 when single, 1, 2, 3... when split.
     end_line_include_until: if set, extend chunk end_line to include this line (BOOK/speaker).
     """
     # Build full text (skip structural markers)
@@ -189,7 +207,6 @@ def _flush_block(
         end_line = max(end_line, end_line_include_until)
 
     if word_count <= MAX_CHUNK_WORDS or not block_lines:
-        chunk_id += 1
         chunk = {
             "book_id": "republic",
             "volume_id": book,
@@ -198,10 +215,11 @@ def _flush_block(
             "start_line": block_start,
             "end_line": end_line,
             "chunk_id": chunk_id,
+            "sub_chunk_id": 1,
             "text": full_text,
         }
         chunks.append(chunk)
-        return chunk_id
+        return
 
     # Split by PARA_MARKER into paragraphs (include blank/sep in range)
     paragraphs: List[Tuple[int, int, str]] = []
@@ -221,18 +239,28 @@ def _flush_block(
         paragraphs.append((para_start, block_lines[-1][0], " ".join(t for _, t in para_lines if t != SEP_MARKER)))
 
     if not paragraphs:
-        return chunk_id
+        return
 
-    # Merge paragraphs to stay under MAX_CHUNK_WORDS; first chunk starts at block_start so BOOK/speaker/blank lines are covered
+    # Expand: split any single paragraph that exceeds MAX_CHUNK_WORDS
+    expanded: List[Tuple[int, int, str]] = []
+    for start_ln, end_ln, text in paragraphs:
+        words = len(text.split())
+        if words > MAX_CHUNK_WORDS:
+            expanded.extend(_split_text_by_max_words(text, MAX_CHUNK_WORDS, start_ln, end_ln))
+        else:
+            expanded.append((start_ln, end_ln, text))
+    paragraphs = expanded
+
+    # Merge paragraphs to stay under MAX_CHUNK_WORDS; chunk_id stays same, sub_chunk_id = 1, 2, 3...
     current_group: List[Tuple[int, int, str]] = []
     current_words = 0
     group_start = block_start
+    sub_chunk_idx = 1
 
     for start_ln, end_ln, text in paragraphs:
         words = len(text.split())
         if current_words + words > MAX_CHUNK_WORDS and current_group:
             group_text = " ".join(t for _, _, t in current_group)
-            chunk_id += 1
             chunk = {
                 "book_id": "republic",
                 "volume_id": book,
@@ -241,9 +269,11 @@ def _flush_block(
                 "start_line": group_start,
                 "end_line": current_group[-1][1],
                 "chunk_id": chunk_id,
+                "sub_chunk_id": sub_chunk_idx,
                 "text": group_text,
             }
             chunks.append(chunk)
+            sub_chunk_idx += 1
             current_group = []
             current_words = 0
             group_start = start_ln
@@ -253,7 +283,6 @@ def _flush_block(
 
     if current_group:
         group_text = " ".join(t for _, _, t in current_group)
-        chunk_id += 1
         last_end = max(current_group[-1][1], block_lines[-1][0])  # include trailing blank/sep in range
         if end_line_include_until is not None:
             last_end = max(last_end, end_line_include_until)
@@ -265,10 +294,9 @@ def _flush_block(
             "start_line": group_start,
             "end_line": last_end,
             "chunk_id": chunk_id,
+            "sub_chunk_id": sub_chunk_idx,
             "text": group_text,
         })
-
-    return chunk_id
 
 
 def main():
@@ -318,6 +346,8 @@ def main():
     print("\n=== Chunking Summary ===")
     print(f"Total chunks: {len(chunks)}")
     if chunks:
+        split_count = sum(1 for c in chunks if c.get("sub_chunk_id", 1) > 1)
+        print(f"Chunks with sub_chunk_id > 1: {split_count}")
         avg_words = sum(len(c["text"].split()) for c in chunks) / len(chunks)
         print(f"Average chunk size: {avg_words:.1f} words")
         by_volume = {}

@@ -6,8 +6,10 @@ Strategy (one chunk per speaker turn / utterance):
 - Each chunk = one continuous utterance by one speaker.
 - Preserve exact start_line/end_line for precise citations.
 - Text retains speaker label at start (e.g. "Meno. Can you tell me...").
-- Long single speeches are split by paragraph when exceeding MAX_CHUNK_WORDS.(no chunks in meno is longer than 400 words)
-- Schema: book_id, volume_id, thematic_division, speaker, start_line, end_line, chunk_id, text.
+- Long single speeches are split by paragraph when exceeding MAX_CHUNK_WORDS;
+  when split, chunk_id stays the same, sub_chunk_id = 1, 2, 3, ...
+- Schema: book_id, volume_id, thematic_division, speaker, start_line, end_line,
+  chunk_id, sub_chunk_id, text.
 - volume_id = "I" (single dialogue). thematic_division = phase name for context/filtering.
 """
 
@@ -41,7 +43,7 @@ PHASE_BOUNDARIES = [
     (1601, 99999, "conclusion"),           # Virtue as divine gift, closing
 ]
 
-MAX_CHUNK_WORDS = 400
+MAX_CHUNK_WORDS = 350
 PARA_MARKER = "\x00PARA\x00"
 
 
@@ -80,13 +82,14 @@ def parse_speaker_tag(tag: str) -> str:
 
 def _emit_turn_chunks(
     chunks: List[Dict],
+    chunk_id: int,
     speaker: str,
     turn_lines: List[Tuple[int, str]],
 ) -> None:
     """
     Emit one or more chunks for a single speaker turn.
-    Turn lines are (source_line, text) with PARA_MARKER for paragraph breaks.
-    If turn exceeds MAX_CHUNK_WORDS, split by paragraph.
+    If turn exceeds MAX_CHUNK_WORDS, split by paragraph; chunk_id stays same,
+    sub_chunk_id = 1, 2, 3, ...
     """
     full_text = " ".join(t for _, t in turn_lines if t != PARA_MARKER)
     word_count = len(full_text.split())
@@ -104,12 +107,13 @@ def _emit_turn_chunks(
             "speaker": speaker,
             "start_line": block_start,
             "end_line": end_line,
-            "chunk_id": 0,
+            "chunk_id": chunk_id,
+            "sub_chunk_id": 1,
             "text": prefixed,
         })
         return
 
-    # Split by paragraph into sub-chunks
+    # Split by paragraph; chunk_id stays same, sub_chunk_id = 1, 2, 3, ...
     paragraphs: List[Tuple[int, int, str]] = []
     para_start = block_start
     para_buf: List[Tuple[int, str]] = []
@@ -132,6 +136,7 @@ def _emit_turn_chunks(
     group: List[Tuple[int, int, str]] = []
     group_words = 0
     group_start = paragraphs[0][0]
+    sub_chunk_idx = 1
 
     for start_ln, end_ln, text in paragraphs:
         words = len(text.split())
@@ -145,9 +150,11 @@ def _emit_turn_chunks(
                 "speaker": speaker,
                 "start_line": group_start,
                 "end_line": group[-1][1],
-                "chunk_id": 0,
+                "chunk_id": chunk_id,
+                "sub_chunk_id": sub_chunk_idx,
                 "text": f"{speaker}. {group_text}",
             })
+            sub_chunk_idx += 1
             group = []
             group_words = 0
             group_start = start_ln
@@ -164,20 +171,21 @@ def _emit_turn_chunks(
             "speaker": speaker,
             "start_line": group_start,
             "end_line": group[-1][1],
-            "chunk_id": 0,
+            "chunk_id": chunk_id,
+            "sub_chunk_id": sub_chunk_idx,
             "text": f"{speaker}. {group_text}",
         })
 
 
 def chunk_meno(text_lines: List[str]) -> List[Dict]:
     """
-    Chunk Meno by speaker turn: one chunk per utterance (or per paragraph-group
-    within a long utterance). chunk_id = unique chunk index (1, 2, 3, ...).
+    Chunk Meno by speaker turn. chunk_id = turn index; when split, sub_chunk_id = 1, 2, 3, ...
     """
     chunks: List[Dict] = []
     content_start = find_content_start(text_lines)
     content_lines = text_lines[content_start:]
     line_offset = content_start
+    chunk_id = 0
 
     i = 0
 
@@ -208,16 +216,15 @@ def chunk_meno(text_lines: List[str]) -> List[Dict]:
                 turn_text += " " + next_stripped
                 i += 1
 
-            _emit_turn_chunks(chunks, name, turn_lines)
+            if turn_lines:
+                chunk_id += 1
+                _emit_turn_chunks(chunks, chunk_id, name, turn_lines)
             continue
 
         if not stripped:
             i += 1
             continue
         i += 1
-
-    for idx, c in enumerate(chunks, 1):
-        c["chunk_id"] = idx
 
     return chunks
 
@@ -251,6 +258,8 @@ def main():
     print("\n=== Chunking Summary ===")
     print(f"Total chunks: {len(chunks)}")
     if chunks:
+        split_count = sum(1 for c in chunks if c.get("sub_chunk_id", 1) > 1)
+        print(f"Chunks with sub_chunk_id > 1: {split_count}")
         avg = sum(len(c["text"].split()) for c in chunks) / len(chunks)
         print(f"Average chunk size: {avg:.1f} words")
         print(f"Min words: {min(len(c['text'].split()) for c in chunks)}")

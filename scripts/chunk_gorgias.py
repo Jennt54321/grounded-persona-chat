@@ -3,13 +3,13 @@
 Chunk the Gorgias dialogue for RAG with high-quality citation.
 
 Strategy (one chunk per speaker turn / utterance):
-- Each dialogue_id = one continuous utterance by one speaker.
-- If a speaker turn exceeds MAX_CHUNK_WORDS, it is split into multiple chunks
-  (chunk_id 1, 2, 3, ... within that dialogue_id).
+- Each chunk_id = one continuous utterance by one speaker.
+- If a turn exceeds MAX_CHUNK_WORDS, split by paragraph; chunk_id stays same,
+  sub_chunk_id = 1, 2, 3, ...
 - Preserve exact start_line/end_line for precise citations.
 - Text retains speaker label at start (e.g. "Socrates. ...").
 - Schema: book_id, volume_id, thematic_division, speaker, start_line, end_line,
-  dialogue_id, chunk_id, text.
+  chunk_id, sub_chunk_id, text.
 """
 
 import json
@@ -45,7 +45,7 @@ PHASE_BOUNDARIES = [
     (1221, 99999, "callicles_nature_convention"),
 ]
 
-MAX_CHUNK_WORDS = 400
+MAX_CHUNK_WORDS = 350
 PARA_MARKER = "\x00PARA\x00"
 
 
@@ -84,13 +84,14 @@ def parse_speaker_tag(tag: str) -> str:
 
 def _emit_turn_chunks(
     chunks: List[Dict],
-    dialogue_id: int,
+    chunk_id: int,
     speaker: str,
     turn_lines: List[Tuple[int, str]],
 ) -> None:
     """
-    Emit one or more chunks for a single speaker turn (one dialogue_id).
-    If turn exceeds MAX_CHUNK_WORDS, split by paragraph into chunk_id 1, 2, ...
+    Emit one or more chunks for a single speaker turn.
+    If turn exceeds MAX_CHUNK_WORDS, split by paragraph; chunk_id stays same,
+    sub_chunk_id = 1, 2, 3, ...
     """
     if not turn_lines:
         return
@@ -110,13 +111,13 @@ def _emit_turn_chunks(
             "speaker": speaker,
             "start_line": block_start,
             "end_line": end_line,
-            "dialogue_id": dialogue_id,
-            "chunk_id": 1,
+            "chunk_id": chunk_id,
+            "sub_chunk_id": 1,
             "text": prefixed,
         })
         return
 
-    # Split by paragraph into sub-chunks (chunk_id 1, 2, 3, ...)
+    # Split by paragraph; chunk_id stays same, sub_chunk_id = 1, 2, 3, ...
     paragraphs: List[Tuple[int, int, str]] = []
     para_start = block_start
     para_buf: List[Tuple[int, str]] = []
@@ -143,7 +144,7 @@ def _emit_turn_chunks(
     group: List[Tuple[int, int, str]] = []
     group_words = 0
     group_start = paragraphs[0][0]
-    chunk_idx = 1
+    sub_chunk_idx = 1
 
     for start_ln, end_ln, text in paragraphs:
         words = len(text.split())
@@ -157,11 +158,11 @@ def _emit_turn_chunks(
                 "speaker": speaker,
                 "start_line": group_start,
                 "end_line": group[-1][1],
-                "dialogue_id": dialogue_id,
-                "chunk_id": chunk_idx,
+                "chunk_id": chunk_id,
+                "sub_chunk_id": sub_chunk_idx,
                 "text": f"{speaker}. {group_text}",
             })
-            chunk_idx += 1
+            sub_chunk_idx += 1
             group = []
             group_words = 0
             group_start = start_ln
@@ -178,22 +179,22 @@ def _emit_turn_chunks(
             "speaker": speaker,
             "start_line": group_start,
             "end_line": group[-1][1],
-            "dialogue_id": dialogue_id,
-            "chunk_id": chunk_idx,
+            "chunk_id": chunk_id,
+            "sub_chunk_id": sub_chunk_idx,
             "text": f"{speaker}. {group_text}",
         })
 
 
 def chunk_gorgias(text_lines: List[str]) -> List[Dict]:
     """
-    Chunk Gorgias by speaker turn: one dialogue_id per utterance; if an
-    utterance exceeds MAX_CHUNK_WORDS, split into multiple chunks (chunk_id 1, 2, ...).
+    Chunk Gorgias by speaker turn. chunk_id = turn index; when split,
+    sub_chunk_id = 1, 2, 3, ...
     """
     chunks: List[Dict] = []
     content_start = find_content_start(text_lines)
     content_lines = text_lines[content_start:]
     line_offset = content_start
-    dialogue_id = 0
+    chunk_id = 0
     i = 0
 
     while i < len(content_lines):
@@ -223,8 +224,8 @@ def chunk_gorgias(text_lines: List[str]) -> List[Dict]:
                 i += 1
 
             if turn_lines:
-                dialogue_id += 1
-                _emit_turn_chunks(chunks, dialogue_id, name, turn_lines)
+                chunk_id += 1
+                _emit_turn_chunks(chunks, chunk_id, name, turn_lines)
             continue
 
         if not stripped:
@@ -266,10 +267,10 @@ def main():
     print("\n=== Chunking Summary ===")
     print(f"Total chunks: {len(chunks)}")
     if chunks:
-        dialogue_ids = {c["dialogue_id"] for c in chunks}
-        print(f"Total dialogue_id (speaker turns): {len(dialogue_ids)}")
-        split_dialogues = {c["dialogue_id"] for c in chunks if c["chunk_id"] > 1}
-        print(f"Dialogues split into multiple chunks: {len(split_dialogues)}")
+        chunk_ids = {c["chunk_id"] for c in chunks}
+        print(f"Total chunk_id (speaker turns): {len(chunk_ids)}")
+        split_count = sum(1 for c in chunks if c.get("sub_chunk_id", 1) > 1)
+        print(f"Chunks with sub_chunk_id > 1: {split_count}")
         avg = sum(len(c["text"].split()) for c in chunks) / len(chunks)
         print(f"Average chunk size: {avg:.1f} words")
         print(f"Min words: {min(len(c['text'].split()) for c in chunks)}")
