@@ -22,9 +22,9 @@ CHUNK_FILES = [
 MODEL_ID = "BAAI/bge-base-en-v1.5"
 RERANKER_MODEL_ID = "BAAI/bge-reranker-base"
 BGE_QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
-TOP_K = 8
+TOP_K = 5
 BI_TOP_K = 50  # Bi-encoder candidates for reranking
-FINAL_TOP_K = 8
+FINAL_TOP_K = 5  # Cross-encoder takes 5 from bi's 50
 
 MIN_CHUNK_TEXT_LEN = 5  # Skip chunks with empty or very short text (no useful content)
 
