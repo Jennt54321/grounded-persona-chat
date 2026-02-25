@@ -20,9 +20,9 @@ class StrictCitation:
     end_line: int
 
 
-# Strict format: [file:start-end] or file:start-end
+# Strict format: [file:start-end] or file:start-end (file may include volume e.g. "Republic II")
 STRICT_CITATION_BRACKETS_RE = re.compile(r'\[([^:\]]+):(\d+)-(\d+)\]')
-STRICT_CITATION_PLAIN_RE = re.compile(r'(?<![\[\w])([A-Za-z]+):(\d+)-(\d+)(?![\]\d-])')
+STRICT_CITATION_PLAIN_RE = re.compile(r'(?<![\[\w])([^:]+):(\d+)-(\d+)(?![\]\d-])')
 
 
 @dataclass

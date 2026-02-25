@@ -16,18 +16,20 @@ from eval.chunk_index import ChunkIndex
 
 
 def _chunks_from_keys(chunk_index: ChunkIndex, keys: list) -> list[dict]:
-    """Resolve retrieved_chunk_keys to full chunk dicts (with text)."""
+    """Resolve retrieved_chunk_keys to full chunk dicts (with text). Keys are 4-tuples (book, volume_id, start, end) or dicts with volume_id."""
     chunks: list[dict] = []
     for k in keys:
-        if isinstance(k, (list, tuple)) and len(k) >= 3:
-            book, start, end = str(k[0]), int(k[1]), int(k[2])
+        vol = ""
+        if isinstance(k, (list, tuple)) and len(k) >= 4:
+            book, vol, start, end = str(k[0]), str(k[1]) if k[1] is not None else "", int(k[2]), int(k[3])
         elif isinstance(k, dict):
             book = str(k.get("file", k.get("book_id", "")))
             start = int(k.get("start_line", 0))
             end = int(k.get("end_line", 0))
+            vol = str(k.get("volume_id", "") or "")
         else:
             continue
-        c = chunk_index.get(book, start, end)
+        c = chunk_index.get(book, start, end, volume_id=vol)
         if c:
             chunks.append(c)
     return chunks

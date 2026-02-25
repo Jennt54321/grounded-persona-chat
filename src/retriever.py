@@ -44,6 +44,7 @@ class RetrievalTrace:
         def _chunk_summary(c: Dict, bi_rank: Optional[int] = None, rerank_rank: Optional[int] = None) -> Dict:
             d = {
                 "book_id": c.get("book_id"),
+                "volume_id": c.get("volume_id"),
                 "start_line": c.get("start_line"),
                 "end_line": c.get("end_line"),
                 "speaker": c.get("speaker", c.get("speakers")),
