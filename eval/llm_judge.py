@@ -11,7 +11,7 @@ from typing import Any
 # Use same backend as conversation to avoid extra deps
 from src.conversation import _hf_chat_completion
 
-JUDGE_SYSTEM_PROMPT = JUDGE_SYSTEM_PROMPT = """You are a strict evaluator for a Q&A system grounded in Plato's texts (Apology, Gorgias, Meno, Republic).
+JUDGE_SYSTEM_PROMPT = """You are a strict evaluator for a Q&A system grounded in Plato's texts (Apology, Gorgias, Meno, Republic).
 
 You will be given:
 1. A user QUESTION
