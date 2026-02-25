@@ -1,7 +1,7 @@
 """
 Conversation module: prompt + LLM for grounded responses.
 Uses Hugging Face (Qwen2.5-3B-Instruct) for local inference.
-Model outputs Value per quote; Python assembles JSON.
+Model receives question + passages in order and outputs a JSON array of value strings only; parser merges by index.
 """
 
 import logging
@@ -112,6 +112,8 @@ def _load_hf_pipeline(model_id: str = HF_MODEL_ID):
 
     model.eval()
     _HF_PIPELINE = (model, tokenizer)
+    device = next(model.parameters()).device
+    logger.info("Hugging Face model loaded successfully: %s on %s", model_id, device)
     return _HF_PIPELINE
 
 
@@ -131,9 +133,10 @@ def _hf_chat_completion(messages: List[Dict[str, str]], model_id: str = HF_MODEL
     # Move tensors to the same device as the model (works for CUDA/MPS/CPU)
     inputs = {k: v.to(model.device) for k, v in inputs.items()}
 
+    # Allow enough tokens for 5 passages × 2-3 line value_system; truncation causes parse failure
     outputs = model.generate(
         **inputs,
-        max_new_tokens=512,
+        max_new_tokens=2048,
         do_sample=False,
         pad_token_id=tokenizer.pad_token_id,
         eos_token_id=tokenizer.eos_token_id,
@@ -147,50 +150,28 @@ def _hf_chat_completion(messages: List[Dict[str, str]], model_id: str = HF_MODEL
     return reply.strip()
 
 
-# Batch value generation: strict format so parsing is reliable. Use delimiter --- between blocks.
+# Batch value generation: model receives question + paragraphs in order and outputs a JSON array of values only.
 BATCH_VALUE_PROMPT = """You are a conversational assistant grounded ONLY in Plato's dialogues (Apology, Meno, Gorgias, Republic).
 
-Your task: For each numbered passage below, consider a user question and state in 1-2 sentences what values or beliefs that passage reflects (e.g., justice, virtue, knowledge).
+You will receive a question and then several passages in order (Passage 1, Passage 2, ...). For each passage, write a 2-3 sentence (2-3 line) analysis of what values or beliefs that passage reflects (e.g., justice, virtue, knowledge), considering the user's question. Each array element should be substantive: multiple sentences or lines, not a single short phrase.
 
-You MUST use this exact format for every passage. Do not add extra text before or after.
-For each passage output exactly two lines:
-1. "Passage N:" where N is the passage number (1, 2, 3, ...).
-2. "Value: " followed by your 1-2 sentence answer for that passage only.
-Separate each passage block with the delimiter "---" on its own line.
-
-Example for 2 passages:
----
-Passage 1:
-Value: This passage reflects the value of courage in facing unjust authority.
----
-Passage 2:
-Value: It emphasizes the importance of truthfulness and integrity.
----
-
-Rules: Use only the exact labels "Passage N:" and "Value:". One block per passage. No JSON, no extra commentary."""
+Output a single valid JSON array of strings: one string per passage, in the same order as the passages. Do not add any text before or after the JSON. No markdown, no code fences, no commentary."""
 
 
 def build_messages_batch_values(
     user_message: str,
     chunks: List[Dict[str, Any]],
 ) -> List[Dict[str, str]]:
-    """Build messages for a single batched call: user question + passages; model returns Value per passage in strict format."""
-    passages, num_passages = _format_passages_for_prompt(chunks)
+    """Build messages: question once, then passages in order; model outputs a JSON array of values in the same order."""
+    valid_chunks = [c for c in chunks if _format_single_chunk(c)]
+    passages, num_passages = _format_passages_for_prompt(valid_chunks)
     user_content = f"""Question: {user_message}
 
-Passages to analyze (number them 1 to {num_passages}):
+Passages (analyze each in order and output exactly {num_passages} values as a JSON array of strings):
 
 {passages}
 
-For each passage above, considering the user's question, output exactly in this format (use "---" between blocks):
----
-Passage 1:
-Value: <your 1-2 sentence answer for passage 1>
----
-Passage 2:
-Value: <your 1-2 sentence answer for passage 2>
----
-(Continue for all {num_passages} passages. Use only the labels "Passage N:" and "Value:".)"""
+Output a JSON array of exactly {num_passages} strings: the value analysis for Passage 1, then Passage 2, and so on."""
     return [
         {"role": "system", "content": BATCH_VALUE_PROMPT},
         {"role": "user", "content": user_content},
@@ -202,9 +183,9 @@ def generate_values_batch_stream(
     chunks: List[Dict[str, Any]],
 ) -> Iterator[tuple[str, int | dict]]:
     """
-    One LLM call for all passages; parse "Quote N: Value: ..." (with --- delimiter).
+    One LLM call for all passages; model returns a JSON array of value strings in passage order.
+    Parser merges values by index into template quotes.
     Yields ("status", current, total) then ("done", {"quotes": [...], "errors": [...]}).
-    Use for both streaming UI and non-streaming (consume the "done" event for result).
     """
     valid_chunks = [c for c in chunks if _format_single_chunk(c)]
     if not valid_chunks:
@@ -226,19 +207,24 @@ def generate_values_batch_stream(
         messages = build_messages_batch_values(user_message, valid_chunks)
         raw = _hf_chat_completion(messages, model_id=HF_MODEL_ID)
     except Exception as e:
-        logger.warning("generate_values_batch_stream: LLM call failed: %s", e)
+        logger.warning("generate_values_batch_stream: LLM call failed: %s", e, exc_info=True)
         errors = [{"stage": "value", "error": str(e)}]
         yield ("status", expected_count, expected_count)
         yield ("done", {"quotes": template_quotes, "errors": errors})
         return
 
-    from src.response_renderer import parse_batch_values_only
-    parsed_values = parse_batch_values_only(raw or "", expected_count)
+    from src.response_renderer import parse_batch_values_json
+    parsed_values = parse_batch_values_json(raw or "", expected_count)
     if parsed_values is None or len(parsed_values) != expected_count:
-        logger.info(
-            "generate_values_batch_stream: parse failed or count mismatch (got %s, expected %s)",
+        # Log at WARNING so it appears with default log level; include raw snippet to trace
+        raw_preview = (raw or "").strip()
+        if len(raw_preview) > 1200:
+            raw_preview = raw_preview[:1200] + "\n... [truncated, total %d chars]" % len((raw or "").strip())
+        logger.warning(
+            "generate_values_batch_stream: parse failed or count mismatch (got %s, expected %s). Raw output snippet:\n%s",
             len(parsed_values) if parsed_values else 0,
             expected_count,
+            raw_preview,
         )
         errors = [{"stage": "value", "error": "parse failed or count mismatch"}]
         yield ("status", expected_count, expected_count)
@@ -247,6 +233,29 @@ def generate_values_batch_stream(
 
     for i, val in enumerate(parsed_values):
         if i < len(template_quotes):
-            template_quotes[i]["value_system"] = (val or "").strip()
+            v = (val or "").strip()
+            template_quotes[i]["value"] = v
+            template_quotes[i]["value_system"] = v
     yield ("status", expected_count, expected_count)
     yield ("done", {"quotes": template_quotes, "errors": []})
+
+
+def ensure_model_loaded(model_id: str = HF_MODEL_ID) -> bool:
+    """
+    Load the Hugging Face pipeline if not already loaded. Use this to verify
+    the model loads successfully (e.g. at startup or in a test script).
+    Returns True if loaded (or already loaded), raises on failure.
+    """
+    _load_hf_pipeline(model_id)
+    return True
+
+
+if __name__ == "__main__":
+    # Verify Hugging Face model loads: python -m src.conversation
+    logging.basicConfig(level=logging.INFO)
+    try:
+        ensure_model_loaded()
+        print("OK: Hugging Face model loaded successfully.")
+    except Exception as e:
+        print("FAIL: Could not load Hugging Face model:", e)
+        raise

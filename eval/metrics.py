@@ -7,7 +7,7 @@ from collections import Counter
 from typing import Any
 
 from eval.citation_parser import ParsedCitation, StrictCitation, normalize_text_for_match
-from eval.chunk_index import ChunkIndex, _section_key
+from eval.chunk_index import ChunkIndex, _section_key, parse_book_volume
 
 
 def intervals_overlap(a_start: int, a_end: int, b_start: int, b_end: int) -> bool:
@@ -16,12 +16,18 @@ def intervals_overlap(a_start: int, a_end: int, b_start: int, b_end: int) -> boo
 
 
 def citation_overlaps_retrieved(citation: StrictCitation, retrieved_chunks: list[dict[str, Any]]) -> bool:
-    """Check if citation range overlaps at least one retrieved chunk (same book, interval overlap)."""
-    file_lower = citation.file.lower().strip()
+    """Check if citation range overlaps at least one retrieved chunk (same book/volume, interval overlap)."""
+    cite_book, cite_vol = parse_book_volume(citation.file)
+    if not cite_book:
+        cite_book = citation.file.lower().strip()
     for c in retrieved_chunks:
         book = (c.get("book_id") or "").lower().strip()
-        if book != file_lower:
+        if book != cite_book:
             continue
+        if cite_vol:
+            c_vol = (c.get("volume_id") or "").strip().upper()
+            if c_vol and c_vol != cite_vol.upper():
+                continue
         try:
             s = int(c.get("start_line", 0))
             e = int(c.get("end_line", 0))
@@ -69,7 +75,8 @@ def compute_citation_validity(
     quote_total = 0
 
     for pc in parsed_citations:
-        chunk = chunk_index.get(pc.book, pc.start_line, pc.end_line)
+        book_id, volume_id = parse_book_volume(pc.book)
+        chunk = chunk_index.get(book_id or pc.book, pc.start_line, pc.end_line, volume_id=volume_id or None)
         if chunk is not None:
             exists += 1
             if pc.quoted_text and pc.quoted_text.strip():
@@ -102,9 +109,9 @@ def compute_retrieval_diversity(
     B1b: Unique sections - distinct (book_id, thematic_division).
     B1c: Top-k concentration - rank-1 chunk reuse count and entropy.
     """
-    unique_chunk_keys: set[tuple[str, int, int]] = set()
+    unique_chunk_keys: set[tuple[str, int, int] | tuple[str, str, int, int]] = set()
     unique_sections: set[tuple[str, str | int]] = set()
-    rank1_chunks: list[tuple[str, int, int]] = []
+    rank1_chunks: list[tuple[str, int, int] | tuple[str, str, int, int]] = []
 
     for chunks in all_retrieved:
         for i, c in enumerate(chunks):
@@ -152,13 +159,14 @@ def compute_citation_diversity(
             "B2c_citation_reuse_rate": 0.0,
         }
 
-    unique_citation_keys: set[tuple[str, int, int]] = set()
+    unique_citation_keys: set[tuple[str, str, int, int]] = set()
     section_counts: Counter[tuple[str, str | int]] = Counter()
 
     for pc in all_citations:
-        key = (pc.book.lower(), pc.start_line, pc.end_line)
+        book_id, volume_id = parse_book_volume(pc.book)
+        key = (book_id or pc.book.lower(), volume_id or "", pc.start_line, pc.end_line)
         unique_citation_keys.add(key)
-        chunk = chunk_index.get(pc.book, pc.start_line, pc.end_line)
+        chunk = chunk_index.get(book_id or pc.book, pc.start_line, pc.end_line, volume_id=volume_id or "")
         if chunk:
             section_counts[chunk_index.section_key(chunk)] += 1
         else:
