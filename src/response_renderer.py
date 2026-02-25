@@ -1,9 +1,9 @@
 """
-Parse model plain-text output and render to bullet format.
-Model outputs Value per quote; Python assembles into template (chunks).
-Relevance/relation column is no longer displayed.
+Parse model output (JSON or plain-text) and render to bullet format.
+Batch value pipeline: model outputs a JSON array of value strings in passage order; Python merges by index into template (chunks).
 """
 
+import json
 import re
 from typing import Any
 
@@ -12,130 +12,70 @@ from src.conversation import build_quote_template
 # citation format: file:start-end (e.g. Apology:1-50)
 CITATION_FORMAT_RE = re.compile(r'^([^:]+):(\d+)-(\d+)$', re.IGNORECASE)
 
-# Plain-text format: "Quote N:" then "Relation:" and "Value:"
-_QUOTE_BLOCK_RE = re.compile(r'Quote\s+(\d+)\s*:\s*(.*?)(?=Quote\s+\d+\s*:|\Z)', re.IGNORECASE | re.DOTALL)
-_RELATION_LINE_RE = re.compile(r'Relation\s*:\s*(.+?)(?=Value\s*:|$)', re.IGNORECASE | re.DOTALL)
-_VALUE_LINE_RE = re.compile(r'Value\s*:\s*(.+?)(?=Relation\s*:|Quote\s+\d+\s*:|$)', re.IGNORECASE | re.DOTALL)
-
-# Value-only batch format: "Quote N:" or "Passage N:" then "Value:" (no Relation). Used when parsing batch value output.
-_VALUE_ONLY_LINE_RE = re.compile(r'Value\s*:\s*(.+?)(?=(?:Quote|Passage)\s+\d+\s*:|---|\Z)', re.IGNORECASE | re.DOTALL)
-# Delimiter-based blocks for batch: --- then Quote N: or Passage N: then Value:
-_BATCH_BLOCK_RE = re.compile(r'(?:^|---\s*\n)\s*(?:Quote|Passage)\s+(\d+)\s*:\s*(.*?)(?=---|\Z)', re.IGNORECASE | re.DOTALL)
-# Blocks by label (Quote or Passage) for batch when delimiter format isn't used:
-_BATCH_ANY_BLOCK_RE = re.compile(r'(?:Quote|Passage)\s+(\d+)\s*:\s*(.*?)(?=(?:Quote|Passage)\s+\d+\s*:|\Z)', re.IGNORECASE | re.DOTALL)
+# Strip "Passage N" or "Passage N:" prefix from model value and capitalize first letter
+PASSAGE_PREFIX_RE = re.compile(r'^\s*Passage\s+\d+\s*:?\s*', re.IGNORECASE)
 
 
-def parse_plain_text_response(raw: str) -> list[dict[str, str]]:
+def _normalize_value_text(s: str) -> str:
+    """Remove leading 'Passage N' / 'Passage N:' and capitalize first character."""
+    if not s or not s.strip():
+        return s.strip()
+    t = PASSAGE_PREFIX_RE.sub("", s).strip()
+    if not t:
+        return t
+    return t[0].upper() + t[1:] if len(t) > 1 else t.upper()
+
+
+def parse_batch_values_json(raw: str, expected_count: int) -> list[str] | None:
     """
-    Parse model plain-text output. Extract relation_to_question and value_system
-    for each "Quote N:" block. Returns list of {relation_to_question, value_system} by index.
-    """
-    if not raw or not raw.strip():
-        return []
-    text = raw.strip()
-
-    result: list[dict[str, str]] = []
-    for m in _QUOTE_BLOCK_RE.finditer(text):
-        block = m.group(2).strip()
-        rel_m = _RELATION_LINE_RE.search(block)
-        val_m = _VALUE_LINE_RE.search(block)
-        rel = (rel_m.group(1).strip() if rel_m else "").strip()
-        val = (val_m.group(1).strip() if val_m else "").strip()
-        result.append({
-            "relation_to_question": rel,
-            "value_system": val,
-        })
-    return result
-
-
-# Fallback: numbered format "1.\nRelation:" or "1)\nRelation:"
-_NUMERIC_BLOCK_RE = re.compile(r'(?:^|\n)\s*(\d+)[\.\)]\s*(.*?)(?=(?:^|\n)\s*\d+[\.\)]\s*|\Z)', re.DOTALL)
-
-
-def _parse_plain_text_fallback(raw: str) -> list[dict[str, str]]:
-    """Fallback when Quote N: format fails - try "1. Relation: ... Value: ..." blocks."""
-    if not raw or not raw.strip():
-        return []
-    result = []
-    for m in _NUMERIC_BLOCK_RE.finditer(raw):
-        block = m.group(2).strip()
-        rel_m = _RELATION_LINE_RE.search(block)
-        val_m = _VALUE_LINE_RE.search(block)
-        rel = (rel_m.group(1).strip() if rel_m else "").strip()
-        val = (val_m.group(1).strip() if val_m else "").strip()
-        result.append({
-            "relation_to_question": rel,
-            "value_system": val,
-        })
-    return result
-
-
-def _parse_model_output(raw: str) -> list[dict[str, str]]:
-    """
-    Parse model plain-text output. Tries "Quote N:" format first, then "1." fallback.
-    Returns list of {relation_to_question, value_system} by quote index.
-    """
-    parsed = parse_plain_text_response(raw)
-    if not parsed:
-        parsed = _parse_plain_text_fallback(raw)
-    return parsed
-
-
-def parse_batch_values_only(raw: str, expected_count: int) -> list[str] | None:
-    """
-    Parse batch model output that contains only "Quote N:" or "Passage N:" and "Value:" (no Relation).
-    Tries, in order:
-    1. Delimiter format: --- Quote/Passage 1: ... Value: ... --- Quote/Passage 2: ...
-    2. Quote N: or Passage N: ... Value: ... blocks (by regex)
-    3. Numbered blocks: 1. Value: ... 2. Value: ...
-    Returns list of value strings of length expected_count (missing entries padded with ""), or None
-    if no format matched (so caller can fall back to per-citation).
+    Parse batch model output as a JSON array of value strings (one per passage, in order).
+    Strips markdown code fences if present; on failure returns None.
+    Returns list of value strings of length expected_count (padded or trimmed), or None.
     """
     if not raw or not raw.strip():
         return None
     text = raw.strip()
-
-    # Strategy 1: delimiter-separated blocks "--- Quote N: ... Value: ..."
-    if "---" in text:
-        values_by_num: dict[int, str] = {}
-        for m in _BATCH_BLOCK_RE.finditer(text):
-            num = int(m.group(1))
-            block = m.group(2).strip()
-            val_m = _VALUE_ONLY_LINE_RE.search(block)
-            val = (val_m.group(1).strip() if val_m else "").strip()
-            values_by_num[num] = val
-        if values_by_num:
-            # Build list of length expected_count; missing indices get ""
-            out = [values_by_num.get(i, "") for i in range(1, expected_count + 1)]
-            return out
-
-    # Strategy 2: "Quote N:" or "Passage N:" blocks with "Value:" inside (value-only; relation optional)
-    result = []
-    for m in _BATCH_ANY_BLOCK_RE.finditer(text):
-        block = m.group(2).strip()
-        val_m = _VALUE_LINE_RE.search(block) or _VALUE_ONLY_LINE_RE.search(block)
-        val = (val_m.group(1).strip() if val_m else "").strip()
-        result.append(val)
-    if result:
-        # Pad or trim to expected_count so caller gets a full list; missing entries are ""
-        while len(result) < expected_count:
+    # Strip markdown code fences
+    if text.startswith("```"):
+        lines = text.split("\n")
+        if lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        text = "\n".join(lines)
+    start = text.find("[")
+    if start == -1:
+        return None
+    end = text.rfind("]")
+    if end == -1 or end < start:
+        return None
+    segment = text[start : end + 1]
+    try:
+        data = json.loads(segment)
+    except (json.JSONDecodeError, TypeError):
+        # Salvage truncated JSON: try closing the last string and the array
+        for suffix in ['"]', '"]]']:
+            try:
+                data = json.loads(segment + suffix)
+                if isinstance(data, list):
+                    break
+            except (json.JSONDecodeError, TypeError):
+                continue
+        else:
+            return None
+    if not isinstance(data, list):
+        return None
+    result: list[str] = []
+    for item in data:
+        if item is None:
             result.append("")
-        return result[:expected_count]
-
-    # Strategy 3: numbered "1." or "1)" then "Value:"
-    result = []
-    for m in _NUMERIC_BLOCK_RE.finditer(text):
-        block = m.group(2).strip()
-        val_m = _VALUE_LINE_RE.search(block) or _VALUE_ONLY_LINE_RE.search(block)
-        val = (val_m.group(1).strip() if val_m else "").strip()
-        result.append(val)
-    if result:
-        while len(result) < expected_count:
-            result.append("")
-        return result[:expected_count]
-
-    return None
-
+        elif isinstance(item, str):
+            result.append(_normalize_value_text(item.strip()))
+        else:
+            result.append(_normalize_value_text(str(item).strip()))
+    while len(result) < expected_count:
+        result.append("")
+    return result[:expected_count]
 
 def merge_model_into_template(
     template: dict,
@@ -144,7 +84,7 @@ def merge_model_into_template(
     """
     Merge parsed relation_to_question and value_system into template.
     Template has text/citation from chunks; parsed_quotes has model's analysis.
-    Match by index.
+    Match by index. Preserves other template keys (e.g. refusal).
     """
     if not parsed_quotes:
         return template
@@ -154,14 +94,12 @@ def merge_model_into_template(
         mq = parsed_quotes[i] if i < len(parsed_quotes) and isinstance(parsed_quotes[i], dict) else None
         merged_quote = dict(tq)
         if mq:
-            rel = (mq.get("relation_to_question") or "").strip()
             val = (mq.get("value_system") or "").strip()
-            if rel:
-                merged_quote["relation_to_question"] = rel
             if val:
                 merged_quote["value_system"] = val
+                merged_quote["value"] = val  # template uses "value"; keep in sync
         merged.append(merged_quote)
-    return {"quotes": merged}
+    return {**template, "quotes": merged}
 
 
 def normalize_citation(citation: str) -> str:
@@ -179,9 +117,9 @@ def normalize_citation(citation: str) -> str:
 
 def render_quotes_to_bullets(data: dict[str, Any]) -> str:
     """
-    Render parsed JSON to bullet format (value only; relevance column not displayed):
+    Render parsed JSON to bullet format (value only):
     • Quote 1 [Apology:1-50]: "text..."
-      - 反映的價值觀：...
+      - <value>
     If refusal is present and quotes is empty, return refusal text.
     """
     refusal = (data.get("refusal") or "").strip()
@@ -197,7 +135,7 @@ def render_quotes_to_bullets(data: dict[str, Any]) -> str:
             continue
         text = (q.get("text") or "").strip()
         citation = (q.get("citation") or "").strip()
-        value_sys = (q.get("value_system") or "").strip()
+        value_sys = (q.get("value_system") or q.get("value") or "").strip()
 
         cite_display = normalize_citation(citation)
         quote_line = f"• Quote {i}"
@@ -208,9 +146,9 @@ def render_quotes_to_bullets(data: dict[str, Any]) -> str:
         lines.append(quote_line)
 
         if value_sys:
-            lines.append(f"  - 反映的價值觀：{value_sys}")
+            lines.append(f"  - {value_sys}")
         else:
-            lines.append("  - 反映的價值觀：（分析失敗，可能超出 token 限制）")
+            lines.append("  - (分析失敗，請查看伺服器日誌以確認原因：LLM 錯誤或 JSON 解析失敗)")
 
         if i < len(quotes):
             lines.append("")  # blank between quotes
@@ -237,8 +175,16 @@ def process_response_to_data(raw: str, chunks: list | None = None) -> dict | Non
     Used by eval pipeline for citation extraction.
     """
     template = build_quote_template(chunks) if chunks else {"quotes": []}
-    if not template.get("quotes"):
+    quotes = template.get("quotes") or []
+    if not quotes:
         return template
-    parsed_quotes = _parse_model_output(raw)
+    expected_count = len(quotes)
+    parsed_values = parse_batch_values_json(raw, expected_count)
+    # parse_batch_values_json returns list[str]; merge_model_into_template expects list[dict]
+    parsed_quotes = (
+        [{"value_system": v, "value": v} for v in parsed_values]
+        if parsed_values is not None
+        else None
+    )
     merged = merge_model_into_template(template, parsed_quotes)
     return merged
