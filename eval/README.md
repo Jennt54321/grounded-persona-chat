@@ -1,15 +1,16 @@
 # Evaluation
 
-Evaluation pipeline for the RAG system: retrieval, generation, citation parsing, and metrics (including RAGAS).
+Evaluation pipeline for the RAG system: retrieval, generation, citation parsing, and metrics.
 
 ## Quick Start
 
-```bash
-# Pull the RAGAS judge model (Prometheus 2) before first run
-ollama pull tensortemplar/prometheus2:7b
+**Use the project venv** so `accelerate` is available (otherwise generation will fail). Either activate it (`source .venv/bin/activate`) or call the venv Python explicitly:
 
-# Run evaluation (RAGAS enabled by default)
+```bash
+# From project root; use venv Python (e.g. .venv/bin/python or activate venv first)
 python -m eval.run_eval -q eval/questions_life.json
+# Or explicitly:
+.venv/bin/python -m eval.run_eval -q eval/questions_life.json
 
 # Quick test with 3 questions
 python -m eval.run_eval -q eval/questions_life.json -n 3
@@ -19,47 +20,17 @@ python -m eval.run_eval --from-results eval/results/eval_results.json
 python -m eval.run_eval -f eval/results/eval_results.json -n 5  # first 5 only
 ```
 
-## RAGAS Metrics
+## LLM-as-a-Judge (Relevancy & Faithfulness)
 
-RAGAS metrics use **Prometheus 2** as the LLM-as-judge via Ollama (local, free). Metrics computed:
+在 run_eval 時可選跑 judge，對每筆結果打 **relevancy**（與問題相關度）與 **faithfulness**（與引用原文一致度），1–5 分：
 
-| Metric | Description |
-|--------|-------------|
-| **Contextual Precision** | Retriever ranks relevant chunks higher (uses response or reference) |
-| **Contextual Recall** | Retriever retrieves all necessary info (requires `reference` in questions) |
-| **Contextual Relevancy** | Retrieved contexts are pertinent to the question |
-| **Answer Relevancy** | Answer is on-topic and helpful |
-| **Faithfulness** | Answer is grounded in retrieved context (no hallucination) |
-
-### Configuration
-
-- **Judge model**: Default `tensortemplar/prometheus2:7b` via Ollama
-- **Ollama**: Ensure Ollama is running; set `OLLAMA_BASE_URL` if not `http://localhost:11434`
-- **Override model**: `--ragas-llm <model>` (e.g. `phi3.5` for a different Ollama model)
-- **Disable RAGAS**: `--no-ragas`
-- **Chunk truncation**: `RAGAS_CHUNK_MAX_CHARS` (default 600) to stay within context limits
-
-### Ground Truth for Context Recall
-
-Add optional `reference` to questions in `questions.json` for Context Recall:
-
-```json
-{
-  "id": 1,
-  "question": "What does Socrates say about the charges?",
-  "reference": "Socrates addresses the charges of corrupting the youth and impiety..."
-}
+```bash
+python -m eval.run_eval -q eval/questions_life.json --run-judge
 ```
-
-Context Recall runs only on questions that have `reference`.
 
 ## Output
 
-- `eval_results.json` - Per-question results including RAGAS scores
+- `eval_results.json` - Per-question results with validity and diversity metrics
 - `eval_summary.json` - Aggregate metrics
 - `eval_full.json` - Full evaluation with metadata
 - `eval_report.md` - Human-readable report
-
-## Trust and Limitations
-
-RAGAS metrics rely on an LLM judge. Scores can vary by model and run. Use them for relative comparison and trend tracking. Cross-check with the rule-based metrics (A1–A4) and spot-check samples manually when important.
