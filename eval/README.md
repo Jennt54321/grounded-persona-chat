@@ -16,8 +16,8 @@ python -m eval.run_eval -q eval/questions_life.json
 python -m eval.run_eval -q eval/questions_life.json -n 3
 
 # Re-run metrics only from existing results (no retrieval, no generation)
-python -m eval.run_eval --from-results eval/results/eval_results.json
-python -m eval.run_eval -f eval/results/eval_results.json -n 5  # first 5 only
+python -m eval.run_eval --from-results eval/results/questions_life_results_checkpoint.json
+python -m eval.run_eval -f eval/results/questions_life_results_checkpoint.json -n 5  # first 5 only
 ```
 
 ## LLM-as-a-Judge (Relevancy & Faithfulness)
@@ -30,7 +30,10 @@ python -m eval.run_eval -q eval/questions_life.json --run-judge
 
 ## Output
 
-- `eval_results.json` - Per-question results with validity and diversity metrics
-- `eval_summary.json` - Aggregate metrics
-- `eval_full.json` - Full evaluation with metadata
-- `eval_report.md` - Human-readable report
+Output files use the questions file stem as prefix (e.g. `questions_life.json` → `questions_life_*`):
+
+- `{stem}_results.json` - Per-question results with validity and diversity metrics
+- `{stem}_summary.json` - Aggregate metrics
+- `{stem}_full.json` - Full evaluation with metadata
+- `{stem}_report.md` - Human-readable report
+- `{stem}_results_checkpoint.json` - Checkpoint for `--from-results`
