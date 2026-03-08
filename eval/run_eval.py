@@ -210,7 +210,6 @@ def run_eval(
                 questions.append({
                     "id": r.get("id"),
                     "question": r.get("question", ""),
-                    "book_hint": r.get("book_hint"),
                 })
 
             retriever = Retriever(books_dir=books_dir)
@@ -274,7 +273,6 @@ def run_eval(
                 result_item = {
                     "id": qid,
                     "question": q,
-                    "book_hint": q_item.get("book_hint") if isinstance(q_item, dict) else None,
                     "response": response,
                     "parsed_citations": parsed_citations_with_text,
                     "cited_texts": cited_texts,
@@ -386,7 +384,6 @@ def run_eval(
                 result_item = {
                     "id": qid,
                     "question": q,
-                    "book_hint": q_item.get("book_hint") if isinstance(q_item, dict) else None,
                     "response": response,
                     "parsed_citations": parsed_citations_with_text,
                     "cited_texts": cited_texts,
@@ -406,9 +403,9 @@ def run_eval(
                         }
                         for i, qt in enumerate(data["quotes"])
                     ]
-                if gen_errors:
-                    result_item["generation_errors"] = gen_errors
-                per_question_results.append(result_item)
+                    if gen_errors:
+                        result_item["generation_errors"] = gen_errors
+                    per_question_results.append(result_item)
 
     # Checkpoint: retrieval + generation + validity (A1-A4)
     checkpoint_path = out_checkpoint
