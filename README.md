@@ -6,9 +6,9 @@ Chat with an assistant grounded in Plato's dialogues (Apology, Meno, Gorgias, Re
 
 - **app/** — FastAPI app: `app/main.py`, `app/static/index.html`
 - **src/** — Core logic: retriever (BGE + reranker), conversation (Qwen2.5), `citation_utils.py`, `response_renderer.py`
-- **scripts/** — Chunking and embedding: `chunk_apology.py`, `chunk_meno.py`, `chunk_gorgias.py`, `chunk_republic.py`, `embed_chunks.py`, `generate_questions.py`, `verify_*_chunks.py`
+- **scripts/** — Chunking and embedding: `chunk_apology.py`, `chunk_meno.py`, `chunk_gorgias.py`, `chunk_republic.py`, `embed_chunks.py`, `verify_*_chunks.py`
 - **books/** — Source `.txt` and chunk JSONs: `apology.txt`, `meno.txt`, `gorgias.txt`, `republic.txt` and (after running scripts) `*_chunks.json`
-- **eval/** — Evaluation pipeline; see [eval/README.md](eval/README.md)
+- **eval/** — Evaluation pipeline (`run_eval.py`, `questions_life.json`, results)
 
 ## Prerequisites
 
@@ -54,10 +54,38 @@ For GPU (e.g. Google Colab), see [colab.ipynb](colab.ipynb).
 
 ## Evaluation
 
-See [eval/README.md](eval/README.md) for the evaluation pipeline. Quick start:
+Evaluation pipeline for the RAG system: retrieval, generation, citation parsing, and metrics.
+
+**Use the project venv** so `accelerate` is available (otherwise generation will fail). Either activate it (`source .venv/bin/activate`) or call the venv Python explicitly:
 
 ```bash
+# From project root
 python -m eval.run_eval -q eval/questions_life.json
+# Or explicitly:
+.venv/bin/python -m eval.run_eval -q eval/questions_life.json
+
+# Quick test with 3 questions
+python -m eval.run_eval -q eval/questions_life.json -n 3
+
+# Re-run metrics only from existing results (no retrieval, no generation)
+python -m eval.run_eval --from-results eval/results/questions_life_results_checkpoint.json
+python -m eval.run_eval -f eval/results/questions_life_results_checkpoint.json -n 5  # first 5 only
 ```
 
-To generate new evaluation questions: `python scripts/generate_questions.py`
+### LLM-as-a-Judge (Relevancy & Faithfulness)
+
+Optional: run judge to score each result for **relevancy** (question relevance) and **faithfulness** (alignment with cited passages), 1–5:
+
+```bash
+python -m eval.run_eval -q eval/questions_life.json --run-judge
+```
+
+### Output
+
+Output files use the questions file stem as prefix (e.g. `questions_life.json` → `questions_life_*`):
+
+- `{stem}_results.json` - Per-question results with validity and diversity metrics
+- `{stem}_summary.json` - Aggregate metrics
+- `{stem}_full.json` - Full evaluation with metadata
+- `{stem}_report.md` - Human-readable report
+- `{stem}_results_checkpoint.json` - Checkpoint for `--from-results`
