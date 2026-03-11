@@ -111,7 +111,7 @@ def parse_citations_strict(response: str) -> List[StrictCitation]:
 
 
 def strict_citations_from_data(data: dict) -> List[StrictCitation]:
-    """Extract StrictCitations from parsed JSON data (quotes array)."""
+    """Extract StrictCitations from parsed JSON data (quotes array). Deduplicates by (file, start, end)."""
     results: List[StrictCitation] = []
     seen: set[tuple[str, int, int]] = set()
     quotes = data.get("quotes") or []
@@ -129,7 +129,25 @@ def strict_citations_from_data(data: dict) -> List[StrictCitation]:
     return results
 
 
-def strict_to_parsed(sc: StrictCitation) -> ParsedCitation:
+def strict_citations_and_quotes_from_data(data: dict) -> tuple[List[StrictCitation], List[str | None]]:
+    """Build (citations, quote_texts) from data['quotes'] with 1:1 order. No dedup — each quote gets its own citation so A2 exact-quote match pairs correctly."""
+    citations: List[StrictCitation] = []
+    quote_texts: List[str | None] = []
+    quotes = data.get("quotes") or []
+    for q in quotes:
+        if not isinstance(q, dict):
+            continue
+        cite = (q.get("citation") or "").strip()
+        text = (q.get("text") or "").strip() or None
+        m = re.match(r'^([^:]+):(\d+)-(\d+)$', cite, re.IGNORECASE)
+        if m:
+            f, s, e = m.group(1).strip(), int(m.group(2)), int(m.group(3))
+            citations.append(StrictCitation(file=f, start_line=s, end_line=e))
+            quote_texts.append(text)
+    return citations, quote_texts
+
+
+def strict_to_parsed(sc: StrictCitation, quoted_text: str | None = None) -> ParsedCitation:
     """Convert StrictCitation to ParsedCitation for legacy metrics."""
     return ParsedCitation(
         book=sc.file,
@@ -137,7 +155,7 @@ def strict_to_parsed(sc: StrictCitation) -> ParsedCitation:
         start_line=sc.start_line,
         end_line=sc.end_line,
         raw=f"[{sc.file}:{sc.start_line}-{sc.end_line}]",
-        quoted_text=None,
+        quoted_text=quoted_text,
     )
 
 

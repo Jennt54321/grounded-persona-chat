@@ -25,6 +25,11 @@ def _section_key(chunk: dict[str, Any]) -> tuple[str, str | int]:
     return (book, div)
 
 
+# Single-volume works: stored as "I" in index, citations often omit volume.
+# Republic is multi-volume; do NOT fallback for it.
+_SINGLE_VOLUME_BOOKS = {"meno", "gorgias", "apology"}
+
+
 def load_chunk_index(books_dir: Path | None = None) -> "ChunkIndex":
     """Load all chunks and build index."""
     books_dir = books_dir or BOOKS_DIR
@@ -102,7 +107,9 @@ class ChunkIndex:
         end_line: int,
         volume_id: str = "",
     ) -> dict[str, Any] | None:
-        """Look up chunk by (book_id, volume_id, start_line, end_line)."""
+        """Look up chunk by (book_id, volume_id, start_line, end_line).
+        For single-volume books (meno, gorgias, apology), fallback to volume I when
+        volume_id is empty, since citations often omit volume."""
         book = book_id.lower().strip()
         vol = (volume_id or "").strip().upper()
         try:
@@ -110,7 +117,13 @@ class ChunkIndex:
         except (TypeError, ValueError):
             return None
         key = (book, vol, s, e)
-        return self._by_exact.get(key)
+        result = self._by_exact.get(key)
+        if result is not None:
+            return result
+        # Fallback: single-volume book with empty volume -> try "I"
+        if not vol and book in _SINGLE_VOLUME_BOOKS:
+            return self._by_exact.get((book, "I", s, e))
+        return None
 
     def chunk_key(self, chunk: dict[str, Any]) -> tuple[str, str, int, int]:
         """Unique key for a chunk: (book_id, volume_id, start_line, end_line)."""

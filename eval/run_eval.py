@@ -19,6 +19,7 @@ from eval.citation_parser import (
     ParsedCitation,
     StrictCitation,
     parse_citations_strict,
+    strict_citations_and_quotes_from_data,
     strict_citations_from_data,
     strict_to_parsed,
 )
@@ -124,18 +125,30 @@ def run_eval(
             response = r.get("response", "")
             all_questions.append(q)
 
-            # Rebuild strict_parsed from parsed_citations
-            pcs = r.get("parsed_citations", [])
-            strict_parsed = [
-                StrictCitation(
-                    file=pc.get("file", ""),
-                    start_line=int(pc.get("start_line", 0)),
-                    end_line=int(pc.get("end_line", 0)),
-                )
-                for pc in pcs
-                if pc.get("file") and pc.get("start_line") is not None and pc.get("end_line") is not None
+            # Rebuild strict_parsed and quote_texts with 1:1 pairing. Prefer quotes array so each citation gets its correct quoted text (fixes A2 when model cites same chunk twice).
+            quotes = r.get("quotes") or []
+            if quotes:
+                data_for_parse = {"quotes": quotes}
+                strict_parsed, quote_texts = strict_citations_and_quotes_from_data(data_for_parse)
+            else:
+                pcs = r.get("parsed_citations", [])
+                strict_parsed = []
+                quote_texts = []
+                for j, pc in enumerate(pcs):
+                    if pc.get("file") and pc.get("start_line") is not None and pc.get("end_line") is not None:
+                        strict_parsed.append(
+                            StrictCitation(
+                                file=pc.get("file", ""),
+                                start_line=int(pc.get("start_line", 0)),
+                                end_line=int(pc.get("end_line", 0)),
+                            )
+                        )
+                        t = pc.get("text", "")
+                        quote_texts.append((t.strip() or None) if (t and str(t).strip()) else None)
+            parsed = [
+                strict_to_parsed(sc, quote_texts[j] if j < len(quote_texts) else None)
+                for j, sc in enumerate(strict_parsed)
             ]
-            parsed = [strict_to_parsed(sc) for sc in strict_parsed]
             all_parsed.append(parsed)
             all_strict_parsed.append(strict_parsed)
 
@@ -237,10 +250,15 @@ def run_eval(
                         gen_errors = payload.get("errors", [])
                 response = render_quotes_to_bullets(data) if data else ""
 
-                strict_parsed = (
-                    strict_citations_from_data(data) if data else parse_citations_strict(response)
-                )
-                parsed = [strict_to_parsed(sc) for sc in strict_parsed]
+                if data and data.get("quotes"):
+                    strict_parsed, quote_texts = strict_citations_and_quotes_from_data(data)
+                else:
+                    strict_parsed = parse_citations_strict(response)
+                    quote_texts = []
+                parsed = [
+                    strict_to_parsed(sc, quote_texts[j] if j < len(quote_texts) else None)
+                    for j, sc in enumerate(strict_parsed)
+                ]
                 all_parsed.append(parsed)
                 all_strict_parsed.append(strict_parsed)
                 all_questions.append(q)
@@ -348,10 +366,15 @@ def run_eval(
                         gen_errors = payload.get("errors", [])
                 response = render_quotes_to_bullets(data) if data else ""
 
-                strict_parsed = (
-                    strict_citations_from_data(data) if data else parse_citations_strict(response)
-                )
-                parsed = [strict_to_parsed(sc) for sc in strict_parsed]
+                if data and data.get("quotes"):
+                    strict_parsed, quote_texts = strict_citations_and_quotes_from_data(data)
+                else:
+                    strict_parsed = parse_citations_strict(response)
+                    quote_texts = []
+                parsed = [
+                    strict_to_parsed(sc, quote_texts[j] if j < len(quote_texts) else None)
+                    for j, sc in enumerate(strict_parsed)
+                ]
                 all_parsed.append(parsed)
                 all_strict_parsed.append(strict_parsed)
                 all_questions.append(q)
