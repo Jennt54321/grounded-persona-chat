@@ -1,14 +1,15 @@
 # Talk to the People — A Grounded Persona Conversation System
 
-Chat with an assistant grounded in Plato's dialogues (Apology, Meno, Gorgias, Republic). Uses semantic retrieval over chunk embeddings and Qwen2.5-3B-Instruct via Hugging Face for grounded responses (local inference, no external API). Retrieval uses BGE bi-encoder (BAAI/bge-base-en-v1.5) plus BGE reranker (BAAI/bge-reranker-base): bi-encoder returns top 50 candidates, reranker returns top 5.
+Chat with an assistant grounded in Plato's dialogues (Apology, Meno, Gorgias, Republic). Uses semantic retrieval over chunk embeddings and Qwen2.5-3B-Instruct via Hugging Face for grounded responses (local inference, no external API). Retrieval uses BGE bi-encoder (BAAI/bge-base-en-v1.5) plus BGE reranker (BAAI/bge-reranker-base): bi-encoder returns top 50 candidates, cross-encoder reranks to top 5.
 
 ## Project structure
 
 - **app/** — FastAPI app: `app/main.py`, `app/static/index.html`
-- **src/** — Core logic: retriever (BGE + reranker), conversation (Qwen2.5), `citation_utils.py`, `response_renderer.py`
+- **src/** — Core logic: retriever (BGE bi-encoder + BGE reranker cross-encoder), conversation (Qwen2.5), `citation_utils.py`, `response_renderer.py`
 - **scripts/** — Chunking and embedding: `chunk_apology.py`, `chunk_meno.py`, `chunk_gorgias.py`, `chunk_republic.py`, `embed_chunks.py`, `verify_*_chunks.py`
 - **books/** — Source `.txt` and chunk JSONs: `apology.txt`, `meno.txt`, `gorgias.txt`, `republic.txt` and (after running scripts) `*_chunks.json`
-- **eval/** — Evaluation pipeline (`run_eval.py`, `questions_life.json`, results)
+- **eval/** — Evaluation pipeline: `run_eval.py`, `questions_life.json`, supporting modules (`citation_parser.py`, `chunk_index.py`, `metrics.py`, `llm_judge.py`, `compute_retrieval_similarity.py`, `run_contextual_metrics.py`), results
+- **docs/** — Research design and evaluation records
 
 ## Prerequisites
 
@@ -46,6 +47,8 @@ For GPU (e.g. Google Colab), see [colab.ipynb](colab.ipynb).
 
 2. Open http://localhost:8000 in your browser.
 
+Retrieval traces are saved to `retrieval_logs/` during chat sessions.
+
 ## API
 
 - **GET /** — Serves the chat UI (static HTML)
@@ -61,6 +64,7 @@ Evaluation pipeline for the RAG system: retrieval, generation, citation parsing,
 ```bash
 # From project root
 python -m eval.run_eval -q eval/questions_life.json
+
 # Or explicitly:
 .venv/bin/python -m eval.run_eval -q eval/questions_life.json
 
@@ -70,11 +74,14 @@ python -m eval.run_eval -q eval/questions_life.json -n 3
 # Re-run metrics only from existing results (no retrieval, no generation)
 python -m eval.run_eval --from-results eval/results/questions_life_results_checkpoint.json
 python -m eval.run_eval -f eval/results/questions_life_results_checkpoint.json -n 5  # first 5 only
+
+# Skip LLM-as-a-judge (runs by default)
+python -m eval.run_eval -q eval/questions_life.json --no-run-judge
 ```
 
 ### LLM-as-a-Judge (Relevancy & Faithfulness)
 
-Optional: run judge to score each result for **relevancy** (question relevance) and **faithfulness** (alignment with cited passages), 1–5:
+By default, the judge scores each result for **relevancy** (question relevance) and **faithfulness** (alignment with cited passages), 1–5. Use `--no-run-judge` to skip.
 
 ```bash
 python -m eval.run_eval -q eval/questions_life.json --run-judge
@@ -82,10 +89,15 @@ python -m eval.run_eval -q eval/questions_life.json --run-judge
 
 ### Output
 
-Output files use the questions file stem as prefix (e.g. `questions_life.json` → `questions_life_*`):
+Output files are written to `eval/results/` (or `--output`) and use the questions file stem as prefix (e.g. `questions_life.json` → `questions_life_*`):
 
-- `{stem}_results.json` - Per-question results with validity and diversity metrics
-- `{stem}_summary.json` - Aggregate metrics
-- `{stem}_full.json` - Full evaluation with metadata
-- `{stem}_report.md` - Human-readable report
-- `{stem}_results_checkpoint.json` - Checkpoint for `--from-results`
+- `{stem}_retrieval.json` — Cached retrieval results (Stage 1)
+- `{stem}_results_checkpoint.json` — Checkpoint for `--from-results`
+- `{stem}_results.json` — Per-question results with validity and diversity metrics
+- `{stem}_summary.json` — Aggregate metrics
+- `{stem}_full.json` — Full evaluation with metadata
+- `{stem}_report.md` — Human-readable report
+
+## Research
+
+See [docs/Research Design and Evaluation Records.md](docs/Research%20Design%20and%20Evaluation%20Records.md) for research hypotheses, metrics, and evaluation records.
